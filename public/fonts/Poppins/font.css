@@ -1,0 +1,68 @@
+@font-face {
+    font-family: "Poppins";
+    font-weight: 100;
+    font-style: normal;
+    src: url("{{ asset('fonts/poppins/Poppins-Thin.woff2') }}") format("woff2"),
+         url("{{ asset('fonts/poppins/Poppins-Thin.woff') }}") format("woff");
+}
+
+@font-face {
+    font-family: "Poppins";
+    font-weight: 200;
+    font-style: normal;
+    src: url("{{ asset('fonts/poppins/Poppins-ExtraLight.woff2') }}") format("woff2"),
+         url("{{ asset('fonts/poppins/Poppins-ExtraLight.woff') }}") format("woff");
+}
+
+/* Contoh untuk font weight lainnya */
+@font-face {
+    font-family: "Poppins";
+    font-weight: 300;
+    font-style: normal;
+    src: url("{{ asset('fonts/poppins/Poppins-Light.woff2') }}") format("woff2"),
+         url("{{ asset('fonts/poppins/Poppins-Light.woff') }}") format("woff");
+}
+
+/* dan seterusnya untuk font lainnya... */
+
+.poppins-thin {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.poppins-extralight {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
