@@ -89,7 +89,7 @@ class DetailQrCodeController extends Controller
                 'status'  => 'success',
                 'message' => 'Detail qr code berhasil ditambahkan',
                 'data'    => [
-                    'qr_codes' =>  $qr_code,
+                    'detail_qr_codes' =>  $qr_code,
                     'generete_qr_code_log' => $generete_qr_code_log
                 ],
             ], 200);
@@ -210,7 +210,7 @@ class DetailQrCodeController extends Controller
                 'status'  => 'success',
                 'message' => 'Detail qr code berhasil diubah',
                 'data'    => [
-                    'qr_code' => $detail_qr_code,
+                    'detail_qr_codes' => $detail_qr_code,
                     'generete_qr_code_log' => $generete_qr_code_log
                 ],
             ], 200);

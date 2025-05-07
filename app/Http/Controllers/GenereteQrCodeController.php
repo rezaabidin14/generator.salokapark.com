@@ -62,10 +62,12 @@ class GenereteQrCodeController extends Controller
                 $search = $request->search;
 
                 $query->where(function ($q) use ($search) {
-                    $q->where('title', 'like', "%$search%")
-                        ->orWhere('sort_description', 'like', "%$search%")
+                    $q->where('title', 'like', '%' . $search . '%')
+                        ->orWhere('sort_description', 'like', '%' . $search . '%')
+                        ->orWhere('departemen', 'like', '%' . $search . '%')
+                        ->orWhere('sub_departemen', 'like', '%' . $search . '%')
                         ->orWhereHas('qr_code', function ($q2) use ($search) {
-                            $q2->where('link_qr', 'like', "%$search%");
+                            $q2->where('link_qr', 'like', '%' . $search . '%');
                         });
                 });
             }
@@ -331,7 +333,7 @@ class GenereteQrCodeController extends Controller
         if (!in_array($request->id_grade, ['LV-002', 'LV-004'])) {
             return response()->json([
                 'status'  => 'error',
-                'message' => 'ID Grade harus LV-002 atau LV-004',
+                'message' => 'Hanya bisa disetujui oleh SPV atau Manager',
                 'data'    => [],
             ], 422);
         }
