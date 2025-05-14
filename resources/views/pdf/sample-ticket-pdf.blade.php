@@ -5,9 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> -->
     <title>Reservasi Tiket Saloka Theme Park</title>
 </head>
 <style>
@@ -15,118 +12,74 @@
         margin: 0cm;
     }
 
-    /* 
-    .poppins-thin {
-    font-family: "Poppins", sans-serif;
-    font-weight: 100;
-    font-style: normal;
+    /* open-sauce-one-300 latin */
+    @font-face {
+        font-family: "Open Sauce One";
+        font-style: normal;
+        font-weight: 300;
+        src: local("Open Sauce One Light"), local("Open Sauce One Light"),
+            url("/assets/fonts/open-sauce-one/webfonts/open-sauce-one-latin-300-normal.woff") format("woff"),
+            url("/assets/fonts/open-sauce-one/webfonts/open-sauce-one-latin-300-normal.woff2") format("woff2"),
+            url("/assets/fonts/open-sauce-one/ttf/open-sauce-one-latin-300-normal.ttf") format("truetype");
     }
 
-    .poppins-extralight {
-    font-family: "Poppins", sans-serif;
-    font-weight: 200;
-    font-style: normal;
+    /* open-sauce-one-400 latin */
+    @font-face {
+        font-family: "Open Sauce One";
+        font-style: normal;
+        font-weight: 400;
+        src: local("Open Sauce One Reguler"), local("Open Sauce One Reguler"),
+            url("/assets/fonts/open-sauce-one/webfonts/open-sauce-one-latin-400-normal.woff") format("woff"),
+            url("/assets/fonts/open-sauce-one/webfonts/open-sauce-one-latin-400-normal.woff2") format("woff2"),
+            url("/assets/fonts/open-sauce-one/ttf/open-sauce-one-latin-400-normal.ttf") format("truetype");
     }
 
-    .poppins-light {
-    font-family: "Poppins", sans-serif;
-    font-weight: 300;
-    font-style: normal;
+    /* open-sauce-one-500 latin */
+    @font-face {
+        font-family: "Open Sauce One";
+        font-style: normal;
+        font-weight: 500;
+        src: local("Open Sauce One Medium"), local("Open Sauce One Medium"),
+            url("/assets/fonts/open-sauce-one/webfonts/open-sauce-one-latin-500-normal.woff") format("woff"),
+            url("/assets/fonts/open-sauce-one/webfonts/open-sauce-one-latin-500-normal.woff2") format("woff2"),
+            url("/assets/fonts/open-sauce-one/ttf/open-sauce-one-latin-500-normal.ttf") format("truetype");
     }
 
-    .poppins-regular {
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+    /* open-sauce-one-600 latin */
+    @font-face {
+        font-family: "Open Sauce One";
+        font-style: normal;
+        font-weight: 600;
+        src: local("Open Sauce One SemiBold"), local("Open Sauce One SemiBold"),
+            url("/assets/fonts/open-sauce-one/webfonts/open-sauce-one-latin-600-normal.woff") format("woff"),
+            url("/assets/fonts/open-sauce-one/webfonts/open-sauce-one-latin-600-normal.woff2") format("woff2"),
+            url("/assets/fonts/open-sauce-one/ttf/open-sauce-one-latin-600-normal.ttf") format("truetype");
     }
 
-    .poppins-medium {
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-style: normal;
+    /* open-sauce-one-700 latin */
+    @font-face {
+        font-family: "Open Sauce One";
+        font-style: normal;
+        font-weight: 700;
+        src: local("Open Sauce One Bold"), local("Open Sauce One Bold"),
+            url("/assets/fonts/open-sauce-one/webfonts/open-sauce-one-latin-700-normal.woff") format("woff"),
+            url("/assets/fonts/open-sauce-one/webfonts/open-sauce-one-latin-700-normal.woff2") format("woff2"),
+            url("/assets/fonts/open-sauce-one/ttf/open-sauce-one-latin-700-normal.ttf") format("truetype");
     }
 
-    .poppins-semibold {
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    font-style: normal;
+    /* open-sauce-one-800 latin */
+    @font-face {
+        font-family: "Open Sauce One";
+        font-style: normal;
+        font-weight: 800;
+        src: local("Open Sauce One ExtraBold"), local("Open Sauce One ExtraBold"),
+            url("/assets/fonts/open-sauce-one/webfonts/open-sauce-one-latin-800-normal.woff") format("woff"),
+            url("/assets/fonts/open-sauce-one/webfonts/open-sauce-one-latin-800-normal.woff2") format("woff2"),
+            url("/assets/fonts/open-sauce-one/ttf/open-sauce-one-latin-800-normal.ttf") format("truetype");
     }
-
-    .poppins-bold {
-    font-family: "Poppins", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    }
-
-    .poppins-extrabold {
-    font-family: "Poppins", sans-serif;
-    font-weight: 800;
-    font-style: normal;
-    }
-
-    .poppins-black {
-    font-family: "Poppins", sans-serif;
-    font-weight: 900;
-    font-style: normal;
-    }
-
-    .poppins-thin-italic {
-    font-family: "Poppins", sans-serif;
-    font-weight: 100;
-    font-style: italic;
-    }
-
-    .poppins-extralight-italic {
-    font-family: "Poppins", sans-serif;
-    font-weight: 200;
-    font-style: italic;
-    }
-
-    .poppins-light-italic {
-    font-family: "Poppins", sans-serif;
-    font-weight: 300;
-    font-style: italic;
-    }
-
-    .poppins-regular-italic {
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-style: italic;
-    }
-
-    .poppins-medium-italic {
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-style: italic;
-    }
-
-    .poppins-semibold-italic {
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    font-style: italic;
-    }
-
-    .poppins-bold-italic {
-    font-family: "Poppins", sans-serif;
-    font-weight: 700;
-    font-style: italic;
-    }
-
-    .poppins-extrabold-italic {
-    font-family: "Poppins", sans-serif;
-    font-weight: 800;
-    font-style: italic;
-    }
-
-    .poppins-black-italic {
-    font-family: "Poppins", sans-serif;
-    font-weight: 900;
-    font-style: italic;
-    } */
-
 
     body {
-        font-family: "Poppins", sans-serif;
+        font-family: 'Open Sauce One', sans-serif;
         margin: 0cm;
         padding: 0cm;
     }
@@ -197,9 +150,9 @@
                             <strong>Reservasi Saloka Theme Park</strong>
                         </h6>
                         <h6 style="line-height: 1.2; font-size: 14px; color: #169870; font-weight: 400">
-                            <span>ID Pesanan:</span><strong> {{ $order_id }} </strong> 
-                        </h6>  
-                    </td> 
+                            <span>Order ID:</span><strong> 1238483</strong>
+                        </h6>
+                    </td>
                     <td align="right">
                         <img src="{{ public_path('assets/images/logosaloka.png') }}" alt="" width="100"
                             class="adapt-img">
@@ -208,10 +161,11 @@
             </tbody>
         </table>
     </div>
-    <!--Header Section End --> 
+    <!--Header Section End -->
 
     <!--Detail Tiket Section Start -->
-    <main style="width: 100%; margin: 0; padding: 0; padding-inline: 0; padding-block: 0;  margin-top: 8rem; background-color: #FFFFFFFF;">
+    <main
+        style="width: 100%; margin: 0; padding: 0; padding-inline: 0; padding-block: 0; margin-top: 8rem; background-color: #FFFFFFFF;">
         <!--Detail QR Code Kode Booking Section Start -->
         <table align="center" cellpadding="0" cellspacing="0" width="100%" class=""
             style="background-color: #FFFFFFFF; padding: 0.5rem 2rem;">
@@ -222,9 +176,9 @@
                         <p class="es-text-mobile-size-16" style="font-size: 14px; line-height: 1.2">
                             <strong>Saloka Theme Park</strong>
                         </p>
-                        <!-- <p class="" style="font-size: 12px; line-height: 1.2">
+                        <p class="" style="font-size: 12px; line-height: 1.2">
                             Reservasi Reguler Ticket - Weekend
-                        </p> -->
+                        </p>
                         <p class="es-text-mobile-size-14" style="font-size: 12px; line-height: 1.2; color: #999999;">
                             <strong>
                                 Jl. Fatmawati No.154, Tuntang, Semarang, Jawa Tengah 50773
@@ -244,7 +198,7 @@
                                                 alt="calendar" width="16" height="16"
                                                 style="margin-right: 6px; vertical-align: middle;">
                                             <span style="vertical-align: middle; white-space: nowrap;">
-                                                Tgl Kedatangan: {{$date_plan}}
+                                                Tgl Kedatangan: 21 Apr 2025
                                             </span>
                                         </div>
                                     </td>
@@ -257,7 +211,7 @@
                                                 width="20" height="20"
                                                 style="margin-right: 6px; vertical-align: middle;">
                                             <span style="vertical-align: middle;">
-                                                Qty Ticket: {{ $total_ticket }} Pax
+                                                Qty Ticket: 8 Pax
                                             </span>
                                         </div>
                                     </td>
@@ -267,17 +221,17 @@
                     </td>
                     <td align="center" style="padding-right: 1rem; padding-left: 1rem;">
                         <p style="color: #169870; font-size: 14px;">
-                            <strong>{{ $amount_total}} </strong>
+                            <strong>IDR 300.000</strong>
                         </p>
                         <img src="data:image/png;base64, {!! base64_encode(
-                            QrCode::format('png')->size(132)->format('png')->merge(public_path('storage/avatar_loka_3d.png'), 0.25, true)->errorCorrection('Q')->color(0, 0, 0)->style('square')->eye('circle')->margin(3)->color(0, 0, 0)->eyeColor(0, 22, 152, 112, 22, 152, 112)->eyeColor(1, 22, 152, 112, 22, 152, 112)->eyeColor(2, 22, 152, 112, 22, 152, 112)->generate('{{ $booking_code }}'),
+                            QrCode::format('png')->size(132)->format('png')->merge(public_path('storage/avatar_loka_3d.png'), 0.25, true)->errorCorrection('Q')->color(0, 0, 0)->style('square')->eye('circle')->margin(3)->color(0, 0, 0)->eyeColor(0, 22, 152, 112, 22, 152, 112)->eyeColor(1, 22, 152, 112, 22, 152, 112)->eyeColor(2, 22, 152, 112, 22, 152, 112)->generate('202504202134706'),
                         ) !!} " style="margin: 0; padding: 0;"
                             width="132">
                         <p>
                             <strong style="font-size: 12px;">Kode Booking:</strong>
                         </p>
                         <h4 style="color: #169870; font-size: 20px;">
-                            <strong>{{ $booking_code }} </strong>
+                            <strong>202504202134706</strong>
                         </h4>
                     </td>
                 </tr>
@@ -301,34 +255,37 @@
                                         </p>
                                     </td>
                                 </tr>
-
                                 <!--- Item Produk Terbayar  -->
-                                @foreach ($ticket_orders as $ticket_order)
                                 <tr>
                                     <td align="left">
-                                        <table align="center" cellpadding="0" cellspacing="0" width="100%" style="margin-top: .5rem">
+                                        <table align="center" cellpadding="0" cellspacing="0" width="100%"
+                                            style="margin-top: .5rem">
                                             <tbody>
                                                 <tr>
-                                                    <td align="left" class="" width="45%" style="font-size: 12px; line-height: 1.2;">
+                                                    <td align="left" class="" width="45%"
+                                                        style="font-size: 12px; line-height: 1.2;">
                                                         <p>
                                                             <span>
-                                                            {{ $ticket_order['ticket_name'] }}
+                                                                Reservasi Reguler Ticket - Weekend
                                                             </span>
                                                         </p>
                                                     </td>
-                                                    <td align="left" class="" width="15%" style="font-size: 12px; line-height: 1.2;">
+                                                    <td align="left" class="" width="15%"
+                                                        style="font-size: 12px; line-height: 1.2;">
                                                         <p>
-                                                            <span>{{ $ticket_order['quantity'] }} Pax</span>
+                                                            <span>8 Pax</span>
                                                         </p>
                                                     </td>
-                                                    <td align="left" class="" width="15%" style="font-size: 12px; line-height: 1.2;">
+                                                    <td align="left" class="" width="15%"
+                                                        style="font-size: 12px; line-height: 1.2;">
                                                         <p>
-                                                            <span>{{ 'Rp ' . number_format($ticket_order['price'], 0, ',', '.') }}</span>
+                                                            <span>Rp 120.000</span>
                                                         </p>
                                                     </td>
-                                                    <td align="right" class="" width="25%" style="font-size: 12px; line-height: 1.2;">
+                                                    <td align="right" class="" width="25%"
+                                                        style="font-size: 12px; line-height: 1.2;">
                                                         <p>
-                                                            <span>{{ 'Rp ' . number_format($ticket_order['subtotal'], 0, ',', '.') }}</span>
+                                                            <span>Rp 960.000</span>
                                                         </p>
                                                     </td>
                                                 </tr>
@@ -336,8 +293,6 @@
                                         </table>
                                     </td>
                                 </tr>
-                                @endforeach
-
                                 <!--- Total Terbayar  -->
                                 <tr>
                                     <td align="left">
@@ -362,7 +317,7 @@
                                                     <td align="right" class="" width="25%"
                                                         style="font-size: 12px; line-height: 1.2;">
                                                         <p>
-                                                            <strong>{{ 'Rp ' . number_format($amount_total, 0, ',', '.') }}</strong>
+                                                            <strong>Rp 960.000</strong>
                                                         </p>
                                                     </td>
                                                 </tr>
@@ -414,7 +369,7 @@
                                                         style="font-size: 12px; line-height: 1.2;">
                                                         <p>
                                                             <span>
-                                                               {{ $customer_name }}
+                                                                Agnes Cherrly
                                                             </span>
                                                         </p>
                                                     </td>
@@ -442,7 +397,7 @@
                                                         style="font-size: 12px; line-height: 1.2;">
                                                         <p>
                                                             <span>
-                                                                {{ $customer_email }}
+                                                                agnescherrlysairondi@gmail.com
                                                             </span>
                                                         </p>
                                                     </td>
@@ -470,7 +425,7 @@
                                                         style="font-size: 12px; line-height: 1.2;">
                                                         <p>
                                                             <span>
-                                                                {{ $customer_phone }}
+                                                                01326010378
                                                             </span>
                                                         </p>
                                                     </td>
@@ -498,7 +453,7 @@
                                                         style="font-size: 12px; line-height: 1.2;">
                                                         <p>
                                                             <span>
-                                                                {{ $customer_city }} , {{ $customer_province }}
+                                                                Salatiga, Jawa Tengah
                                                             </span>
                                                         </p>
                                                     </td>
@@ -541,7 +496,7 @@
                                                         style="font-size: 12px; line-height: 1.2;">
                                                         <p>
                                                             <span>
-                                                               {{ $payment_method }}
+                                                                BRI Virtual Account
                                                             </span>
                                                         </p>
                                                     </td>
@@ -569,7 +524,7 @@
                                                         style="font-size: 12px; line-height: 1.2;">
                                                         <p>
                                                             <span>
-                                                                {{ $payment_date }}
+                                                                2025-04-20 12:11:39
                                                             </span>
                                                         </p>
                                                     </td>
@@ -597,7 +552,7 @@
                                                         style="font-size: 12px; line-height: 1.2;">
                                                         <p>
                                                             <strong>
-                                                                {{  number_format($amount_total, 0, ',', '.') }}
+                                                                Rp 960.000
                                                             </strong>
                                                         </p>
                                                     </td>

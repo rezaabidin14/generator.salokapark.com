@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GeneratePDFController;
+use App\Http\Controllers\SampleTicketPdfController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -19,3 +20,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::post('/generate-invoice-website-saloka-pdf', [GeneratePDFController::class, 'GenerateInvoiceWebsiteSaloka']);
+Route::post('/generate-invoice-livin-sukha-pdf', [GeneratePDFController::class, 'GenerateInvoiceLivinSukha']);
+
+Route::get('/sample-ticket-pdf', [SampleTicketPdfController::class, 'index']);

@@ -450,63 +450,7 @@
                                             </tbody>
                                         </table>
                                     </td>
-                                </tr>
-                                <!-- Nomor Telpon Pemesan  -->
-                                <tr>
-                                    <td align="left">
-                                        <table align="center" cellpadding="0" cellspacing="0" width="100%"
-                                            style="margin-top: .2rem">
-                                            <tbody>
-                                                <tr>
-                                                    <td align="left" class="" width="20%"
-                                                        style="font-size: 12px; line-height: 1.2;">
-                                                        <p>
-                                                            <span>
-                                                                Telpon
-                                                            </span>
-                                                        </p>
-                                                    </td>
-                                                    <td align="left" class="" width="80%"
-                                                        style="font-size: 12px; line-height: 1.2;">
-                                                        <p>
-                                                            <span>
-                                                                {{ $customer_phone }}
-                                                            </span>
-                                                        </p>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
-                                <!-- Alamat Pemesan  -->
-                                <tr>
-                                    <td align="left">
-                                        <table align="center" cellpadding="0" cellspacing="0" width="100%"
-                                            style="margin-top: .2rem">
-                                            <tbody>
-                                                <tr>
-                                                    <td align="left" class="" width="20%"
-                                                        style="font-size: 12px; line-height: 1.2;">
-                                                        <p>
-                                                            <span>
-                                                                Alamat
-                                                            </span>
-                                                        </p>
-                                                    </td>
-                                                    <td align="left" class="" width="80%"
-                                                        style="font-size: 12px; line-height: 1.2;">
-                                                        <p>
-                                                            <span>
-                                                                {{ $customer_city }} , {{ $customer_province }}
-                                                            </span>
-                                                        </p>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
+                                </tr>                
                             </tbody>
                         </table>
                     </td>

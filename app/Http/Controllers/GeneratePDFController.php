@@ -103,4 +103,77 @@ class GeneratePDFController extends Controller
             ], 500);
         }
     }
+
+
+    public function GenerateInvoiceLivinSukha(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'order_id'          => 'required',
+            'total_ticket'      => 'required',
+            'amount_total'      => 'required',
+            "payment_method"    => 'required',
+            'payment_date'      => 'required',
+            'date_plan'         => 'required',
+            'booking_code'      => 'required',
+            'customer_name'     => 'required',
+            'customer_email'    => 'required',
+            'ticket_orders'     => 'required',
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json([
+                'status' => 'error',
+                'message' => $validator->errors()->first(),
+                'data' => [],
+            ], 422);
+        }
+
+        try {
+            $data = [
+                'order_id'          => $request->order_id,
+                'total_ticket'      => $request->total_ticket,
+                'amount_total'      => $request->amount_total,
+                'payment_method'    => $request->payment_method,
+                'payment_date'      => $request->payment_date,
+                'date_plan'         => $request->date_plan,
+                'booking_code'      => $request->booking_code,
+                'customer_name'     => $request->customer_name,
+                'customer_email'    => $request->customer_email,
+                'ticket_orders'     => $request->ticket_orders,
+            ];
+
+            $data = $this->safeUtf8($data);
+
+            $pdfTicket = Pdf::loadView('pdf.invoice-livin-sukha', $data)
+                ->setPaper('A4', 'portrait')
+                ->setOptions([
+                    'defaultFont'           => 'Open Sauce One',
+                    'isHtml5ParserEnabled'  => true,
+                    'isRemoteEnabled'       => true,
+                ])
+                ->setWarnings(false);
+
+            $pdfTicket->getDomPDF()->getOptions()->setChroot(public_path());
+
+            $fileName = 'Invoice-' . $request->order_id . '.pdf';
+            $path = 'public/invoices/' . $fileName;
+
+            Storage::put($path, $pdfTicket->output());
+
+            return response()->json([
+                'status' => 'success',
+                'message' => 'Invoice berhasil dibuat.',
+                'data' => [
+                    'file_name' => $fileName,
+                    'file_path' => Storage::url($path),
+                ],
+            ]);
+        } catch (\Throwable $th) {
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Terjadi kesalahan generate pdf: ' . $th->getMessage(),
+                'data' => [],
+            ], 500);
+        }
+    }
 }

@@ -45,8 +45,8 @@ return [
          * Times-Roman, Times-Bold, Times-BoldItalic, Times-Italic,
          * Symbol, ZapfDingbats.
          */
-        'font_dir' => public_path('assets/fonts/'),
-        'font_cache' => public_path('assets/fonts/'),
+        'font_dir' => public_path('/assets/fonts/open-sauce-one/ttf'),
+        'font_cache' => public_path('/assets/fonts/open-sauce-one/ttf'),
 
         'fonts' => [
             'Open Sauce One' => [
