@@ -86,17 +86,14 @@
         <tr>
           <td align="left">
             <h4 style="line-height: 1.2; font-size: 20px">
-              <strong>E-ticket</strong>
+              <strong>E-Registration</strong>
             </h4>
             <h6 style="line-height: 1.2; font-size: 16px">
-              <strong>Reservasi Saloka Theme Park</strong>
-            </h6>
-            <h6 style="line-height: 1.2; font-size: 14px; color: #169870; font-weight: 400">
-              <span>ID Pesanan:</span><strong> {{ $order_id }} </strong>
+              <strong>Membership Edu Pride Saloka</strong>
             </h6>
           </td>
           <td align="right">
-            <img src="{{ public_path('assets/images/logosaloka.png') }}"
+            <img src="{{ public_path('assets/images/logoedupride.png') }}"
                  alt=""
                  width="100"
                  class="adapt-img">
