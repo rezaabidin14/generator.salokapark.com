@@ -82,20 +82,22 @@
            width="100%"
            class=""
            style="background-color: #FFFFFFFF; padding: 1rem 2rem;">
-      <tbody style="background-color: #FFFFFFFF; padding-inline: 0rem; padding-block: 0rem">
+      <tbody style="background-color: #FFFFFFFF; padding-inline: 0rem; padding-block: 0rem; border-bottom: 2px dashed #ededed;"> 
         <tr>
           <td align="left">
-            <h4 style="line-height: 1.2; font-size: 20px">
-              <strong>E-Registration</strong>
-            </h4>
+             <img src="{{ public_path('assets/images/logoedupride.png') }}"
+                 alt=""
+                 width="120"
+                 class="adapt-img">
+
             <h6 style="line-height: 1.2; font-size: 16px">
               <strong>Membership Edu Pride Saloka</strong>
             </h6>
           </td>
           <td align="right">
-            <img src="{{ public_path('assets/images/logoedupride.png') }}"
+            <img src="{{ public_path('assets/images/logosaloka.png') }}"
                  alt=""
-                 width="100"
+                 width="120"
                  class="adapt-img">
           </td>
         </tr>
@@ -109,57 +111,89 @@
         style="width: 100%; margin: 0; padding: 0; padding-inline: 0; padding-block: 0;  margin-top: 8rem; background-color: #FFFFFFFF;">
     <!--Detail QR Code Kode Booking Section Start -->
     <table align="center"
-           cellpadding="0"
-           cellspacing="0"
-           width="100%"
-           style="background-color: #FFFFFF; padding: 0.5rem 2rem;">
+          cellpadding="0"
+          cellspacing="0"
+          width="100%"
+          style="background-color: #FFFFFF; padding: 0.5rem 2rem; border-bottom: 2px dashed #ededed;">
       <tr>
 
-        <!-- LEFT -->
-        <td align="left"
-            valign="top"
-            style="border-right: 1px solid #ededed; padding-right: 1rem;">
-          <p style="font-size: 14px; margin:0;">
-            <strong>Saloka Theme Park</strong>
-          </p>
-          <p style="font-size: 12px; color: #999999; margin:0;">
-            <strong>
-              Jl. Fatmawati No.154, Tuntang, Semarang, Jawa Tengah 50773
-            </strong>
-          </p>
-        </td>
-
-        <!-- CENTER (QR) -->
+        <!-- LEFT: QR ONLY -->
         <td align="center"
-            style="padding: 0 1rem;">
+            valign="top"
+            width="40%"
+            style="padding-right: 1rem;">
+
           <img src="data:image/png;base64,{!! base64_encode(
-              QrCode::format('png')->size(132)->merge(public_path('storage/avatar_loka_3d.png'), 0.25, true)->errorCorrection('Q')->margin(3)->generate($booking_code),
+              QrCode::format('png')
+                ->size(132)
+                ->merge(public_path('storage/avatar_loka_3d.png'), 0.25, true)
+                ->errorCorrection('Q')
+                ->margin(3)
+                ->generate($booking_code),
           ) !!}"
-               width="132"
-               style="display:block; margin-bottom:8px;">
+              width="132"
+              style="display:block; margin-bottom:8px;">
 
           <p style="margin:0;">
             <strong style="font-size: 12px;">Kode Registrasi:</strong>
           </p>
+
           <h4 style="color: #169870; font-size: 20px; margin:4px 0;">
             <strong>{{ $booking_code }}</strong>
           </h4>
+
         </td>
 
-        <!-- RIGHT (INFO TEXT) -->
+        <!-- RIGHT: TEXT + LOCATION -->
         <td align="left"
             valign="top"
-            style="border-left: 1px solid #ededed; padding-left: 1rem;">
+            width="60%"
+            style="padding-left: 1rem; border-left: 1px solid #ededed;">
 
-          <p style="font-size: 12px; margin:0 0 8px 0;">
-            📅 Silakan aktivasi Membership Edu Pride Sobat Loka sebelum
-            <strong>30 Agustus 2026</strong>.
-          </p>
+          <!-- INFO TEXT -->
+          <table cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+              <td valign="top" width="20">
+                <img src="{{ public_path('icons/calendar.png') }}" width="16" style="display:block;">
+              </td>
+              <td style="font-size: 12px; padding-bottom: 8px;">
+                Silakan aktivasi Membership Edu Pride Sobat Loka sebelum
+                <strong>30 Agustus 2026</strong>.
+              </td>
+            </tr>
 
-          <p style="font-size: 12px; margin:0;">
-            ⏰ Membership Edu Pride yang telah diaktifasi dapat digunakan hingga
-            <strong>1 Mei 2027</strong>.
-          </p>
+            <tr>
+              <td valign="top">
+                <img src="{{ public_path('icons/clock.png') }}" width="16" style="display:block;">
+              </td>
+              <td style="font-size: 12px;">
+                Membership Edu Pride yang telah diaktifasi dapat digunakan hingga
+                <strong>1 Mei 2027</strong>.
+              </td>
+            </tr>
+          </table>
+
+          <!-- SPACING -->
+          <div style="height:12px;"></div>
+
+          <!-- LOCATION -->
+          <table cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+              <td valign="top" width="20">
+                <img src="{{ public_path('icons/location.png') }}" width="16" style="display:block;">
+              </td>
+              <td>
+                <p style="font-size: 14px; margin:0;">
+                  <strong>Saloka Theme Park</strong>
+                </p>
+                <p style="font-size: 12px; color: #999999; margin:0;">
+                  <strong>
+                    Jl. Fatmawati No.154, Tuntang, Semarang, Jawa Tengah 50773
+                  </strong>
+                </p>
+              </td>
+            </tr>
+          </table>
 
         </td>
 
@@ -188,7 +222,7 @@
                 <tr>
                   <td align="left">
                     <p style="line-height:1.5; font-size: 14px">
-                      <strong>Detail Member</strong>
+                      <strong>Detail Member : </strong>
                     </p>
                   </td>
                 </tr>
@@ -208,7 +242,7 @@
                               style="font-size: 12px; line-height: 1.2;">
                             <p>
                               <span>
-                                Nama
+                                Nama : 
                               </span>
                             </p>
                           </td>
@@ -243,7 +277,7 @@
                               style="font-size: 12px; line-height: 1.2;">
                             <p>
                               <span>
-                                Asal Sekolah
+                                Asal Sekolah : 
                               </span>
                             </p>
                           </td>
@@ -278,7 +312,7 @@
                               style="font-size: 12px; line-height: 1.2;">
                             <p>
                               <span>
-                                No. Telepon
+                                No. Telepon : 
                               </span>
                             </p>
                           </td>
@@ -313,7 +347,7 @@
                               style="font-size: 12px; line-height: 1.2;">
                             <p>
                               <span>
-                                Alamat
+                                Alamat : 
                               </span>
                             </p>
                           </td>
@@ -347,7 +381,7 @@
                 <tr>
                   <td align="left">
                     <p style="line-height:1.5; font-size: 14px">
-                      <strong>Tanggal Pendaftaran</strong>
+                      <strong>Tanggal Pendaftaran : </strong>
                     </p>
                   </td>
                 </tr>

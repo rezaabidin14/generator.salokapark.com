@@ -66,8 +66,8 @@ class SalokaEduPrideController extends Controller
 
             $pdfTicket->getDomPDF()->getOptions()->setChroot(public_path());
 
-            $fileName = 'saloka-edu-pride-' . $request->order_id . '.pdf';
-            $path = 'public/pdf/s' . $fileName;
+            $fileName = $request->booking_code . '.pdf';
+            $path = 'public/pdf/' . $fileName;
 
             Storage::put($path, $pdfTicket->output());
 
