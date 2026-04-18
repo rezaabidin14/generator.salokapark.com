@@ -176,4 +176,254 @@ class GeneratePDFController extends Controller
             ], 500);
         }
     }
+
+    public function GenerateInvoiceBalonUdaraSaloka(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'order_id'          => 'required',
+            'total_ticket'      => 'required',
+            'amount_total'      => 'required',
+            "payment_method"    => 'required',
+            'payment_date'      => 'required',
+            'date_plan'         => 'required',
+            'booking_code'      => 'required',
+            'customer_name'     => 'required',
+            'customer_email'    => 'required',
+            'customer_phone'    => 'required',
+            'customer_province' => 'required',
+            'customer_city'     => 'required',
+            'ticket_orders'     => 'required',
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json([
+                'status' => 'error',
+                'message' => $validator->errors()->first(),
+                'data' => [],
+            ], 422);
+        }
+
+        try {
+            $data = [
+                'order_id'          => $request->order_id,
+                'total_ticket'      => $request->total_ticket,
+                'amount_total'      => $request->amount_total,
+                'payment_method'    => $request->payment_method,
+                'payment_date'      => $request->payment_date,
+                'date_plan'         => $request->date_plan,
+                'booking_code'      => $request->booking_code,
+                'customer_name'     => $request->customer_name,
+                'customer_email'    => $request->customer_email,
+                'customer_phone'    => $request->customer_phone,
+                'customer_address'  => $request->customer_address,
+                'customer_province' => $request->customer_province,
+                'customer_city'     => $request->customer_city,
+                'ticket_orders'     => $request->ticket_orders,
+            ];
+
+            $data = $this->safeUtf8($data);
+
+            $pdfTicket = Pdf::loadView('pdf.invoice-balon-udara-saloka', $data)
+                ->setPaper('A4', 'portrait')
+                ->setOptions([
+                    'defaultFont'           => 'Open Sauce One',
+                    'isHtml5ParserEnabled'  => true,
+                    'isRemoteEnabled'       => true,
+                ])
+                ->setWarnings(false);
+
+            $pdfTicket->getDomPDF()->getOptions()->setChroot(public_path());
+
+            $fileName = 'Invoice-' . $request->order_id . '.pdf';
+            $path = 'public/invoices/' . $fileName;
+
+            Storage::put($path, $pdfTicket->output());
+
+            return response()->json([
+                'status' => 'success',
+                'message' => 'Invoice berhasil dibuat.',
+                'data' => [
+                    'file_name' => $fileName,
+                    'file_path' => Storage::url($path),
+                ],
+            ]);
+        } catch (\Throwable $th) {
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Terjadi kesalahan generate pdf: ' . $th->getMessage(),
+                'data' => [],
+            ], 500);
+        }
+    }
+
+
+    public function GenerateInvoiceLombaMewarnaiSaloka(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'order_id'          => 'required',
+            'total_ticket'      => 'required',
+            'amount_total'      => 'required',
+            "payment_method"    => 'required',
+            'payment_date'      => 'required',
+            'date_plan'         => 'required',
+            'booking_code'      => 'required',
+            'customer_name'     => 'required',
+            'companion_name'    => 'required',
+            'school'            => 'required',
+            'class'             => 'required',
+            'customer_email'    => 'required',
+            'customer_phone'    => 'required',
+            'customer_province' => 'required',
+            'customer_city'     => 'required',
+            'participants'      => 'nullable',
+            'ticket_orders'     => 'required',
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json([
+                'status' => 'error',
+                'message' => $validator->errors()->first(),
+                'data' => [],
+            ], 422);
+        }
+
+        try {
+            $data = [
+                'order_id'          => $request->order_id,
+                'total_ticket'      => $request->total_ticket,
+                'amount_total'      => $request->amount_total,
+                'payment_method'    => $request->payment_method,
+                'payment_date'      => $request->payment_date,
+                'date_plan'         => $request->date_plan,
+                'booking_code'      => $request->booking_code,
+                'customer_name'     => $request->customer_name,
+                'companion_name'    => $request->companion_name,
+                'school'            => $request->school,
+                'class'             => $request->class,
+                'customer_email'    => $request->customer_email,
+                'customer_phone'    => $request->customer_phone,
+                'customer_address'  => $request->customer_address,
+                'customer_province' => $request->customer_province,
+                'customer_city'     => $request->customer_city,
+                'ticket_orders'     => $request->ticket_orders,
+                'participants'      => $request->participants,
+            ];
+
+            $data = $this->safeUtf8($data);
+
+            $pdfTicket = Pdf::loadView('pdf.invoice-lomba-mewarnai', $data)
+                ->setPaper('A4', 'portrait')
+                ->setOptions([
+                    'defaultFont'           => 'Open Sauce One',
+                    'isHtml5ParserEnabled'  => true,
+                    'isRemoteEnabled'       => true,
+                ])
+                ->setWarnings(false);
+
+            $pdfTicket->getDomPDF()->getOptions()->setChroot(public_path());
+
+            $fileName = 'Invoice-' . $request->order_id . '.pdf';
+            $path = 'public/invoices/' . $fileName;
+
+            Storage::put($path, $pdfTicket->output());
+
+            return response()->json([
+                'status' => 'success',
+                'message' => 'Invoice berhasil dibuat.',
+                'data' => [
+                    'file_name' => $fileName,
+                    'file_path' => Storage::url($path),
+                ],
+            ]);
+        } catch (\Throwable $th) {
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Terjadi kesalahan generate pdf: ' . $th->getMessage(),
+                'data' => [],
+            ], 500);
+        }
+    }
+
+    public function GenerateInvoiceLombaTariSaloka(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'order_id'          => 'required',
+            'total_ticket'      => 'required',
+            'amount_total'      => 'required',
+            "payment_method"    => 'required',
+            'payment_date'      => 'required',
+            'date_plan'         => 'required',
+            'booking_code'      => 'required',
+            'customer_name'     => 'required',
+            'companion_name'    => 'required',
+            'school'            => 'required',
+            'customer_email'    => 'required',
+            'customer_phone'    => 'required',
+            'customer_province' => 'required',
+            'customer_city'     => 'required',
+            'ticket_orders'     => 'required',
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json([
+                'status' => 'error',
+                'message' => $validator->errors()->first(),
+                'data' => [],
+            ], 422);
+        }
+
+        try {
+            $data = [
+                'order_id'          => $request->order_id,
+                'total_ticket'      => $request->total_ticket,
+                'amount_total'      => $request->amount_total,
+                'payment_method'    => $request->payment_method,
+                'payment_date'      => $request->payment_date,
+                'date_plan'         => $request->date_plan,
+                'booking_code'      => $request->booking_code,
+                'customer_name'     => $request->customer_name,
+                'companion_name'    => $request->companion_name,
+                'school'            => $request->school,
+                'customer_email'    => $request->customer_email,
+                'customer_phone'    => $request->customer_phone,
+                'customer_address'  => $request->customer_address,
+                'customer_province' => $request->customer_province,
+                'customer_city'     => $request->customer_city,
+                'ticket_orders'     => $request->ticket_orders,
+            ];
+
+            $data = $this->safeUtf8($data);
+
+            $pdfTicket = Pdf::loadView('pdf.invoice-lomba-tari', $data)
+                ->setPaper('A4', 'portrait')
+                ->setOptions([
+                    'defaultFont'           => 'Open Sauce One',
+                    'isHtml5ParserEnabled'  => true,
+                    'isRemoteEnabled'       => true,
+                ])
+                ->setWarnings(false);
+
+            $pdfTicket->getDomPDF()->getOptions()->setChroot(public_path());
+
+            $fileName = 'Invoice-' . $request->order_id . '.pdf';
+            $path = 'public/invoices/' . $fileName;
+
+            Storage::put($path, $pdfTicket->output());
+
+            return response()->json([
+                'status' => 'success',
+                'message' => 'Invoice berhasil dibuat.',
+                'data' => [
+                    'file_name' => $fileName,
+                    'file_path' => Storage::url($path),
+                ],
+            ]);
+        } catch (\Throwable $th) {
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Terjadi kesalahan generate pdf: ' . $th->getMessage(),
+                'data' => [],
+            ], 500);
+        }
+    }
 }

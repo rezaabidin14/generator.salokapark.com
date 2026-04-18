@@ -41,6 +41,7 @@ class GenereteQrCodeController extends Controller
                 'DS010' => 'DP013', //Finance & Accounting
                 'DS046' => 'DP005', //Inpark Revenue
                 'DS019' => 'DP008', //Sales
+                'DS040' => 'DP015', //Marketing
                 // kurang marketing
             ];
 
@@ -117,7 +118,7 @@ class GenereteQrCodeController extends Controller
             'id_departemen' => 'required|min:4',
             'departemen' => 'required|min:2',
             'id_sub_departemen' => 'required|min:4',
-            'sub_departemen' => 'required|min:4',
+            'sub_departemen' => 'required|min:2',
             'qr_codes' => 'required|array|min:1',
             'qr_codes.*.link_qr' => 'required|string|min:5',
             'qr_codes.*.note_qr' => 'required|string|min:5',
@@ -330,7 +331,7 @@ class GenereteQrCodeController extends Controller
         }
 
         // cek id grade dulu
-        if (!in_array($request->id_grade, ['LV-002', 'LV-004'])) {
+        if (!in_array($request->id_grade, ['LV-001', 'LV-002', 'LV-004'])) {
             return response()->json([
                 'status'  => 'error',
                 'message' => 'Hanya bisa disetujui oleh SPV atau Manager',

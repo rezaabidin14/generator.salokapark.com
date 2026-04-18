@@ -5,7 +5,10 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GeneratePDFController;
 use App\Http\Controllers\GenereteQrCodeController;
+use App\Http\Controllers\GenerateExcelController;
+use App\Http\Controllers\GenerateImageFromSheet;
 use App\Http\Controllers\SampleTicketPdfController;
+use App\Http\Controllers\GenerateEmailInformationPdfController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -23,6 +26,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::post('/generate-invoice-website-saloka-pdf', [GeneratePDFController::class, 'GenerateInvoiceWebsiteSaloka']);
 Route::post('/generate-invoice-livin-sukha-pdf', [GeneratePDFController::class, 'GenerateInvoiceLivinSukha']);
+Route::post('/generate-invoice-balon-udara-saloka-pdf', [GeneratePDFController::class, 'GenerateInvoiceBalonUdaraSaloka']);
+Route::post('/generate-invoice-lomba-mewarnai-saloka-pdf', [GeneratePDFController::class, 'GenerateInvoiceLombaMewarnaiSaloka']);
+Route::post('/generate-invoice-lomba-tari-saloka-pdf', [GeneratePDFController::class, 'GenerateInvoiceLombaTariSaloka']);
 
 Route::get('/sample-ticket-pdf', [SampleTicketPdfController::class, 'index']);
 
@@ -37,3 +43,16 @@ Route::post('/generete-qrcode-submit/{id}', [GenereteQrCodeController::class, 's
 // Detail Qr Code
 Route::post('/qrcode-create/{id}', [DetailQrCodeController::class, 'store'])->name('detail-qrcode-create');
 Route::post('/qrcode-update/{id}', [DetailQrCodeController::class, 'update'])->name('detail-qrcode-update');
+
+// Generete Excel
+Route::post('/generete-excel-jathilan', [GenerateExcelController::class, 'exportExcelEventJathilan'])->name('generete-excel');
+Route::post('/generete-excel-mewarnai', [GenerateExcelController::class, 'exportExcelEventMewarnai'])->name('generete-excel-mewarnai');
+Route::post('/generete-excel-membership-hallowen', [GenerateExcelController::class, 'exportExcelEventMembershipHallowen'])->name('generete-excel-membership');
+Route::post('/generete-excel-tari-kreasi-supporter', [GenerateExcelController::class, 'exportExcelTariKreasiSupporter'])->name('generete-excel-tari-kreasi-supporter');
+Route::post('/generete-excel-tari-kreasi', [GenerateExcelController::class, 'exportExcelTariKreasi'])->name('generete-excel-tari-kreasi');
+
+// Generate PDF Email
+Route::post('/generate-email-information', [GenerateEmailInformationPdfController::class, 'GenerateEmailInformation']);
+
+// Generate Image From Sheet
+Route::get('/generate-image-from-sheet', [GenerateImageFromSheet::class, 'sheetToImage']);
