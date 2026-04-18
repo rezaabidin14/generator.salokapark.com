@@ -76,32 +76,36 @@
 
   <!--Header Section Start -->
   <div class="header">
-    <table align="center"
-           cellpadding="0"
-           cellspacing="0"
-           width="100%"
-           class=""
-           style="background-color: #FFFFFFFF; padding: 1rem 2rem;">
-      <tbody style="background-color: #FFFFFFFF; padding-inline: 0rem; padding-block: 0rem; border-bottom: 2px dashed #ededed;"> 
-        <tr>
-          <td align="left">
-             <img src="{{ public_path('assets/images/logoedupride.png') }}"
-                 alt=""
-                 width="120"
-                 class="adapt-img">
+      <table align="center"
+          cellpadding="0"
+          cellspacing="0"
+          width="100%"
+          style="background-color: #FFFFFF; border-bottom: 2px dashed #ededed; margin-bottom: 2rem;">
+      <tr>
 
-            <h6 style="line-height: 1.2; font-size: 16px">
-              <strong>Membership Edu Pride Saloka</strong>
-            </h6>
-          </td>
-          <td align="right">
-            <img src="{{ public_path('assets/images/logosaloka.png') }}"
-                 alt=""
-                 width="120"
-                 class="adapt-img">
-          </td>
-        </tr>
-      </tbody>
+        <!-- LEFT -->
+        <td align="left"
+            style="padding: 1rem 2rem;">
+            
+          <img src="{{ public_path('assets/images/logoedupride.png') }}"
+              width="120"
+              style="display:block; margin-bottom:8px;">
+
+          <h6 style="line-height: 1.2; font-size: 16px; margin:0;">
+            <strong>Membership Edu Pride Saloka</strong>
+          </h6>
+        </td>
+
+        <!-- RIGHT -->
+        <td align="right"
+            style="padding: 1rem 2rem;">
+            
+          <img src="{{ public_path('assets/images/logosaloka.png') }}"
+              width="120"
+              style="display:block;">
+        </td>
+
+      </tr>
     </table>
   </div>
   <!--Header Section End -->
@@ -203,216 +207,70 @@
 
     <!--Detail Detail Pemesan & Metode Pembayaran Section Start -->
     <table align="center"
-           cellpadding="0"
-           cellspacing="0"
-           width="100%"
-           class=""
-           style="background-color: #FFFFFFFF; padding: 0rem 0rem; border-bottom: 2px dashed #ededed;">
-      <tbody style="background-color: #FFFFFFFF; padding-inline: 0rem; padding-block: 0rem">
+          cellpadding="0"
+          cellspacing="0"
+          width="100%"
+          style="background-color:#FFFFFF; border-bottom:2px dashed #ededed; table-layout:fixed;">
+      <tbody>
         <tr>
-          <!--Detail Detail Pemesan -->
-          <td align="left"
-              valign="top">
-            <table align="center"
-                   cellpadding="0"
-                   cellspacing="0"
-                   width="100%"
-                   style="background-color: #FFFFFFFF; padding: 1rem 2rem;">
-              <tbody>
-                <tr>
-                  <td align="left">
-                    <p style="line-height:1.5; font-size: 14px">
-                      <strong>Detail Member : </strong>
-                    </p>
-                  </td>
-                </tr>
-                <!-- Nama Pemesan  -->
-                <tr>
-                  <td align="left">
-                    <table align="center"
-                           cellpadding="0"
-                           cellspacing="0"
-                           width="100%"
-                           style="margin-top: .5rem">
-                      <tbody>
-                        <tr>
-                          <td align="left"
-                              class=""
-                              width="20%"
-                              style="font-size: 12px; line-height: 1.2;">
-                            <p>
-                              <span>
-                                Nama : 
-                              </span>
-                            </p>
-                          </td>
-                          <td align="left"
-                              class=""
-                              width="80%"
-                              style="font-size: 12px; line-height: 1.2;">
-                            <p>
-                              <span>
-                                {{ $name }}
-                              </span>
-                            </p>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </td>
-                </tr>
-                <!-- Email Pemesan  -->
-                <tr>
-                  <td align="left">
-                    <table align="center"
-                           cellpadding="0"
-                           cellspacing="0"
-                           width="100%"
-                           style="margin-top: .2rem">
-                      <tbody>
-                        <tr>
-                          <td align="left"
-                              class=""
-                              width="20%"
-                              style="font-size: 12px; line-height: 1.2;">
-                            <p>
-                              <span>
-                                Asal Sekolah : 
-                              </span>
-                            </p>
-                          </td>
-                          <td align="left"
-                              class=""
-                              width="80%"
-                              style="font-size: 12px; line-height: 1.2;">
-                            <p>
-                              <span>
-                                {{ $school }}
-                              </span>
-                            </p>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </td>
-                </tr>
-                <!-- Nomor Telpon Pemesan  -->
-                <tr>
-                  <td align="left">
-                    <table align="center"
-                           cellpadding="0"
-                           cellspacing="0"
-                           width="100%"
-                           style="margin-top: .2rem">
-                      <tbody>
-                        <tr>
-                          <td align="left"
-                              class=""
-                              width="20%"
-                              style="font-size: 12px; line-height: 1.2;">
-                            <p>
-                              <span>
-                                No. Telepon : 
-                              </span>
-                            </p>
-                          </td>
-                          <td align="left"
-                              class=""
-                              width="80%"
-                              style="font-size: 12px; line-height: 1.2;">
-                            <p>
-                              <span>
-                                {{ $phone }}
-                              </span>
-                            </p>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </td>
-                </tr>
-                <!-- Alamat Pemesan  -->
-                <tr>
-                  <td align="left">
-                    <table align="center"
-                           cellpadding="0"
-                           cellspacing="0"
-                           width="100%"
-                           style="margin-top: .2rem">
-                      <tbody>
-                        <tr>
-                          <td align="left"
-                              class=""
-                              width="20%"
-                              style="font-size: 12px; line-height: 1.2;">
-                            <p>
-                              <span>
-                                Alamat : 
-                              </span>
-                            </p>
-                          </td>
-                          <td align="left"
-                              class=""
-                              width="80%"
-                              style="font-size: 12px; line-height: 1.2;">
-                            <p>
-                              <span>
-                                {{ $address }}
-                              </span>
-                            </p>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </td>
-                </tr>
-              </tbody>
+
+          <!-- LEFT -->
+          <td valign="top" width="65%" style="padding:1rem 2rem;">
+
+            <p style="font-size:14px; margin:0 0 10px 0;">
+              <strong>Detail Member :</strong>
+            </p>
+
+            <table width="100%" cellpadding="0" cellspacing="0" style="table-layout:fixed;">
+              
+              <tr>
+                <td width="15%" style="font-size:12px;">Nama</td>
+                <td width="5%" style="font-size:12px;">:</td>
+                <td width="80%" style="font-size:12px; word-break:break-word;">
+                  {{ $name }}
+                </td>
+              </tr>
+
+              <tr>
+                <td style="font-size:12px; padding-top:4px;">Sekolah</td>
+                <td style="font-size:12px; padding-top:4px;">:</td>
+                <td style="font-size:12px; padding-top:4px; word-break:break-word;">
+                  {{ $school }}
+                </td>
+              </tr>
+
+              <tr>
+                <td style="font-size:12px; padding-top:4px;">Telepon</td>
+                <td style="font-size:12px; padding-top:4px;">:</td>
+                <td style="font-size:12px; padding-top:4px; word-break:break-word;">
+                  {{ $phone }}
+                </td>
+              </tr>
+
+              <tr>
+                <td style="font-size:12px; padding-top:4px;">Alamat</td>
+                <td style="font-size:12px; padding-top:4px;">:</td>
+                <td style="font-size:12px; padding-top:4px; word-break:break-word;">
+                  {{ $address }}
+                </td>
+              </tr>
+
             </table>
           </td>
-          <!-- Metode Pembayaran -->
-          <td align="left"
-              valign="top">
-            <table align="center"
-                   cellpadding="0"
-                   cellspacing="0"
-                   width="100%"
-                   style="background-color: #FFFFFFFF; padding: 1rem 2rem;">
-              <tbody>
-                <tr>
-                  <td align="left">
-                    <p style="line-height:1.5; font-size: 14px">
-                      <strong>Tanggal Pendaftaran : </strong>
-                    </p>
-                  </td>
-                </tr>
-                <!-- Metode Pembayaran -->
-                <tr>
-                  <td align="left">
-                    <table align="center"
-                           cellpadding="0"
-                           cellspacing="0"
-                           width="100%"
-                           style="margin-top: .5rem">
-                      <tbody>
-                        <tr>
-                          <td align="left"
-                              class=""
-                              width="50%"
-                              style="font-size: 12px; line-height: 1.2;">
-                            <p>
-                              <span>
-                                {{ $registration_date }}
-                              </span>
-                            </p>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+
+          <!-- RIGHT -->
+          <td valign="top" width="35%" style="padding:1rem 2rem;">
+
+            <p style="font-size:14px; margin:0 0 10px 0;">
+              <strong>Tanggal Pendaftaran :</strong>
+            </p>
+
+            <p style="font-size:12px; margin:0; word-break:break-word;">
+              {{ $registration_date }}
+            </p>
+
           </td>
+
         </tr>
       </tbody>
     </table>
