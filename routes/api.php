@@ -10,6 +10,7 @@ use App\Http\Controllers\GenerateImageFromSheet;
 use App\Http\Controllers\SampleTicketPdfController;
 use App\Http\Controllers\GenerateEmailInformationPdfController;
 use App\Http\Controllers\SalokaEduPrideController;
+use App\Http\Controllers\SalokaPHRDController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -31,6 +32,7 @@ Route::post('/generate-invoice-balon-udara-saloka-pdf', [GeneratePDFController::
 Route::post('/generate-invoice-lomba-mewarnai-saloka-pdf', [GeneratePDFController::class, 'GenerateInvoiceLombaMewarnaiSaloka']);
 Route::post('/generate-invoice-lomba-tari-saloka-pdf', [GeneratePDFController::class, 'GenerateInvoiceLombaTariSaloka']);
 Route::post('/generate-saloka-edu-pride-pdf', [SalokaEduPrideController::class, 'GeneratePdf']);
+Route::post('/generate-saloka-phrd-pdf', [SalokaPHRDController::class, 'GeneratePdf']);
 
 Route::get('/sample-ticket-pdf', [SampleTicketPdfController::class, 'index']);
 
