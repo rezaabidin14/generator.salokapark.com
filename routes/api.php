@@ -7,7 +7,6 @@ use App\Http\Controllers\GeneratePDFController;
 use App\Http\Controllers\GenereteQrCodeController;
 use App\Http\Controllers\GenerateExcelController;
 use App\Http\Controllers\GenerateImageFromSheet;
-use App\Http\Controllers\SampleTicketPdfController;
 use App\Http\Controllers\GenerateEmailInformationPdfController;
 use App\Http\Controllers\SalokaEduPrideController;
 use App\Http\Controllers\SalokaPHRDController;
@@ -33,8 +32,8 @@ Route::post('/generate-invoice-lomba-mewarnai-saloka-pdf', [GeneratePDFControlle
 Route::post('/generate-invoice-lomba-tari-saloka-pdf', [GeneratePDFController::class, 'GenerateInvoiceLombaTariSaloka']);
 Route::post('/generate-saloka-edu-pride-pdf', [SalokaEduPrideController::class, 'GeneratePdf']);
 Route::post('/generate-saloka-phrd-pdf', [SalokaPHRDController::class, 'GeneratePdf']);
+Route::post('/generate-saloka-phrd-sertificate', [SalokaPHRDController::class, 'GenerateSertificate']);
 
-Route::get('/sample-ticket-pdf', [SampleTicketPdfController::class, 'index']);
 
 // Generete QR Code
 Route::post('/generete-qrcode-create', [GenereteQrCodeController::class, 'store'])->name('generete-qrcode-create');
