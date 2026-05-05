@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SalokafestController;
+use App\Http\Controllers\SalokaPHRDController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/salokafest', [SalokafestController::class, 'previewPdf'])->name('salokafest');
+Route::get('/phrd_sertificate', [SalokaPHRDController::class, 'GenerateSertificate'])->name('phrd_certificate');
