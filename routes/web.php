@@ -14,6 +14,9 @@ use App\Http\Controllers\SalokaPHRDController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('/', function () {
+    return view('welcome');
+});
 
 Route::get('/salokafest', [SalokafestController::class, 'previewPdf'])->name('salokafest');
 Route::get('/phrd_sertificate', [SalokaPHRDController::class, 'GenerateSertificate'])->name('phrd_certificate');

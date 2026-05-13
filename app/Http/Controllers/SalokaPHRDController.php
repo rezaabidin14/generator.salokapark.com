@@ -122,8 +122,6 @@ class SalokaPHRDController extends Controller
 
             $pdfTicket->getDomPDF()->getOptions()->setChroot(public_path());
 
-            return $pdfTicket->stream();
-
             $fileName = $request->name . '.pdf';
             $path = 'public/pdf/' . $fileName;
 

@@ -98,13 +98,9 @@
         <td align="left"
             style="padding: 1rem 2rem;">
 
-          {{-- <img src="{{ public_path('assets/images/logoedupride.png') }}"
+          <img src="{{ public_path('assets/images/logo_jambore_hr_2026.png') }}"
               width="120"
-              style="display:block; margin-bottom:8px;"> --}}
-
-          <h6 style="line-height: 1.2; font-size: 16px; margin:0;">
-            <strong>HR AMAZING RIDES 2026</strong>
-          </h6>
+              style="display:block; margin-bottom:8px;">
         </td>
 
         <!-- RIGHT -->

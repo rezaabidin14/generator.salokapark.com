@@ -10,6 +10,7 @@ use App\Http\Controllers\GenerateImageFromSheet;
 use App\Http\Controllers\GenerateEmailInformationPdfController;
 use App\Http\Controllers\SalokaEduPrideController;
 use App\Http\Controllers\SalokaPHRDController;
+use App\Http\Controllers\SalokafestController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -33,6 +34,7 @@ Route::post('/generate-invoice-lomba-tari-saloka-pdf', [GeneratePDFController::c
 Route::post('/generate-saloka-edu-pride-pdf', [SalokaEduPrideController::class, 'GeneratePdf']);
 Route::post('/generate-saloka-phrd-pdf', [SalokaPHRDController::class, 'GeneratePdf']);
 Route::post('/generate-saloka-phrd-sertificate', [SalokaPHRDController::class, 'GenerateSertificate']);
+Route::post('/generate-salokafest-pdf', [SalokafestController::class, 'GeneratePdf']);
 
 
 // Generete QR Code
