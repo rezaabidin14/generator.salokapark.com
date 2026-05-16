@@ -33,32 +33,23 @@ class SalokafestController extends Controller
     private function mapData(Request $request)
     {
         return $this->safeUtf8([
-            'order_id'          => $request->order_id ?? 'INV-' . uniqid(),
-            'booking_code'      => $request->booking_code ?? 'TEST-123',
+            'order_id'          => $request->order_id,
+            'booking_code'      => $request->booking_code,
 
-            'customer_name'     => $request->name ?? 'John Doe',
-            'customer_email'    => $request->email ?? 'email@example.com',
-            'customer_phone'    => $request->phone ?? '08123456789',
-            'customer_province' => $request->address ?? 'Indonesia',
-            'customer_city'     => $request->address ?? 'Jakarta',
+            'customer_name'     => $request->customer_name,
+            'customer_email'    => $request->customer_email,
+            'customer_phone'    => $request->customer_phone,
+            'customer_province' => $request->customer_province,
+            'customer_city'     => $request->customer_city,
 
-            'registration_date' => $request->registration_date ?? now(),
-            'date_plan'         => $request->date_plan ?? now(),
+            'transaction_date'  => $request->transaction_date,
+            
+            'amount_total'      => $request->amount_total,
 
-            'total_ticket'      => $request->total_ticket ?? 1,
-            'amount_total'      => $request->amount_total ?? 100000,
+            'payment_method'    => $request->payment_method,
+            'payment_date'      => $request->payment_date,
 
-            'payment_method'    => $request->payment_method ?? 'BCA Virtual Account',
-            'payment_date'      => $request->payment_date ?? now(),
-
-            'ticket_orders'     => $request->ticket_orders ?? [
-                [
-                    'ticket_name' => 'Single Day',
-                    'price'       => 100000,
-                    'quantity'    => 1,
-                    'subtotal'    => 100000,
-                ]
-            ],
+            'ticket_orders'     => $request->ticket_orders 
         ]);
     }
 
@@ -87,22 +78,6 @@ class SalokafestController extends Controller
      */
     public function GeneratePdf(Request $request)
     {
-        $validator = Validator::make($request->all(), [
-            'booking_code'      => 'required',
-            'name'              => 'required',
-            'phone'             => 'required',
-            'address'           => 'required',
-            'registration_date' => 'required|date',
-        ]);
-
-        if ($validator->fails()) {
-            return response()->json([
-                'status'  => 'error',
-                'message' => $validator->errors()->first(),
-                'data'    => [],
-            ], 422);
-        }
-
         try {
             $data = $this->mapData($request);
 

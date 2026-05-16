@@ -359,7 +359,20 @@
 
             <tr>
               <td style="padding:6px 0 10px 0;">
-                <strong>{{ $registration_date }}</strong>
+                <strong>{{ $transaction_date }}</strong>
+              </td>
+            </tr>
+
+            <tr>
+              <td width="120"
+                  style="padding:6px 0; color:#666;">
+                Waktu Pembayaran
+              </td>
+            </tr>
+
+            <tr>
+              <td style="padding:6px 0 10px 0;">
+                <strong>{{ $payment_date }}</strong>
               </td>
             </tr>
 
