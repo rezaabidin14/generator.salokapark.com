@@ -103,7 +103,7 @@
               <strong>E-ticket</strong>
             </h4>
             <h6 style="line-height: 1.2; font-size: 14px">
-              <strong>Jambore HR 2026</strong>
+              <strong>Lomba Tari Kreasi Saloka 2026</strong>
             </h6>
             <h6 style="line-height: 1.2; font-size: 12px; color: #169870; font-weight: 400">
               <span>ID Pesanan:</span>
