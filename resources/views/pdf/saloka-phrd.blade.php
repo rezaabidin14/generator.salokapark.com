@@ -94,30 +94,6 @@
            cellpadding="0"
            cellspacing="0"
            width="100%"
-<<<<<<< HEAD
-           style="background-color: transparent; border-bottom: 2px dashed #ededed; margin-bottom: 2rem;">
-      <tr>
-
-        <!-- LEFT -->
-        <td align="left"
-            style="padding: 1rem 2rem;">
-
-          <img src="{{ public_path('assets/images/logo_jambore_hr_2026.png') }}"
-              width="120"
-              style="display:block; margin-bottom:8px;">
-        </td>
-
-        <!-- RIGHT -->
-        <td align="right"
-            style="padding: 1rem 2rem;">
-
-          <img src="{{ public_path('assets/images/logosaloka.png') }}"
-               width="120"
-               style="display:block;">
-        </td>
-
-      </tr>
-=======
            class=""
            style="background-color: #FFFFFFFF; padding: 1rem 2rem;">
       <tbody style="background-color: #FFFFFFFF; padding-inline: 0rem; padding-block: 0rem">
@@ -147,7 +123,6 @@
           </td>
         </tr>
       </tbody>
->>>>>>> 7c7e3ef206275dbcbd66fe0a6a9c583354e238ca
     </table>
   </div>
   <!--Header Section End -->
