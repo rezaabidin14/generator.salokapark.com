@@ -27,12 +27,19 @@ class SalokaPHRDController extends Controller
     public function GeneratePdf(Request $request)
     {
         $validator = Validator::make($request->all(), [
+            'order_id'          => 'required',
+            'total_ticket'      => 'required',
+            'amount_total'      => 'required',
+            "payment_method"    => 'required',
+            'payment_date'      => 'required',
+            'date_plan'         => 'required',
             'booking_code'      => 'required',
-            'name'              => 'required',
-            'company'            => 'required',
-            'phone'             => 'required',
-            'address'           => 'required',
-            'registration_date' => 'required|date',
+            'customer_name'     => 'required',
+            'customer_email'    => 'required',
+            'customer_phone'    => 'required',
+            'customer_province' => 'required',
+            'customer_city'     => 'required',
+            'ticket_orders'     => 'required',
         ]);
 
         if ($validator->fails()) {
@@ -45,12 +52,19 @@ class SalokaPHRDController extends Controller
 
         try {
             $data = [
+                'order_id'          => $request->order_id,
+                'total_ticket'      => $request->total_ticket,
+                'amount_total'      => $request->amount_total,
+                'payment_method'    => $request->payment_method,
+                'payment_date'      => $request->payment_date,
+                'date_plan'         => $request->date_plan,
                 'booking_code'      => $request->booking_code,
-                'name'              => $request->name,
-                'company'            => $request->company,
-                'phone'             => $request->phone,
-                'address'           => $request->address,
-                'registration_date' => $request->registration_date,
+                'customer_name'     => $request->customer_name,
+                'customer_email'    => $request->customer_email,
+                'customer_phone'    => $request->customer_phone,
+                'customer_province' => $request->customer_province,
+                'customer_city'     => $request->customer_city,
+                'ticket_orders'     => $request->ticket_orders
             ];
 
             $data = $this->safeUtf8($data);

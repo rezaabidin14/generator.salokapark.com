@@ -7,18 +7,32 @@
         content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible"
         content="ie=edge">
+  <title>Reservasi Tiket Saloka Theme Park</title>
 </head>
 <style>
   @page {
     margin: 0cm;
   }
 
-
-
   body {
     font-family: "Poppins", sans-serif;
-    margin: 0cm;
-    padding: 0cm;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url("{{ public_path('images/background_saloka.jpg') }}");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    /* ubah sesuai kebutuhan */
+    z-index: -1;
   }
 
   main {
@@ -64,17 +78,6 @@
     right: 0px;
     text-align: center;
   }
-
-  body {
-    font-family: "Poppins", sans-serif;
-    margin: 0;
-    padding: 0;
-
-    background-image: url("{{ public_path('images/background_saloka.jpg') }}");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
 </style>
 
 <body style="margin: 0; padding: 0;">
@@ -91,6 +94,7 @@
            cellpadding="0"
            cellspacing="0"
            width="100%"
+<<<<<<< HEAD
            style="background-color: transparent; border-bottom: 2px dashed #ededed; margin-bottom: 2rem;">
       <tr>
 
@@ -113,207 +117,140 @@
         </td>
 
       </tr>
+=======
+           class=""
+           style="background-color: #FFFFFFFF; padding: 1rem 2rem;">
+      <tbody style="background-color: #FFFFFFFF; padding-inline: 0rem; padding-block: 0rem">
+        <tr>
+          <td align="left">
+            <h4 style="line-height: 1.2; font-size: 20px">
+              <strong>E-ticket</strong>
+            </h4>
+            <h6 style="line-height: 1.2; font-size: 16px">
+              <strong>Jambore HR 2026</strong>
+            </h6>
+            <h6 style="line-height: 1.2; font-size: 14px; color: #169870; font-weight: 400">
+              <span>ID Pesanan:</span><strong> {{ $order_id }} </strong>
+            </h6>
+          </td>
+          <td align="center">
+            <img src="{{ public_path('assets/images/logo_jambore_hr_2026.png') }}"
+                 alt=""
+                 width="100"
+                 class="adapt-img">
+          </td>
+          <td align="right">
+            <img src="{{ public_path('assets/images/logosaloka.png') }}"
+                 alt=""
+                 width="100"
+                 class="adapt-img">
+          </td>
+        </tr>
+      </tbody>
+>>>>>>> 7c7e3ef206275dbcbd66fe0a6a9c583354e238ca
     </table>
   </div>
   <!--Header Section End -->
 
   <!--Detail Tiket Section Start -->
   <main
-        style="width: 100%; margin: 0; padding: 0; padding-inline: 0; padding-block: 0;  margin-top: 8rem; background-color: transparent;">
+        style="width: 100%; margin: 0; padding: 0; padding-inline: 0; padding-block: 0;  margin-top: 8rem; background-color: #FFFFFFFF;">
     <!--Detail QR Code Kode Booking Section Start -->
     <table align="center"
            cellpadding="0"
            cellspacing="0"
            width="100%"
-           style="background-color: transparent; padding: 0.5rem 2rem; border-bottom: 2px dashed #ededed;">
-      <tr>
-
-        <!-- LEFT: QR ONLY -->
-        <td align="center"
-            valign="top"
-            width="40%"
-            style="padding-right: 1rem;">
-
-          <img src="data:image/png;base64,{!! base64_encode(
-              QrCode::format('png')->size(132)->merge(public_path('storage/avatar_loka_3d.png'), 0.25, true)->errorCorrection('Q')->margin(3)->generate($booking_code),
-          ) !!}"
-               width="132"
-               style="display:block; margin-bottom:8px;">
-
-          <p style="margin:0;">
-            <strong style="font-size: 12px;">Kode Registrasi:</strong>
-          </p>
-
-          <h4 style="color: #169870; font-size: 20px; margin:4px 0;">
-            <strong>{{ $booking_code }}</strong>
-          </h4>
-
-        </td>
-
-        <!-- RIGHT: TEXT + LOCATION -->
-        <td align="left"
-            valign="top"
-            width="60%"
-            style="padding-left: 1rem; border-left: 1px solid #ededed;">
-
-          <!-- INFO TEXT -->
-          <table cellpadding="0"
-                 cellspacing="0"
-                 width="100%">
-            <tr>
-              <td valign="top"
-                  width="20">
-                <img src="{{ public_path('icons/calendar.png') }}"
-                     width="16"
-                     style="display:block;">
-              </td>
-              <td style="font-size: 12px; padding-bottom: 8px;">
-                Silakan aktivasi Membership Edu Pride Sobat Loka sebelum
-                <strong>30 Agustus 2026</strong>.
-              </td>
-            </tr>
-
-            <tr>
-              <td valign="top">
-                <img src="{{ public_path('icons/clock.png') }}"
-                     width="16"
-                     style="display:block;">
-              </td>
-              <td style="font-size: 12px;">
-                Membership Edu Pride yang telah diaktifasi dapat digunakan hingga
-                <strong>1 Mei 2027</strong>.
-              </td>
-            </tr>
-          </table>
-
-          <!-- SPACING -->
-          <div style="height:12px;"></div>
-
-          <!-- LOCATION -->
-          <table cellpadding="0"
-                 cellspacing="0"
-                 width="100%">
-            <tr>
-              <td valign="top"
-                  width="20">
-                <img src="{{ public_path('icons/location.png') }}"
-                     width="16"
-                     style="display:block;">
-              </td>
-              <td>
-                <p style="font-size: 14px; margin:0;">
-                  <strong>Saloka Theme Park</strong>
-                </p>
-                <p style="font-size: 12px; color: #999999; margin:0;">
-                  <strong>
-                    Jl. Fatmawati No.154, Tuntang, Semarang, Jawa Tengah 50773
-                  </strong>
-                </p>
-              </td>
-            </tr>
-          </table>
-
-        </td>
-
-      </tr>
-    </table>
-    <!--Detail QR Code Kode Booking Section End -->
-
-    <!--Detail Detail Pemesan & Metode Pembayaran Section Start -->
-    <table align="center"
-           cellpadding="0"
-           cellspacing="0"
-           width="100%"
-           style="background-color: transparent; border-bottom:2px dashed #ededed; table-layout:fixed;">
-      <tbody>
+           class=""
+           style="background-color: #FFFFFFFF; padding: 0.5rem 2rem;">
+      <tbody style="background-color: #FFFFFFFF; padding-inline: 0rem; padding-block: 0rem">
         <tr>
-
-          <!-- LEFT -->
-          <td valign="top"
-              width="65%"
-              style="padding:1rem 2rem;">
-
-            <p style="font-size:14px; margin:0 0 10px 0;">
-              <strong>Detail Peserta:</strong>
+          <td align="left"
+              valign="top"
+              style="border-right: 1px solid #ededed; padding-right: .5rem; padding-left: 0rem;">
+            <p class="es-text-mobile-size-16"
+               style="font-size: 14px; line-height: 1.2">
+              <strong>Saloka Theme Park</strong>
             </p>
-
-            <table width="100%"
+            <p class="es-text-mobile-size-14"
+               style="font-size: 12px; line-height: 1.2; color: #999999;">
+              <strong>
+                Jl. Fatmawati No.154, Tuntang, Semarang, Jawa Tengah 50773
+              </strong>
+            </p>
+          </td>
+          <td align="left"
+              valign="top"
+              style="border-right: 1px solid #ededed; padding-right: 1rem; padding-left: 1rem;">
+            <table align="center"
                    cellpadding="0"
                    cellspacing="0"
-                   style="table-layout:fixed;">
-
-              <tr>
-                <td width="15%"
-                    style="font-size:12px;">Nama</td>
-                <td width="5%"
-                    style="font-size:12px;">:</td>
-                <td width="80%"
-                    style="font-size:12px; word-break:break-word;">
-                  {{ $name }}
-                </td>
-              </tr>
-
-              <tr>
-                <td style="font-size:12px; padding-top:4px;">Perusahaan</td>
-                <td style="font-size:12px; padding-top:4px;">:</td>
-                <td style="font-size:12px; padding-top:4px; word-break:break-word;">
-                  {{ $company }}
-                </td>
-              </tr>
-
-              <tr>
-                <td style="font-size:12px; padding-top:4px;">Telepon</td>
-                <td style="font-size:12px; padding-top:4px;">:</td>
-                <td style="font-size:12px; padding-top:4px; word-break:break-word;">
-                  {{ $phone }}
-                </td>
-              </tr>
-
-              <tr>
-                <td style="font-size:12px; padding-top:4px;">Alamat</td>
-                <td style="font-size:12px; padding-top:4px;">:</td>
-                <td style="font-size:12px; padding-top:4px; word-break:break-word;">
-                  {{ $address }}
-                </td>
-              </tr>
-
+                   width="100%"
+                   style="background-color: #ffffff;">
+              <tbody>
+                <tr>
+                  <td align="left">
+                    <div
+                         style="display: flex; align-items: center; font-size: 12px; line-height: 1.2; white-space: nowrap;">
+                      <img src="{{ public_path('assets/images/calender_png.png') }}"
+                           alt="calendar"
+                           width="16"
+                           height="16"
+                           style="margin-right: 6px; vertical-align: middle;">
+                      <span style="vertical-align: middle; white-space: nowrap;">
+                        Tgl Kedatangan: {{ $date_plan }}
+                      </span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="left"
+                      style="padding-top: .5rem;">
+                    <div
+                         style="display: flex; align-items: center; font-size: 12px; line-height: 1.2; white-space: nowrap;">
+                      <img src="{{ public_path('assets/images/ticket_png.jpg') }}"
+                           alt="calendar"
+                           width="20"
+                           height="20"
+                           style="margin-right: 6px; vertical-align: middle;">
+                      <span style="vertical-align: middle;">
+                        Qty Ticket: {{ $total_ticket }} Pax
+                      </span>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
             </table>
           </td>
-
-          <!-- RIGHT -->
-          <td valign="top"
-              width="35%"
-              style="padding:1rem 2rem;">
-
-            <p style="font-size:14px; margin:0 0 10px 0;">
-              <strong>Tanggal Pendaftaran :</strong>
+          <td align="center"
+              style="padding-right: 1rem; padding-left: 1rem;">
+            <p style="color: #169870; font-size: 14px;">
+              <strong>{{ $amount_total }} </strong>
             </p>
-
-            <p style="font-size:12px; margin:0; word-break:break-word;">
-              {{ $registration_date }}
+            <img src="data:image/png;base64, {!! base64_encode(
+                QrCode::format('png')->size(132)->format('png')->merge(public_path('storage/avatar_loka_3d.png'), 0.25, true)->errorCorrection('Q')->color(0, 0, 0)->style('square')->eye('circle')->margin(3)->color(0, 0, 0)->eyeColor(0, 22, 152, 112, 22, 152, 112)->eyeColor(1, 22, 152, 112, 22, 152, 112)->eyeColor(2, 22, 152, 112, 22, 152, 112)->generate('{{ $booking_code }}'),
+            ) !!} "
+                 style="margin: 0; padding: 0;"
+                 width="132">
+            <p>
+              <strong style="font-size: 12px;">Kode Booking:</strong>
             </p>
-
+            <h4 style="color: #169870; font-size: 20px;">
+              <strong>{{ $booking_code }} </strong>
+            </h4>
           </td>
-
         </tr>
       </tbody>
     </table>
-    <!--Detail Detail Pemesan & Metode Pembayaran Section End -->
-  </main>
-  <!--Detail Tiket Section End -->
+    <!--Detail QR Code Kode Booking Section End -->
 
-  {{-- <div class="page-break"></div> --}}
-
-  {{-- <!-- Syart & Ketentuan Section Start -->
-  <main style="width: 100%; margin: 0; padding: 0; padding-inline: 0; padding-block: 0; margin-top: 8rem;">
-    <!--Cara Print Kode Booking Section Start -->
+    <!--Detail Ringkasan Pemabyaran Section Start -->
     <table align="center"
            cellpadding="0"
            cellspacing="0"
            width="100%"
            class=""
-           style="background-color: transparentFF; padding: 0rem 0rem; border-top: 2px dashed #ededed; border-bottom: 2px dashed #ededed;">
-      <tbody style="background-color: transparentFF; padding-inline: 0rem; padding-block: 0rem">
+           style="background-color: #FFFFFFFF; padding: 0rem 0rem; padding-top: 1rem; border-bottom: 2px dashed #ededed; border-top: 2px dashed #ededed">
+      <tbody style="background-color: #FFFFFFFF; padding-inline: 0rem; padding-block: 0rem">
         <tr>
           <td align="left"
               valign="top">
@@ -321,7 +258,438 @@
                    cellpadding="0"
                    cellspacing="0"
                    width="100%"
-                   style="background-color: transparentFF; padding: 1rem 2rem;">
+                   style="background-color: #FFFFFFFF; padding: 1rem 2rem;">
+              <tbody>
+                <tr>
+                  <td align="left">
+                    <p style="line-height:1.5; font-size: 14px">
+                      <strong>Ringkasan Pembayaran</strong>
+                    </p>
+                  </td>
+                </tr>
+
+                <!--- Item Produk Terbayar  -->
+                @foreach ($ticket_orders as $ticket_order)
+                  <tr>
+                    <td align="left">
+                      <table align="center"
+                             cellpadding="0"
+                             cellspacing="0"
+                             width="100%"
+                             style="margin-top: .5rem">
+                        <tbody>
+                          <tr>
+                            <td align="left"
+                                class=""
+                                width="45%"
+                                style="font-size: 12px; line-height: 1.2;">
+                              <p>
+                                <span>
+                                  {{ $ticket_order['ticket_name'] }}
+                                </span>
+                              </p>
+                            </td>
+                            <td align="left"
+                                class=""
+                                width="15%"
+                                style="font-size: 12px; line-height: 1.2;">
+                              <p>
+                                <span>{{ $ticket_order['quantity'] }} Pax</span>
+                              </p>
+                            </td>
+                            <td align="left"
+                                class=""
+                                width="15%"
+                                style="font-size: 12px; line-height: 1.2;">
+                              <p>
+                                <span>{{ 'Rp ' . number_format($ticket_order['price'], 0, ',', '.') }}</span>
+                              </p>
+                            </td>
+                            <td align="right"
+                                class=""
+                                width="25%"
+                                style="font-size: 12px; line-height: 1.2;">
+                              <p>
+                                <span>{{ 'Rp ' . number_format($ticket_order['subtotal'], 0, ',', '.') }}</span>
+                              </p>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                @endforeach
+
+                <!--- Total Terbayar  -->
+                <tr>
+                  <td align="left">
+                    <table align="center"
+                           cellpadding="0"
+                           cellspacing="0"
+                           width="100%"
+                           style="margin-top: .3rem">
+                      <tbody>
+                        <tr>
+                          <td align="left"
+                              class=""
+                              width="45%"
+                              style="font-size: 12px; line-height: 1.2;">
+                            <p>
+                              <strong>
+                                Total Terbayar
+                              </strong>
+                            </p>
+                          </td>
+                          <td align="left"
+                              class=""
+                              width="15%"
+                              style="font-size: 12px; line-height: 1.2;">
+                          </td>
+                          <td align="left"
+                              class=""
+                              width="15%"
+                              style="font-size: 12px; line-height: 1.2;">
+                          </td>
+                          <td align="right"
+                              class=""
+                              width="25%"
+                              style="font-size: 12px; line-height: 1.2;">
+                            <p>
+                              <strong>{{ 'Rp ' . number_format($amount_total, 0, ',', '.') }}</strong>
+                            </p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <!--Detail Ringkasan Pemabyaran Section End -->
+
+    <!--Detail Detail Pemesan & Metode Pembayaran Section Start -->
+    <table align="center"
+           cellpadding="0"
+           cellspacing="0"
+           width="100%"
+           class=""
+           style="background-color: #FFFFFFFF; padding: 0rem 0rem; border-bottom: 2px dashed #ededed;">
+      <tbody style="background-color: #FFFFFFFF; padding-inline: 0rem; padding-block: 0rem">
+        <tr>
+          <!--Detail Detail Pemesan -->
+          <td align="left"
+              valign="top">
+            <table align="center"
+                   cellpadding="0"
+                   cellspacing="0"
+                   width="100%"
+                   style="background-color: #FFFFFFFF; padding: 1rem 2rem;">
+              <tbody>
+                <tr>
+                  <td align="left">
+                    <p style="line-height:1.5; font-size: 14px">
+                      <strong>Detail Pemesan</strong>
+                    </p>
+                  </td>
+                </tr>
+                <!-- Nama Pemesan  -->
+                <tr>
+                  <td align="left">
+                    <table align="center"
+                           cellpadding="0"
+                           cellspacing="0"
+                           width="100%"
+                           style="margin-top: .5rem">
+                      <tbody>
+                        <tr>
+                          <td align="left"
+                              class=""
+                              width="20%"
+                              style="font-size: 12px; line-height: 1.2;">
+                            <p>
+                              <span>
+                                Nama
+                              </span>
+                            </p>
+                          </td>
+                          <td align="left"
+                              class=""
+                              width="80%"
+                              style="font-size: 12px; line-height: 1.2;">
+                            <p>
+                              <span>
+                                {{ $customer_name }}
+                              </span>
+                            </p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <!-- Email Pemesan  -->
+                <tr>
+                  <td align="left">
+                    <table align="center"
+                           cellpadding="0"
+                           cellspacing="0"
+                           width="100%"
+                           style="margin-top: .2rem">
+                      <tbody>
+                        <tr>
+                          <td align="left"
+                              class=""
+                              width="20%"
+                              style="font-size: 12px; line-height: 1.2;">
+                            <p>
+                              <span>
+                                Email
+                              </span>
+                            </p>
+                          </td>
+                          <td align="left"
+                              class=""
+                              width="80%"
+                              style="font-size: 12px; line-height: 1.2;">
+                            <p>
+                              <span>
+                                {{ $customer_email }}
+                              </span>
+                            </p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <!-- Nomor Telpon Pemesan  -->
+                <tr>
+                  <td align="left">
+                    <table align="center"
+                           cellpadding="0"
+                           cellspacing="0"
+                           width="100%"
+                           style="margin-top: .2rem">
+                      <tbody>
+                        <tr>
+                          <td align="left"
+                              class=""
+                              width="20%"
+                              style="font-size: 12px; line-height: 1.2;">
+                            <p>
+                              <span>
+                                Telpon
+                              </span>
+                            </p>
+                          </td>
+                          <td align="left"
+                              class=""
+                              width="80%"
+                              style="font-size: 12px; line-height: 1.2;">
+                            <p>
+                              <span>
+                                {{ $customer_phone }}
+                              </span>
+                            </p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <!-- Alamat Pemesan  -->
+                <tr>
+                  <td align="left">
+                    <table align="center"
+                           cellpadding="0"
+                           cellspacing="0"
+                           width="100%"
+                           style="margin-top: .2rem">
+                      <tbody>
+                        <tr>
+                          <td align="left"
+                              class=""
+                              width="20%"
+                              style="font-size: 12px; line-height: 1.2;">
+                            <p>
+                              <span>
+                                Alamat
+                              </span>
+                            </p>
+                          </td>
+                          <td align="left"
+                              class=""
+                              width="80%"
+                              style="font-size: 12px; line-height: 1.2;">
+                            <p>
+                              <span>
+                                {{ $customer_city }} , {{ $customer_province }}
+                              </span>
+                            </p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+          <!-- Metode Pembayaran -->
+          <td align="left"
+              valign="top">
+            <table align="center"
+                   cellpadding="0"
+                   cellspacing="0"
+                   width="100%"
+                   style="background-color: #FFFFFFFF; padding: 1rem 2rem;">
+              <tbody>
+                <tr>
+                  <td align="left">
+                    <p style="line-height:1.5; font-size: 14px">
+                      <strong>Detail Pembayaran</strong>
+                    </p>
+                  </td>
+                </tr>
+                <!-- Metode Pembayaran -->
+                <tr>
+                  <td align="left">
+                    <table align="center"
+                           cellpadding="0"
+                           cellspacing="0"
+                           width="100%"
+                           style="margin-top: .5rem">
+                      <tbody>
+                        <tr>
+                          <td align="left"
+                              class=""
+                              width="50%"
+                              style="font-size: 12px; line-height: 1.2;">
+                            <p>
+                              <span>
+                                Dibayarkan dengan
+                              </span>
+                            </p>
+                          </td>
+                          <td align="left"
+                              class=""
+                              width="50%"
+                              style="font-size: 12px; line-height: 1.2;">
+                            <p>
+                              <span>
+                                {{ $payment_method }}
+                              </span>
+                            </p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <!-- Tanggal Pembayaran -->
+                <tr>
+                  <td align="left">
+                    <table align="center"
+                           cellpadding="0"
+                           cellspacing="0"
+                           width="100%"
+                           style="margin-top: .2rem">
+                      <tbody>
+                        <tr>
+                          <td align="left"
+                              class=""
+                              width="50%"
+                              style="font-size: 12px; line-height: 1.2;">
+                            <p>
+                              <span>
+                                Berhasil dibayarkan
+                              </span>
+                            </p>
+                          </td>
+                          <td align="left"
+                              class=""
+                              width="50%"
+                              style="font-size: 12px; line-height: 1.2;">
+                            <p>
+                              <span>
+                                {{ $payment_date }}
+                              </span>
+                            </p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <!-- Jumlah Dibayarkan -->
+                <tr>
+                  <td align="left">
+                    <table align="center"
+                           cellpadding="0"
+                           cellspacing="0"
+                           width="100%"
+                           style="margin-top: .2rem">
+                      <tbody>
+                        <tr>
+                          <td align="left"
+                              class=""
+                              width="50%"
+                              style="font-size: 12px; line-height: 1.2;">
+                            <p>
+                              <span>
+                                Jumlah dibayarkan
+                              </span>
+                            </p>
+                          </td>
+                          <td align="left"
+                              class=""
+                              width="50%"
+                              style="font-size: 12px; line-height: 1.2;">
+                            <p>
+                              <strong>
+                                {{ number_format($amount_total, 0, ',', '.') }}
+                              </strong>
+                            </p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <!--Detail Detail Pemesan & Metode Pembayaran Section End -->
+  </main>
+  <!--Detail Tiket Section End -->
+
+  <div class="page-break"></div>
+
+  <!-- Syart & Ketentuan Section Start -->
+  <main style="width: 100%; margin: 0; padding: 0; padding-inline: 0; padding-block: 0; margin-top: 8rem;">
+    <!--Cara Print Kode Booking Section Start -->
+    <table align="center"
+           cellpadding="0"
+           cellspacing="0"
+           width="100%"
+           class=""
+           style="background-color: #FFFFFFFF; padding: 0rem 0rem; border-top: 2px dashed #ededed; border-bottom: 2px dashed #ededed;">
+      <tbody style="background-color: #FFFFFFFF; padding-inline: 0rem; padding-block: 0rem">
+        <tr>
+          <td align="left"
+              valign="top">
+            <table align="center"
+                   cellpadding="0"
+                   cellspacing="0"
+                   width="100%"
+                   style="background-color: #FFFFFFFF; padding: 1rem 2rem;">
               <tbody>
                 <!-- Cara Print Kode Booking Start -->
                 <tr>
@@ -601,17 +969,17 @@
           </td>
         </tr>
       </tbody>
-    </table> --}}
-  <!--Cara Print Kode Booking Section End -->
+    </table>
+    <!--Cara Print Kode Booking Section End -->
 
-  {{-- <!--Detail Syarat & Ketentuan Section Start -->
+    <!--Detail Syarat & Ketentuan Section Start -->
     <table align="center"
            cellpadding="0"
            cellspacing="0"
            width="100%"
            class=""
-           style="background-color: transparentFF; padding: 0rem 0rem; border-bottom: 2px dashed #ededed;">
-      <tbody style="background-color: transparentFF; padding-inline: 0rem; padding-block: 0rem">
+           style="background-color: #FFFFFFFF; padding: 0rem 0rem; border-bottom: 2px dashed #ededed;">
+      <tbody style="background-color: #FFFFFFFF; padding-inline: 0rem; padding-block: 0rem">
         <tr>
           <td align="left"
               valign="top">
@@ -619,7 +987,7 @@
                    cellpadding="0"
                    cellspacing="0"
                    width="100%"
-                   style="background-color: transparentFF; padding: 1rem 2rem;">
+                   style="background-color: #FFFFFFFF; padding: 1rem 2rem;">
               <tbody>
                 <tr>
                   <td align="left">
@@ -983,7 +1351,7 @@
       </tbody>
     </table>
     <!--Detail Syarat & Ketentuan Section End -->
-  </main> --}}
+  </main>
   <!-- Syart & Ketentuan Section End -->
 </body>
 
