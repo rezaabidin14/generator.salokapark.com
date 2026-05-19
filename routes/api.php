@@ -36,7 +36,7 @@ Route::post('/generate-saloka-edu-pride-pdf', [SalokaEduPrideController::class, 
 Route::post('/generate-saloka-phrd-pdf', [SalokaPHRDController::class, 'GeneratePdf']);
 Route::post('/generate-saloka-phrd-sertificate', [SalokaPHRDController::class, 'GenerateSertificate']);
 Route::post('/generate-salokafest-pdf', [SalokafestController::class, 'GeneratePdf']);
-Route::get('/generate-lomba-tari-pdf', [LombaTariController::class, 'GeneratePdf']);
+Route::post('/generate-lomba-tari-pdf', [LombaTariController::class, 'GeneratePdf']);
 Route::post('/generate-lomba-tari-sertificate', [LombaTariController::class, 'GenerateSertificate']);
 
 
