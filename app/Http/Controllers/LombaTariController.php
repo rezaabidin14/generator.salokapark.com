@@ -26,89 +26,52 @@ class LombaTariController extends Controller
 
     public function GeneratePdf(Request $request)
     {
-        // $validator = Validator::make($request->all(), [
-        //     'order_id'          => 'required',
-        //     'total_ticket'      => 'required',
-        //     'amount_total'      => 'required',
-        //     "payment_method"    => 'required',
-        //     'payment_date'      => 'required',
-        //     'date_plan'         => 'required',
-        //     'booking_code'      => 'required',
-        //     'customer_name'     => 'required',
-        //     'customer_email'    => 'required',
-        //     'customer_phone'    => 'required',
-        //     'customer_province' => 'required',
-        //     'customer_city'     => 'required',
-        //     'ticket_orders'     => 'required',
-        // ]);
+        $validator = Validator::make($request->all(), [
+            'order_id'          => 'required',
+            'total_ticket'      => 'required',
+            'amount_total'      => 'required',
+            "payment_method"    => 'required',
+            'payment_date'      => 'required',
+            'date_plan'         => 'required',
+            'booking_code'      => 'required',
+            'customer_name'     => 'required',
+            'customer_email'    => 'required',
+            'customer_phone'    => 'required',
+            'customer_province' => 'required',
+            'customer_city'     => 'required',
+            'group_name'        => 'required',
+            'school_name'       => 'required',
+            'ticket_orders'     => 'required',
+        ]);
 
-        // if ($validator->fails()) {
-        //     return response()->json([
-        //         'status' => 'error',
-        //         'message' => $validator->errors()->first(),
-        //         'data' => [],
-        //     ], 422);
-        // }
+        if ($validator->fails()) {
+            return response()->json([
+                'status' => 'error',
+                'message' => $validator->errors()->first(),
+                'data' => [],
+            ], 422);
+        }
 
         try {
-            // $data = [
-            //     'order_id'          => $request->order_id,
-            //     'total_ticket'      => $request->total_ticket,
-            //     'amount_total'      => $request->amount_total,
-            //     'payment_method'    => $request->payment_method,
-            //     'payment_date'      => $request->payment_date,
-            //     'date_plan'         => $request->date_plan,
-            //     'booking_code'      => $request->booking_code,
-            //     'customer_name'     => $request->customer_name,
-            //     'customer_email'    => $request->customer_email,
-            //     'customer_phone'    => $request->customer_phone,
-            //     'customer_province' => $request->customer_province,
-            //     'customer_city'     => $request->customer_city,
-            //     'ticket_orders'     => $request->ticket_orders
-            // ];
-
             $data = [
-    'order_id'          => 'ORD-20260519-001',
-    'total_ticket'      => 4,
-    'amount_total'      => 275000,
-    'payment_method'    => 'QRIS',
-    'payment_date'      => '2026-05-19 14:30:00',
-    'date_plan'         => '2026-06-01',
-    'booking_code'      => 'SLKTR-8F92KD',
-    'customer_name'     => 'Budi Santoso',
-    'customer_email'    => 'budi.santoso@example.com',
-    'customer_phone'    => '081234567890',
-    'customer_province' => 'Jawa Tengah',
-    'customer_city'     => 'Semarang',
+                'order_id'          => $request->order_id,
+                'total_ticket'      => $request->total_ticket,
+                'amount_total'      => $request->amount_total,
+                'payment_method'    => $request->payment_method,
+                'payment_date'      => $request->payment_date,
+                'date_plan'         => $request->date_plan,
+                'booking_code'      => $request->booking_code,
+                'customer_name'     => $request->customer_name,
+                'customer_email'    => $request->customer_email,
+                'customer_phone'    => $request->customer_phone,
+                'customer_province' => $request->customer_province,
+                'customer_city'     => $request->customer_city,
+                'group_name'        => $request->group_name,
+                'school_name'       => $request->school_name,
+                'ticket_orders'     => $request->ticket_orders
+            ];
 
-    'ticket_orders' => [
-        [
-            'ticket_name' => 'Tiket Reguler Dewasa',
-            'quantity'         => 2,
-            'price'       => 75000,
-            'subtotal'    => 150000,
-        ],
-        [
-            'ticket_name' => 'Tiket Anak',
-            'quantity'         => 1,
-            'price'       => 50000,
-            'subtotal'    => 50000,
-        ],
-        [
-            'ticket_name' => 'Tiket Pendamping',
-            'quantity'         => 1,
-            'price'       => 70000,
-            'subtotal'    => 70000,
-        ],
-        [
-            'ticket_name' => 'Biaya Admin',
-            'quantity'         => 1,
-            'price'       => 5000,
-            'subtotal'    => 5000,
-        ],
-    ],
-];
-
+           
             $data = $this->safeUtf8($data);
 
             $pdfTicket = Pdf::loadView('pdf.saloka-lomba-tari', $data)
@@ -124,8 +87,6 @@ class LombaTariController extends Controller
 
             $fileName = $request->booking_code . '.pdf';
             $path = 'public/pdf/' . $fileName;
-
-            return $pdfTicket->stream($fileName);
 
             Storage::put($path, $pdfTicket->output());
 

@@ -433,7 +433,42 @@
                               style="font-size: 12px; line-height: 1.2;">
                             <p>
                               <span>
-                                {{ $customer_name }}
+                                {{ $group_name }}
+                              </span>
+                            </p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td align="left">
+                    <table align="center"
+                           cellpadding="0"
+                           cellspacing="0"
+                           width="100%"
+                           style="margin-top: .5rem">
+                      <tbody>
+                        <tr>
+                          <td align="left"
+                              class=""
+                              width="30%"
+                              style="font-size: 12px; line-height: 1.2;">
+                            <p>
+                              <span>
+                                Sanggar/Sekolah
+                              </span>
+                            </p>
+                          </td>
+                          <td align="left"
+                              class=""
+                              width="70%"
+                              style="font-size: 12px; line-height: 1.2;">
+                            <p>
+                              <span>
+                                {{ $school_name }}
                               </span>
                             </p>
                           </td>
