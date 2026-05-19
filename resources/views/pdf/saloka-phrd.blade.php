@@ -87,7 +87,7 @@
            cellpadding="0"
            cellspacing="0"
            width="100%"
-           style="background-color: transparent; padding: 1rem 2rem;">
+           style="background-color: white; padding: 1rem 2rem;">
       <tbody>
         <tr>
           <td align="left"
