@@ -18,21 +18,14 @@
     font-family: "Poppins", sans-serif;
     margin: 0;
     padding: 0;
-    position: relative;
-    overflow: hidden;
-  }
 
-  body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background-image: url("{{ public_path('images/background_saloka.jpg') }}");
+    background:
+      linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
+      url("{{ public_path('images/background_saloka.jpg') }}");
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.3;
-    /* ubah sesuai kebutuhan */
-    z-index: -1;
   }
 
   main {
@@ -138,15 +131,15 @@
 
   <!--Detail Tiket Section Start -->
   <main
-        style="width: 100%; margin: 0; padding: 0; padding-inline: 0; padding-block: 0;  margin-top: 8rem; background-color: transparentFF;">
+        style="width: 100%; margin: 0; padding: 0; padding-inline: 0; padding-block: 0;  margin-top: 8rem; background-color: transparent;">
     <!--Detail QR Code Kode Booking Section Start -->
     <table align="center"
            cellpadding="0"
            cellspacing="0"
            width="100%"
            class=""
-           style="background-color: transparentFF; padding: 0.5rem 2rem;">
-      <tbody style="background-color: transparentFF; padding-inline: 0rem; padding-block: 0rem">
+           style="background-color: transparent; padding: 0.5rem 2rem;">
+      <tbody style="background-color: transparent; padding-inline: 0rem; padding-block: 0rem">
         <tr>
           <td align="left"
               valign="top"
@@ -233,8 +226,8 @@
            cellspacing="0"
            width="100%"
            class=""
-           style="background-color: transparentFF; padding: 0rem 0rem; padding-top: 1rem; border-bottom: 2px dashed #ededed; border-top: 2px dashed #ededed">
-      <tbody style="background-color: transparentFF; padding-inline: 0rem; padding-block: 0rem">
+           style="background-color: transparent; padding: 0rem 0rem; padding-top: 1rem; border-bottom: 2px dashed #ededed; border-top: 2px dashed #ededed">
+      <tbody style="background-color: transparent; padding-inline: 0rem; padding-block: 0rem">
         <tr>
           <td align="left"
               valign="top">
@@ -242,7 +235,7 @@
                    cellpadding="0"
                    cellspacing="0"
                    width="100%"
-                   style="background-color: transparentFF; padding: 1rem 2rem;">
+                   style="background-color: transparent; padding: 1rem 2rem;">
               <tbody>
                 <tr>
                   <td align="left">
@@ -361,8 +354,8 @@
            cellspacing="0"
            width="100%"
            class=""
-           style="background-color: transparentFF; padding: 0rem 0rem; border-bottom: 2px dashed #ededed;">
-      <tbody style="background-color: transparentFF; padding-inline: 0rem; padding-block: 0rem">
+           style="background-color: transparent; padding: 0rem 0rem; border-bottom: 2px dashed #ededed;">
+      <tbody style="background-color: transparent; padding-inline: 0rem; padding-block: 0rem">
         <tr>
           <!--Detail Detail Pemesan -->
           <td align="left"
@@ -371,7 +364,7 @@
                    cellpadding="0"
                    cellspacing="0"
                    width="100%"
-                   style="background-color: transparentFF; padding: 1rem 2rem;">
+                   style="background-color: transparent; padding: 1rem 2rem;">
               <tbody>
                 <tr>
                   <td align="left">
@@ -392,7 +385,7 @@
                         <tr>
                           <td align="left"
                               class=""
-                              width="20%"
+                              width="30%"
                               style="font-size: 12px; line-height: 1.2;">
                             <p>
                               <span>
@@ -402,7 +395,41 @@
                           </td>
                           <td align="left"
                               class=""
-                              width="80%"
+                              width="70%"
+                              style="font-size: 12px; line-height: 1.2;">
+                            <p>
+                              <span>
+                                {{ $customer_name }}
+                              </span>
+                            </p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="left">
+                    <table align="center"
+                           cellpadding="0"
+                           cellspacing="0"
+                           width="100%"
+                           style="margin-top: .5rem">
+                      <tbody>
+                        <tr>
+                          <td align="left"
+                              class=""
+                              width="30%"
+                              style="font-size: 12px; line-height: 1.2;">
+                            <p>
+                              <span>
+                                Nama Group
+                              </span>
+                            </p>
+                          </td>
+                          <td align="left"
+                              class=""
+                              width="70%"
                               style="font-size: 12px; line-height: 1.2;">
                             <p>
                               <span>
@@ -427,7 +454,7 @@
                         <tr>
                           <td align="left"
                               class=""
-                              width="20%"
+                              width="30%"
                               style="font-size: 12px; line-height: 1.2;">
                             <p>
                               <span>
@@ -437,7 +464,7 @@
                           </td>
                           <td align="left"
                               class=""
-                              width="80%"
+                              width="70%"
                               style="font-size: 12px; line-height: 1.2;">
                             <p>
                               <span>
@@ -462,7 +489,7 @@
                         <tr>
                           <td align="left"
                               class=""
-                              width="20%"
+                              width="30%"
                               style="font-size: 12px; line-height: 1.2;">
                             <p>
                               <span>
@@ -472,7 +499,7 @@
                           </td>
                           <td align="left"
                               class=""
-                              width="80%"
+                              width="70%"
                               style="font-size: 12px; line-height: 1.2;">
                             <p>
                               <span>
@@ -497,7 +524,7 @@
                         <tr>
                           <td align="left"
                               class=""
-                              width="20%"
+                              width="30%"
                               style="font-size: 12px; line-height: 1.2;">
                             <p>
                               <span>
@@ -507,7 +534,7 @@
                           </td>
                           <td align="left"
                               class=""
-                              width="80%"
+                              width="70%"
                               style="font-size: 12px; line-height: 1.2;">
                             <p>
                               <span>
@@ -530,7 +557,7 @@
                    cellpadding="0"
                    cellspacing="0"
                    width="100%"
-                   style="background-color: transparentFF; padding: 1rem 2rem;">
+                   style="background-color: transparent; padding: 1rem 2rem;">
               <tbody>
                 <tr>
                   <td align="left">
@@ -664,8 +691,8 @@
            cellspacing="0"
            width="100%"
            class=""
-           style="background-color: transparentFF; padding: 0rem 0rem; border-top: 2px dashed #ededed; border-bottom: 2px dashed #ededed;">
-      <tbody style="background-color: transparentFF; padding-inline: 0rem; padding-block: 0rem">
+           style="background-color: transparent; padding: 0rem 0rem; border-top: 2px dashed #ededed; border-bottom: 2px dashed #ededed;">
+      <tbody style="background-color: transparent; padding-inline: 0rem; padding-block: 0rem">
         <tr>
           <td align="left"
               valign="top">
@@ -673,7 +700,7 @@
                    cellpadding="0"
                    cellspacing="0"
                    width="100%"
-                   style="background-color: transparentFF; padding: 1rem 2rem;">
+                   style="background-color: transparent; padding: 1rem 2rem;">
               <tbody>
                 <!-- Cara Print Kode Booking Start -->
                 <tr>
@@ -935,8 +962,8 @@
            cellspacing="0"
            width="100%"
            class=""
-           style="background-color: transparentFF; padding: 0rem 0rem; border-bottom: 2px dashed #ededed;">
-      <tbody style="background-color: transparentFF; padding-inline: 0rem; padding-block: 0rem">
+           style="background-color: transparent; padding: 0rem 0rem; border-bottom: 2px dashed #ededed;">
+      <tbody style="background-color: transparent; padding-inline: 0rem; padding-block: 0rem">
         <tr>
           <td align="left"
               valign="top">
@@ -944,7 +971,7 @@
                    cellpadding="0"
                    cellspacing="0"
                    width="100%"
-                   style="background-color: transparentFF; padding: 1rem 2rem;">
+                   style="background-color: transparent; padding: 1rem 2rem;">
               <tbody>
                 <tr>
                   <td align="left">
