@@ -108,7 +108,7 @@
 
           <td align="center"
               style="width: 35%;">
-            <img src="{{ public_path('assets/images/logo_jambore_hr_2026.png') }}"
+            <img src="{{ public_path('assets/images/logo_lomba_tari_2026.png') }}"
                  alt="Logo Jambore"
                  width="140"
                  style="display:block; margin:auto;"
