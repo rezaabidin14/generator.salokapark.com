@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use Barryvdh\DomPDF\Facade\Pdf;
-use Illuminate\Support\Facades\Validator;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Validator;
 
 class LombaTariController extends Controller
 {
@@ -17,20 +18,24 @@ class LombaTariController extends Controller
             foreach ($text as $key => $value) {
                 $text->$key = $this->safeUtf8($value);
             }
+
             return $text;
         } elseif (is_string($text)) {
             return mb_convert_encoding($text, 'UTF-8', 'UTF-8');
         }
+
         return $text;
     }
 
     public function GeneratePdf(Request $request)
     {
+        ini_set('memory_limit', '2048M');
+
         $validator = Validator::make($request->all(), [
             'order_id'          => 'required',
             'total_ticket'      => 'required',
             'amount_total'      => 'required',
-            "payment_method"    => 'required',
+            'payment_method'    => 'required',
             'payment_date'      => 'required',
             'date_plan'         => 'required',
             'booking_code'      => 'required',
@@ -46,13 +51,19 @@ class LombaTariController extends Controller
 
         if ($validator->fails()) {
             return response()->json([
-                'status' => 'error',
+                'status'  => 'error',
                 'message' => $validator->errors()->first(),
-                'data' => [],
+                'data'    => [],
             ], 422);
         }
 
         try {
+
+            Log::info('Start Generate PDF', [
+                'booking_code' => $request->booking_code,
+                'memory_mb'    => round(memory_get_usage(true) / 1024 / 1024, 2),
+            ]);
+
             $data = [
                 'order_id'          => $request->order_id,
                 'total_ticket'      => $request->total_ticket,
@@ -68,37 +79,66 @@ class LombaTariController extends Controller
                 'customer_city'     => $request->customer_city,
                 'group_name'        => $request->group_name,
                 'school_name'       => $request->school_name,
-                'ticket_orders'     => $request->ticket_orders
+                'ticket_orders'     => $request->ticket_orders,
             ];
 
-           
             $data = $this->safeUtf8($data);
+
+            Log::info('Render PDF View', [
+                'booking_code' => $request->booking_code,
+            ]);
 
             $pdfTicket = Pdf::loadView('pdf.saloka-lomba-tari', $data)
                 ->setPaper('A4', 'portrait')
                 ->setOptions([
-                    'defaultFont'           => 'Open Sauce One',
-                    'isHtml5ParserEnabled'  => true,
-                    'isRemoteEnabled'       => true,
+                    'defaultFont'          => 'sans-serif',
+                    'isHtml5ParserEnabled' => true,
+                    'isRemoteEnabled'      => false,
+                    'dpi'                  => 96,
+                    'isPhpEnabled'         => true,
                 ])
                 ->setWarnings(false);
 
             $pdfTicket->getDomPDF()->getOptions()->setChroot(public_path());
+
+            Log::info('PDF Render Success', [
+                'booking_code' => $request->booking_code,
+                'memory_peak_mb' => round(memory_get_peak_usage(true) / 1024 / 1024, 2),
+            ]);
 
             $fileName = $request->booking_code . '.pdf';
             $path = 'public/pdf/' . $fileName;
 
             Storage::put($path, $pdfTicket->output());
 
+            Log::info('PDF Saved Success', [
+                'booking_code' => $request->booking_code,
+                'path' => $path,
+                'memory_peak_mb' => round(memory_get_peak_usage(true) / 1024 / 1024, 2),
+            ]);
+
             return response()->json([
-                'status' => 'success',
+                'status'  => 'success',
                 'message' => 'File pdf berhasil dibuat.',
-                'data' => [
+                'data'    => [
                     'file_name' => $fileName,
                     'file_path' => asset('storage/pdf/' . $fileName),
                 ],
             ]);
         } catch (\Throwable $th) {
+
+            Log::error('Generate PDF Error', [
+                'message' => $th->getMessage(),
+                'file' => $th->getFile(),
+                'line' => $th->getLine(),
+                'trace' => $th->getTraceAsString(),
+
+                'memory_usage_mb' => round(memory_get_usage(true) / 1024 / 1024, 2),
+                'memory_peak_mb' => round(memory_get_peak_usage(true) / 1024 / 1024, 2),
+
+                'payload' => $request->all(),
+            ]);
+
             return response()->json([
                 'status' => 'error',
                 'message' => 'Terjadi kesalahan generate pdf: ' . $th->getMessage(),
@@ -107,10 +147,10 @@ class LombaTariController extends Controller
         }
     }
 
-
-
-     public function GenerateSertificate(Request $request)
+    public function GenerateSertificate(Request $request)
     {
+        ini_set('memory_limit', '2048M');
+
         $validator = Validator::make($request->all(), [
             'name' => 'required',
         ]);
@@ -124,8 +164,13 @@ class LombaTariController extends Controller
         }
 
         try {
+
+            Log::info('Start Generate Certificate', [
+                'name' => $request->name,
+            ]);
+
             $data = [
-                'name'              => $request->name 
+                'name' => $request->name,
             ];
 
             $data = $this->safeUtf8($data);
@@ -133,9 +178,11 @@ class LombaTariController extends Controller
             $pdfTicket = Pdf::loadView('pdf.sertificate-lomba-tari', $data)
                 ->setPaper('A4', 'landscape')
                 ->setOptions([
-                    'defaultFont'           => 'Open Sauce One',
-                    'isHtml5ParserEnabled'  => true,
-                    'isRemoteEnabled'       => true,
+                    'defaultFont'          => 'sans-serif',
+                    'isHtml5ParserEnabled' => true,
+                    'isRemoteEnabled'      => false,
+                    'dpi'                  => 96,
+                    'isPhpEnabled'         => true,
                 ])
                 ->setWarnings(false);
 
@@ -146,6 +193,12 @@ class LombaTariController extends Controller
 
             Storage::put($path, $pdfTicket->output());
 
+            Log::info('Certificate Saved Success', [
+                'name' => $request->name,
+                'path' => $path,
+                'memory_peak_mb' => round(memory_get_peak_usage(true) / 1024 / 1024, 2),
+            ]);
+
             return response()->json([
                 'status' => 'success',
                 'message' => 'File pdf berhasil dibuat.',
@@ -155,6 +208,19 @@ class LombaTariController extends Controller
                 ],
             ]);
         } catch (\Throwable $th) {
+
+            Log::error('Generate Certificate Error', [
+                'message' => $th->getMessage(),
+                'file' => $th->getFile(),
+                'line' => $th->getLine(),
+                'trace' => $th->getTraceAsString(),
+
+                'memory_usage_mb' => round(memory_get_usage(true) / 1024 / 1024, 2),
+                'memory_peak_mb' => round(memory_get_peak_usage(true) / 1024 / 1024, 2),
+
+                'payload' => $request->all(),
+            ]);
+
             return response()->json([
                 'status' => 'error',
                 'message' => 'Terjadi kesalahan generate pdf: ' . $th->getMessage(),
@@ -163,6 +229,3 @@ class LombaTariController extends Controller
         }
     }
 }
-
-
- 
