@@ -993,246 +993,196 @@
 
     <!--Detail Syarat & Ketentuan Section Start -->
     <table align="center"
-           cellpadding="0"
-           cellspacing="0"
-           width="100%"
-           class=""
-           style="background-color: transparent; padding: 0rem 0rem; border-bottom: 2px dashed #ededed;">
-      <tbody style="background-color: transparent; padding-inline: 0rem; padding-block: 0rem">
-        <tr>
-          <td align="left"
-              valign="top">
-            <table align="center"
-                   cellpadding="0"
-                   cellspacing="0"
-                   width="100%"
-                   style="background-color: transparent; padding: 1rem 2rem;">
-              <tbody>
-                <tr>
-                  <td align="left">
-                    <p style="line-height:1.5; font-size: 14px">
-                      <strong>Syarat & Ketentuan Kunjungan:</strong>
-                    </p>
-                  </td>
-                </tr>
-                <!-- Item SnK -->
-                <tr>
-                  <td align="left">
+          cellpadding="0"
+          cellspacing="0"
+          width="100%"
+          style="background-color: transparent; padding: 0rem 0rem; border-bottom: 2px dashed #ededed;">
+        <tbody>
+            <tr>
+                <td align="left" valign="top">
                     <table align="center"
-                           cellpadding="0"
-                           cellspacing="0"
-                           width="100%"
-                           style="margin-top: .5rem">
-                      <tbody>
-                        <tr>
-                          <td align="left"
-                              class=""
-                              width="3%"
-                              style="font-size: 12px; line-height: 1.2;">
-                            <p>
-                              <span>
-                                1.
-                              </span>
-                            </p>
-                          </td>
-                          <td align="left"
-                              class=""
-                              width="97%"
-                              style="font-size: 12px; line-height: 1.2;">
-                            <p>
-                              <span>
-                                <strong>Tiket hanya berlaku di tanggal
-                                  kunjungan</strong> yang telah dipilih saat
-                                reservasi.
-                              </span>
-                            </p>
-                          </td>
-                        </tr>
-                      </tbody>
+                          cellpadding="0"
+                          cellspacing="0"
+                          width="100%"
+                          style="background-color: transparent; padding: 1rem 2rem;">
+                        <tbody>
+                            <tr>
+                                <td align="left">
+                                    <p style="line-height:1.5; font-size:14px">
+                                        <strong>Syarat & Ketentuan Lomba Tari Kreasi 2026:</strong>
+                                    </p>
+                                </td>
+                            </tr>
+
+                            <!-- 1 -->
+                            <tr>
+                                <td align="left" style="font-size:12px; line-height:1.5;">
+                                    <p><strong>1.</strong> Terbuka untuk umum (Sanggar / PAUD-TK / SD / SMP / SMA / Universitas).</p>
+                                </td>
+                            </tr>
+
+                            <!-- 2 -->
+                            <tr>
+                                <td align="left" style="font-size:12px; line-height:1.5;">
+                                    <p><strong>2.</strong> Pendaftaran melalui website lombatari.salokapark.com dan kemudian melakukan pembayaran secara online dengan adanya batasan waktu pembayaran.</p>
+                                </td>
+                            </tr>
+
+                            <!-- 3 -->
+                            <tr>
+                                <td align="left" style="font-size:12px; line-height:1.5;">
+                                    <p><strong>3.</strong> Membawakan 1 (satu) Tari Kreasi dengan Tema Tari Kreasi Nusantara dengan durasi maksimal 8 (delapan) menit, serta diberikan waktu maksimal 2 (dua) menit untuk persiapan.</p>
+                                </td>
+                            </tr>
+
+                            <!-- 4 -->
+                            <tr>
+                                <td align="left" style="font-size:12px; line-height:1.5;">
+                                    <p><strong>4.</strong> Konsep tarian tidak mengandung unsur SARA.</p>
+                                </td>
+                            </tr>
+
+                            <!-- 5 -->
+                            <tr>
+                                <td align="left" style="font-size:12px; line-height:1.5;">
+                                    <p><strong>5.</strong> 1 (satu) grup terdiri atas maksimal 10 (sepuluh) orang yang terdiri atas 7–9 orang penari (pria/wanita) dan 1 (satu) orang official.</p>
+                                </td>
+                            </tr>
+
+                            <!-- 6 -->
+                            <tr>
+                                <td align="left" style="font-size:12px; line-height:1.5;">
+                                    <p><strong>6.</strong> Setiap kontingen boleh mengirimkan lebih dari 1 (satu) tim.</p>
+                                </td>
+                            </tr>
+
+                            <!-- 7 -->
+                            <tr>
+                                <td align="left" style="font-size:12px; line-height:1.5;">
+                                    <p><strong>7.</strong> Biaya pendaftaran Presale Rp250.000/team dan tiket pendamping Rp80.000/orang. Jumlah pendamping tidak terbatas (sudah termasuk tiket wahana Saloka).</p>
+                                </td>
+                            </tr>
+
+                            <!-- 8 -->
+                            <tr>
+                                <td align="left" style="font-size:12px; line-height:1.5;">
+                                    <p><strong>8.</strong> Biaya pendaftaran Regular Rp300.000/team dan tiket pendamping Rp100.000/orang. Jumlah pendamping tidak terbatas (sudah termasuk tiket wahana Saloka).</p>
+                                </td>
+                            </tr>
+
+                            <!-- 9 -->
+                            <tr>
+                                <td align="left" style="font-size:12px; line-height:1.5;">
+                                    <p><strong>9.</strong> Musik pengiring bebas (rekaman), dikirim dalam format MP3 melalui email atau Google Drive maksimal H-3 pelaksanaan serta melampirkan sumber musik.</p>
+                                </td>
+                            </tr>
+
+                            <!-- 10 -->
+                            <tr>
+                                <td align="left" style="font-size:12px; line-height:1.5;">
+                                    <p><strong>10.</strong> Registrasi peserta dimulai pukul 07.00–10.00 WIB di Sales Counter untuk mendapatkan nomor urut peserta, sertifikat peserta/grup (online), dan ID Card Official.</p>
+                                </td>
+                            </tr>
+
+                            <!-- 11 -->
+                            <tr>
+                                <td align="left" style="font-size:12px; line-height:1.5;">
+                                    <p><strong>11.</strong> Peserta harus standby 30 menit sebelum jadwal tampil di area lomba.</p>
+                                </td>
+                            </tr>
+
+                            <!-- 12 -->
+                            <tr>
+                                <td align="left" style="font-size:12px; line-height:1.5;">
+                                    <p><strong>12.</strong> Perwakilan tim wajib menghadiri Technical Meeting pada tanggal 19 Juli 2026 melalui Google Meet.</p>
+                                </td>
+                            </tr>
+
+                            <!-- 13 -->
+                            <tr>
+                                <td align="left" style="font-size:12px; line-height:1.5;">
+                                    <p><strong>13.</strong> Penilaian berdasarkan aspek Wirogo, Wiromo, Wiroso, dan Visual.</p>
+                                </td>
+                            </tr>
+
+                            <!-- 14 -->
+                            <tr>
+                                <td align="left" style="font-size:12px; line-height:1.5;">
+                                    <p><strong>14.</strong> Pendaftaran ditutup pada 13 Juli 2026 pukul 23.59 WIB atau saat kuota peserta telah terpenuhi.</p>
+                                </td>
+                            </tr>
+
+                            <!-- 15 -->
+                            <tr>
+                                <td align="left" style="font-size:12px; line-height:1.5;">
+                                    <p><strong>15.</strong> Panitia menyediakan tempat transit (touch up area) yang dapat digunakan bersama oleh seluruh peserta.</p>
+                                </td>
+                            </tr>
+
+                            <!-- 16 -->
+                            <tr>
+                                <td align="left" style="font-size:12px; line-height:1.5;">
+                                    <p><strong>16.</strong> Peserta diperkenankan menggunakan properti tari yang mendukung penampilan.</p>
+                                </td>
+                            </tr>
+
+                            <!-- 17 -->
+                            <tr>
+                                <td align="left" style="font-size:12px; line-height:1.5;">
+                                    <p><strong>17.</strong> Properti yang digunakan tidak diperkenankan mengotori panggung (misalnya flare, mercon, tepung, kelopak bunga, pasir, air, bubuk glitter, daun kering, confetti, balon helium, dan sejenisnya).</p>
+                                </td>
+                            </tr>
+
+                            <!-- 18 -->
+                            <tr>
+                                <td align="left" style="font-size:12px; line-height:1.5;">
+                                    <p><strong>18.</strong> Peserta dengan nomor undi 1–10 dihimbau sudah melakukan persiapan dari rumah (make up dan hairdo).</p>
+                                </td>
+                            </tr>
+
+                            <!-- 19 -->
+                            <tr>
+                                <td align="left" style="font-size:12px; line-height:1.5;">
+                                    <p><strong>19.</strong> Peserta tidak diperkenankan membawa makanan dan minuman dari luar Saloka.</p>
+                                </td>
+                            </tr>
+
+                            <!-- 20 -->
+                            <tr>
+                                <td align="left" style="font-size:12px; line-height:1.5;">
+                                    <p><strong>20.</strong> Peserta dihimbau untuk membawa tumbler atau botol minum sendiri.</p>
+                                </td>
+                            </tr>
+
+                            <!-- 21 -->
+                            <tr>
+                                <td align="left" style="font-size:12px; line-height:1.5;">
+                                    <p><strong>21.</strong> Peserta yang dipanggil sebanyak 3 (tiga) kali dan tidak hadir di tempat akan otomatis didiskualifikasi.</p>
+                                </td>
+                            </tr>
+
+                            <!-- 22 -->
+                            <tr>
+                                <td align="left" style="font-size:12px; line-height:1.5;">
+                                    <p><strong>22.</strong> Pengumuman juara dilakukan setelah Baruklinting Show pukul 18.00 WIB.</p>
+                                </td>
+                            </tr>
+
+                            <!-- 23 -->
+                            <tr>
+                                <td align="left" style="font-size:12px; line-height:1.5;">
+                                    <p><strong>23.</strong> Keputusan Dewan Juri bersifat mutlak dan tidak dapat diganggu gugat.</p>
+                                </td>
+                            </tr>
+
+                        </tbody>
                     </table>
-                  </td>
-                </tr>
-                <tr>
-                  <td align="left">
-                    <table align="center"
-                           cellpadding="0"
-                           cellspacing="0"
-                           width="100%"
-                           style="margin-top: .2rem">
-                      <tbody>
-                        <tr>
-                          <td align="left"
-                              class=""
-                              width="3%"
-                              style="font-size: 12px; line-height: 1.2;">
-                            <p>
-                              <span>
-                                2.
-                              </span>
-                            </p>
-                          </td>
-                          <td align="left"
-                              class=""
-                              width="97%"
-                              style="font-size: 12px; line-height: 1.2;">
-                            <p>
-                              <span>
-                                <strong>Tiket tidak dapat digunakan lebih dari 1
-                                  kali</strong> atau di luar tanggal kunjungan.
-                              </span>
-                            </p>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </td>
-                </tr>
-                <tr>
-                  <td align="left">
-                    <table align="center"
-                           cellpadding="0"
-                           cellspacing="0"
-                           width="100%"
-                           style="margin-top: .2rem">
-                      <tbody>
-                        <tr>
-                          <td align="left"
-                              class=""
-                              width="3%"
-                              style="font-size: 12px; line-height: 1.2;">
-                            <p>
-                              <span>
-                                3.
-                              </span>
-                            </p>
-                          </td>
-                          <td align="left"
-                              class=""
-                              width="97%"
-                              style="font-size: 12px; line-height: 1.2;">
-                            <p>
-                              <span>
-                                Pengunjung wajib menjaga ketertiban dan kebersihan
-                                selama berada di area taman.
-                              </span>
-                            </p>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </td>
-                </tr>
-                <tr>
-                  <td align="left">
-                    <table align="center"
-                           cellpadding="0"
-                           cellspacing="0"
-                           width="100%"
-                           style="margin-top: .2rem">
-                      <tbody>
-                        <tr>
-                          <td align="left"
-                              class=""
-                              width="3%"
-                              style="font-size: 12px; line-height: 1.2;">
-                            <p>
-                              <span>
-                                4.
-                              </span>
-                            </p>
-                          </td>
-                          <td align="left"
-                              class=""
-                              width="97%"
-                              style="font-size: 12px; line-height: 1.2;">
-                            <p>
-                              <span>
-                                Dilarang membawa makanan dan minuman dari luar ke dalam
-                                area Saloka Theme Park.
-                              </span>
-                            </p>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </td>
-                </tr>
-                <tr>
-                  <td align="left">
-                    <table align="center"
-                           cellpadding="0"
-                           cellspacing="0"
-                           width="100%"
-                           style="margin-top: .2rem">
-                      <tbody>
-                        <tr>
-                          <td align="left"
-                              class=""
-                              width="3%"
-                              style="font-size: 12px; line-height: 1.2;">
-                            <p>
-                              <span>
-                                5.
-                              </span>
-                            </p>
-                          </td>
-                          <td align="left"
-                              class=""
-                              width="97%"
-                              style="font-size: 12px; line-height: 1.2;">
-                            <p>
-                              <span>
-                                Tiket yang sudah dibeli <strong>tidak dapat diuangkan
-                                  kembali</strong>.
-                              </span>
-                            </p>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </td>
-                </tr>
-                <tr>
-                  <td align="left">
-                    <table align="center"
-                           cellpadding="0"
-                           cellspacing="0"
-                           width="100%"
-                           style="margin-top: .2rem">
-                      <tbody>
-                        <tr>
-                          <td align="left"
-                              class=""
-                              width="3%"
-                              style="font-size: 12px; line-height: 1.2;">
-                            <p>
-                              <span>
-                                6.
-                              </span>
-                            </p>
-                          </td>
-                          <td align="left"
-                              class=""
-                              width="97%"
-                              style="font-size: 12px; line-height: 1.2;">
-                            <p>
-                              <span>
-                                Batas penukaran tiket dilayani hingga <strong>1 Jam</strong> sebelum kegiatan berakhir
-                              </span>
-                            </p>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </td>
-        </tr>
-      </tbody>
+                </td>
+            </tr>
+        </tbody>
     </table>
     <!--Detail Syarat & Ketentuan Section End -->
+
   </main>
   <!-- Syart & Ketentuan Section End -->
 </body>
