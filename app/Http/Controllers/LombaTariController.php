@@ -196,22 +196,19 @@ class LombaTariController extends Controller
                 ->append('.pdf')
                 ->toString();
 
-            Log::info('Generate Certificate Success', [
-                'group_name'  => $request->group_name,
-                'school_name' => $request->school_name,
-                'file_name'   => $fileName,
-            ]);
+            $path = 'e-certificates/lomba-tari/' . $fileName;
 
-            return $pdf->stream($fileName);
-
-            Storage::put($path, $pdfTicket->output());
+            Storage::disk('public')->put(
+                $path,
+                $pdf->output()
+            );
 
             return response()->json([
                 'status' => 'success',
                 'message' => 'File pdf berhasil dibuat.',
                 'data' => [
                     'file_name' => $fileName,
-                    'file_path' => asset('storage/pdf/' . $fileName),
+                    'file_path' => asset('storage/' . $path),
                 ],
             ]);
 
