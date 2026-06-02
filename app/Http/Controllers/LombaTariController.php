@@ -152,52 +152,59 @@ class LombaTariController extends Controller
         ini_set('memory_limit', '2048M');
 
         $validator = Validator::make($request->all(), [
-            'name' => 'required',
+            'group_name'  => 'required|string|max:255',
+            'school_name' => 'required|string|max:255',
         ]);
 
         if ($validator->fails()) {
             return response()->json([
-                'status' => 'error',
+                'status'  => 'error',
                 'message' => $validator->errors()->first(),
-                'data' => [],
+                'data'    => [],
             ], 422);
         }
 
         try {
 
-            Log::info('Start Generate Certificate', [
-                'name' => $request->name,
-            ]);
-
             $data = [
-                'name' => $request->name,
+                'school_name' => $request->input('school_name'),
+                'group_name'  => $request->input('group_name'),
             ];
 
             $data = $this->safeUtf8($data);
 
-            $pdfTicket = Pdf::loadView('pdf.sertificate-lomba-tari', $data)
-                ->setPaper('A4', 'landscape')
-                ->setOptions([
-                    'defaultFont'          => 'sans-serif',
-                    'isHtml5ParserEnabled' => true,
-                    'isRemoteEnabled'      => false,
-                    'dpi'                  => 96,
-                    'isPhpEnabled'         => true,
-                ])
-                ->setWarnings(false);
+            $pdf = Pdf::loadView(
+                'pdf.sertificate-lomba-tari',
+                $data
+            )
+            ->setPaper('A4', 'landscape')
+            ->setOptions([
+                'defaultFont'          => 'sans-serif',
+                'isHtml5ParserEnabled' => true,
+                'isRemoteEnabled'      => false,
+                'dpi'                  => 96,
+                'isPhpEnabled'         => true,
+            ])
+            ->setWarnings(false);
 
-            $pdfTicket->getDomPDF()->getOptions()->setChroot(public_path());
+            $pdf->getDomPDF()
+                ->getOptions()
+                ->setChroot(public_path());
 
-            $fileName = $request->name . '.pdf';
-            $path = 'public/pdf/' . $fileName;
+            $fileName = str($request->group_name)
+                ->slug('_')
+                ->append('.pdf')
+                ->toString();
+
+            Log::info('Generate Certificate Success', [
+                'group_name'  => $request->group_name,
+                'school_name' => $request->school_name,
+                'file_name'   => $fileName,
+            ]);
+
+            return $pdf->stream($fileName);
 
             Storage::put($path, $pdfTicket->output());
-
-            Log::info('Certificate Saved Success', [
-                'name' => $request->name,
-                'path' => $path,
-                'memory_peak_mb' => round(memory_get_peak_usage(true) / 1024 / 1024, 2),
-            ]);
 
             return response()->json([
                 'status' => 'success',
@@ -207,24 +214,22 @@ class LombaTariController extends Controller
                     'file_path' => asset('storage/pdf/' . $fileName),
                 ],
             ]);
+
         } catch (\Throwable $th) {
 
             Log::error('Generate Certificate Error', [
-                'message' => $th->getMessage(),
-                'file' => $th->getFile(),
-                'line' => $th->getLine(),
-                'trace' => $th->getTraceAsString(),
-
-                'memory_usage_mb' => round(memory_get_usage(true) / 1024 / 1024, 2),
-                'memory_peak_mb' => round(memory_get_peak_usage(true) / 1024 / 1024, 2),
-
-                'payload' => $request->all(),
+                'message'          => $th->getMessage(),
+                'file'             => $th->getFile(),
+                'line'             => $th->getLine(),
+                'memory_usage_mb'  => round(memory_get_usage(true) / 1024 / 1024, 2),
+                'memory_peak_mb'   => round(memory_get_peak_usage(true) / 1024 / 1024, 2),
+                'payload'          => $request->all(),
             ]);
 
             return response()->json([
-                'status' => 'error',
+                'status'  => 'error',
                 'message' => 'Terjadi kesalahan generate pdf: ' . $th->getMessage(),
-                'data' => [],
+                'data'    => [],
             ], 500);
         }
     }
