@@ -12,6 +12,7 @@ use App\Http\Controllers\SalokaEduPrideController;
 use App\Http\Controllers\SalokaPHRDController;
 use App\Http\Controllers\SalokafestController;
 use App\Http\Controllers\LombaTariController;
+use App\Http\Controllers\LombaMewarnaiController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -38,6 +39,8 @@ Route::post('/generate-saloka-phrd-sertificate', [SalokaPHRDController::class, '
 Route::post('/generate-salokafest-pdf', [SalokafestController::class, 'GeneratePdf']);
 Route::post('/generate-lomba-tari-pdf', [LombaTariController::class, 'GeneratePdf']);
 Route::post('/generate-lomba-tari-sertificate', [LombaTariController::class, 'GenerateSertificate']);
+Route::post('/generate-lomba-mewarnai-pdf', [LombaMewarnaiController::class, 'GeneratePdf']);
+Route::post('/generate-lomba-mewarnai-sertificate', [LombaMewarnaiController::class, 'GenerateSertificate']);
 
 
 
