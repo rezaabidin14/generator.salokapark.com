@@ -68,14 +68,14 @@
        ========================= */
     .header {
       position: absolute;
-      top: 200px; /* ubah ini untuk naik/turun */
+      top: 300px; /* ubah ini untuk naik/turun */
       left: 0;
       width: 100%;
       text-align: center;
     }
 
     .participant-name {
-      font-size: 30px;
+      font-size: 48px;
       font-weight: bold;
       color: black;
     }
