@@ -68,7 +68,7 @@
        ========================= */
     .header {
       position: absolute;
-      top: 400px; /* ubah ini untuk naik/turun */
+      top: 200px; /* ubah ini untuk naik/turun */
       left: 0;
       width: 100%;
       text-align: center;
@@ -77,7 +77,7 @@
     .participant-name {
       font-size: 30px;
       font-weight: bold;
-      color: white;
+      color: black;
     }
   </style>
 </head>
