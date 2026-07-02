@@ -143,8 +143,7 @@ class LombaMewarnaiController extends Controller
         ini_set('memory_limit', '2048M');
 
         $validator = Validator::make($request->all(), [
-            'group_name'  => 'required|string|max:255',
-            'school_name' => 'required|string|max:255',
+            'name'  => 'required|string|max:255',
         ]);
 
         if ($validator->fails()) {
@@ -158,14 +157,13 @@ class LombaMewarnaiController extends Controller
         try {
 
             $data = [
-                'school_name' => $request->input('school_name'),
-                'group_name'  => $request->input('group_name'),
+                'name' => $request->input('name'),
             ];
 
             $data = $this->safeUtf8($data);
 
             $pdf = Pdf::loadView(
-                'pdf.sertificate-lomba-tari',
+                'pdf.sertificate-lomba-mewarnai',
                 $data
             )
             ->setPaper('A4', 'landscape')
@@ -182,12 +180,12 @@ class LombaMewarnaiController extends Controller
                 ->getOptions()
                 ->setChroot(public_path());
 
-            $fileName = str($request->group_name)
+            $fileName = str($request->name)
                 ->slug('_')
                 ->append('.pdf')
                 ->toString();
 
-            $path = 'e-certificates/lomba-tari/' . $fileName;
+            $path = 'e-certificates/lomba-mewarnai/' . $fileName;
 
             Storage::disk('public')->put(
                 $path,
