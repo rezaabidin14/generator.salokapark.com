@@ -68,7 +68,7 @@
        ========================= */
     .header {
       position: absolute;
-      top: 300px; /* ubah ini untuk naik/turun */
+      top: 250px; /* ubah ini untuk naik/turun */
       left: 0;
       width: 100%;
       text-align: center;
