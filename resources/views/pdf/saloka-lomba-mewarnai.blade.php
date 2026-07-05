@@ -245,57 +245,132 @@
                   </td>
                 </tr>
 
-                <!--- Item Produk Terbayar  -->
-                @foreach ($ticket_orders as $ticket_order)
+              <!--- Item Produk Terbayar -->
+              @foreach ($ticket_orders as $ticket_order)
                   <tr>
-                    <td align="left">
-                      <table align="center"
-                             cellpadding="0"
-                             cellspacing="0"
-                             width="100%"
-                             style="margin-top: .5rem">
-                        <tbody>
-                          <tr>
-                            <td align="left"
-                                class=""
-                                width="45%"
-                                style="font-size: 12px; line-height: 1.2;">
-                              <p>
-                                <span>
-                                  {{ $ticket_order['ticket_name'] }}
-                                </span>
-                              </p>
-                            </td>
-                            <td align="left"
-                                class=""
-                                width="15%"
-                                style="font-size: 12px; line-height: 1.2;">
-                              <p>
-                                <span>{{ $ticket_order['quantity'] }} Pax</span>
-                              </p>
-                            </td>
-                            <td align="left"
-                                class=""
-                                width="15%"
-                                style="font-size: 12px; line-height: 1.2;">
-                              <p>
-                                <span>{{ 'Rp ' . number_format($ticket_order['price'], 0, ',', '.') }}</span>
-                              </p>
-                            </td>
-                            <td align="right"
-                                class=""
-                                width="25%"
-                                style="font-size: 12px; line-height: 1.2;">
-                              <p>
-                                <span>{{ 'Rp ' . number_format($ticket_order['subtotal'], 0, ',', '.') }}</span>
-                              </p>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </td>
+                      <td align="left">
+                          <table
+                              align="center"
+                              cellpadding="0"
+                              cellspacing="0"
+                              width="100%"
+                              style="
+                                  margin-top:.5rem;
+                                  @if($ticket_order['is_meet_and_greet'] ?? false)
+                                      background:#FFF6D5;
+                                      border:2px solid #C9A227;
+                                      border-radius:10px;
+                                  @endif
+                              "
+                          >
+                              <tbody>
+                                  <tr>
+                                      <td
+                                          align="left"
+                                          width="45%"
+                                          style="
+                                              font-size:12px;
+                                              line-height:1.35;
+                                              padding:10px 12px;
+                                          "
+                                      >
+                                          <div
+                                              style="
+                                                  font-size:12px;
+                                                  font-weight:bold;
+                                                  color:#4A3B00;
+                                              "
+                                          >
+                                              {{ $ticket_order['ticket_name'] }}
+                                          </div>
+
+                                          @if($ticket_order['is_meet_and_greet'] ?? false)
+                                              <div
+                                                  style="
+                                                      margin-top:5px;
+                                                      display:inline-block;
+                                                      padding:3px 10px;
+                                                      background:#C9A227;
+                                                      border:1px solid #A67C00;
+                                                      border-radius:20px;
+                                                      color:#FFFFFF;
+                                                      font-size:9px;
+                                                      font-weight:bold;
+                                                      letter-spacing:1px;
+                                                      text-transform:uppercase;
+                                                  "
+                                              >
+                                                  Golden Ticket Meet &amp; Greet 
+                                              </div>
+
+                                              <div
+                                                  style="
+                                                      margin-top:4px;
+                                                      font-size:9px;
+                                                      color:#8C6A00;
+                                                      font-style:italic;
+                                                      font-weight:bold;
+                                                      letter-spacing:.5px;
+                                                  "
+                                              >
+                                                  *Peserta Meet & Greet akan mendapatkan kesempatan untuk bertemu langsung dengan karakter Saloka dan berfoto bersama.
+                                              </div>
+                                          @endif
+                                      </td>
+
+                                      <td
+                                          align="left"
+                                          width="15%"
+                                          style="
+                                              font-size:12px;
+                                              line-height:1.2;
+                                              padding:10px 8px;
+                                              @if($ticket_order['is_meet_and_greet'] ?? false)
+                                                  color:#6B5200;
+                                                  font-weight:bold;
+                                              @endif
+                                          "
+                                      >
+                                          {{ $ticket_order['quantity'] }} Pax
+                                      </td>
+
+                                      <td
+                                          align="left"
+                                          width="15%"
+                                          style="
+                                              font-size:12px;
+                                              line-height:1.2;
+                                              padding:10px 8px;
+                                              @if($ticket_order['is_meet_and_greet'] ?? false)
+                                                  color:#6B5200;
+                                                  font-weight:bold;
+                                              @endif
+                                          "
+                                      >
+                                          {{ 'Rp ' . number_format($ticket_order['price'], 0, ',', '.') }}
+                                      </td>
+
+                                      <td
+                                          align="right"
+                                          width="25%"
+                                          style="
+                                              font-size:12px;
+                                              line-height:1.2;
+                                              padding:10px 12px;
+                                              font-weight:bold;
+                                              @if($ticket_order['is_meet_and_greet'] ?? false)
+                                                  color:#6B5200;
+                                              @endif
+                                          "
+                                      >
+                                          {{ 'Rp ' . number_format($ticket_order['subtotal'], 0, ',', '.') }}
+                                      </td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </td>
                   </tr>
-                @endforeach
+              @endforeach
 
                 <!--- Total Terbayar  -->
                 <tr>
