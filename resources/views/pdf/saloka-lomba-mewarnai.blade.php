@@ -245,7 +245,7 @@
                   </td>
                 </tr>
 
-              <!--- Item Produk Terbayar -->
+             <!--- Item Produk Terbayar -->
               @foreach ($ticket_orders as $ticket_order)
                   <tr>
                       <td align="left">
@@ -257,9 +257,10 @@
                               style="
                                   margin-top:.5rem;
                                   @if($ticket_order['is_meet_and_greet'] ?? false)
-                                      background:#FFF6D5;
-                                      border:2px solid #C9A227;
-                                      border-radius:10px;
+                                      background:#FFF9EA;
+                                      border:2px solid #D4AF37;
+                                      border-radius:12px;
+                                      box-shadow:0 4px 12px rgba(212,175,55,.18);
                                   @endif
                               "
                           >
@@ -270,15 +271,15 @@
                                           width="45%"
                                           style="
                                               font-size:12px;
-                                              line-height:1.35;
-                                              padding:10px 12px;
+                                              line-height:1.5;
+                                              padding:12px;
                                           "
                                       >
                                           <div
                                               style="
-                                                  font-size:12px;
+                                                  font-size:13px;
                                                   font-weight:bold;
-                                                  color:#4A3B00;
+                                                  color:#4B3600;
                                               "
                                           >
                                               {{ $ticket_order['ticket_name'] }}
@@ -287,12 +288,12 @@
                                           @if($ticket_order['is_meet_and_greet'] ?? false)
                                               <div
                                                   style="
-                                                      margin-top:5px;
+                                                      margin-top:8px;
                                                       display:inline-block;
-                                                      padding:3px 10px;
-                                                      background:#C9A227;
-                                                      border:1px solid #A67C00;
-                                                      border-radius:20px;
+                                                      padding:5px 14px;
+                                                      background:#D4AF37;
+                                                      border:1px solid #E7C75F;
+                                                      border-radius:999px;
                                                       color:#FFFFFF;
                                                       font-size:9px;
                                                       font-weight:bold;
@@ -300,20 +301,28 @@
                                                       text-transform:uppercase;
                                                   "
                                               >
-                                                  Golden Ticket Meet &amp; Greet 
+                                                  Golden Ticket Winner
                                               </div>
 
                                               <div
                                                   style="
-                                                      margin-top:4px;
+                                                      margin-top:8px;
+                                                      padding:8px 10px;
+                                                      background:#FFFDF7;
+                                                      border-left:4px solid #D4AF37;
+                                                      border-radius:6px;
+                                                      color:#6B5200;
                                                       font-size:9px;
-                                                      color:#8C6A00;
-                                                      font-style:italic;
-                                                      font-weight:bold;
-                                                      letter-spacing:.5px;
+                                                      line-height:1.55;
                                                   "
                                               >
-                                                  *Peserta Meet & Greet akan mendapatkan kesempatan untuk bertemu langsung dengan karakter Saloka dan berfoto bersama.
+                                                  <strong>Selamat!</strong> Anda merupakan
+                                                  <strong>Pemenang Golden Ticket</strong>.
+
+                                                  Nikmati pengalaman eksklusif
+                                                  <strong>Meet &amp; Greet bersama Loka &amp; Riri</strong>,
+                                                  lengkap dengan sesi foto untuk mengabadikan
+                                                  momen spesial yang tak terlupakan.
                                               </div>
                                           @endif
                                       </td>
@@ -323,10 +332,10 @@
                                           width="15%"
                                           style="
                                               font-size:12px;
-                                              line-height:1.2;
-                                              padding:10px 8px;
+                                              line-height:1.3;
+                                              padding:12px 8px;
                                               @if($ticket_order['is_meet_and_greet'] ?? false)
-                                                  color:#6B5200;
+                                                  color:#8A6A00;
                                                   font-weight:bold;
                                               @endif
                                           "
@@ -339,10 +348,10 @@
                                           width="15%"
                                           style="
                                               font-size:12px;
-                                              line-height:1.2;
-                                              padding:10px 8px;
+                                              line-height:1.3;
+                                              padding:12px 8px;
                                               @if($ticket_order['is_meet_and_greet'] ?? false)
-                                                  color:#6B5200;
+                                                  color:#8A6A00;
                                                   font-weight:bold;
                                               @endif
                                           "
@@ -354,12 +363,12 @@
                                           align="right"
                                           width="25%"
                                           style="
-                                              font-size:12px;
-                                              line-height:1.2;
-                                              padding:10px 12px;
+                                              font-size:13px;
+                                              line-height:1.3;
+                                              padding:12px;
                                               font-weight:bold;
                                               @if($ticket_order['is_meet_and_greet'] ?? false)
-                                                  color:#6B5200;
+                                                  color:#8A6A00;
                                               @endif
                                           "
                                       >
