@@ -1073,7 +1073,7 @@
                             <!-- ================= F ================= -->
                             <tr>
                                 <td align="left">
-                                    <p style="font-size:13px;line-height:1.6;margin-top:18px;padding-top:200px;">
+                                    <p style="font-size:13px;line-height:1.6;margin-top:18px;padding-top:190px;">
                                         <strong>F. PELAKSANAAN LOMBA</strong>
                                     </p>
                                 </td>
