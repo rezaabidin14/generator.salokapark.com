@@ -971,239 +971,192 @@
     </table>
     <!--Cara Print Kode Booking Section End -->
 
-    <!--Detail Syarat & Ketentuan Section Start -->
+   <!--Detail Syarat & Ketentuan Section Start -->
     <table align="center"
-           cellpadding="0"
-           cellspacing="0"
-           width="100%"
-           style="background-color: transparent; padding: 0rem 0rem; border-bottom: 2px dashed #ededed;">
-      <tbody>
-        <tr>
-          <td align="left"
-              valign="top">
-            <table align="center"
-                   cellpadding="0"
-                   cellspacing="0"
-                   width="100%"
-                   style="background-color: transparent; padding: 1rem 2rem;">
-              <tbody>
-                <tr>
-                  <td align="left">
-                    <p style="line-height:1.5; font-size:14px">
-                      <strong>Syarat & Ketentuan Lomba Mewarnai 2026:</strong>
-                    </p>
-                  </td>
-                </tr>
+          cellpadding="0"
+          cellspacing="0"
+          width="100%"
+          style="background-color:transparent;padding:0;border-bottom:2px dashed #ededed;">
+        <tbody>
+            <tr>
+                <td align="left" valign="top">
+                    <table align="center"
+                          cellpadding="0"
+                          cellspacing="0"
+                          width="100%"
+                          style="padding:1rem 2rem;">
+                        <tbody>
 
-                <!-- 1 -->
-                <tr>
-                  <td align="left"
-                      style="font-size:12px; line-height:1.5;">
-                    <p><strong>1.</strong> Terbuka untuk umum (Sanggar / PAUD-TK / SD / SMP / SMA / Universitas).</p>
-                  </td>
-                </tr>
+                            <!-- Title -->
+                            <tr>
+                                <td align="left">
+                                    <p style="font-size:14px;line-height:1.6;">
+                                        <strong>Syarat & Ketentuan Lomba Menggambar & Mewarnai Loka & Riri 2026</strong>
+                                    </p>
+                                </td>
+                            </tr>
 
-                <!-- 2 -->
-                <tr>
-                  <td align="left"
-                      style="font-size:12px; line-height:1.5;">
-                    <p><strong>2.</strong> Pendaftaran melalui website lombatari.salokapark.com dan kemudian melakukan
-                      pembayaran secara online dengan adanya batasan waktu pembayaran.</p>
-                  </td>
-                </tr>
+                            <!-- ================= A ================= -->
+                            <tr>
+                                <td align="left">
+                                    <p style="font-size:13px;line-height:1.6;margin-top:12px;">
+                                        <strong>A. KETENTUAN UMUM</strong>
+                                    </p>
+                                </td>
+                            </tr>
 
-                <!-- 3 -->
-                <tr>
-                  <td align="left"
-                      style="font-size:12px; line-height:1.5;">
-                    <p><strong>3.</strong> Membawakan 1 (satu) Tari dengan Tema Tari Nusantara dengan
-                      durasi maksimal 8 (delapan) menit, serta diberikan waktu maksimal 2 (dua) menit untuk persiapan.
-                    </p>
-                  </td>
-                </tr>
+                            <tr><td style="font-size:12px;line-height:1.6;"><p><strong>1.</strong> Lomba Menggambar & Mewarnai Loka & Riri diselenggarakan oleh Saloka Theme Park bekerja sama dengan Educa Studio.</p></td></tr>
+                            <tr><td style="font-size:12px;line-height:1.6;"><p><strong>2.</strong> Dengan melakukan pendaftaran, peserta dianggap telah membaca, memahami, dan menyetujui seluruh syarat dan ketentuan yang berlaku.</p></td></tr>
+                            <tr><td style="font-size:12px;line-height:1.6;"><p><strong>3.</strong> Peserta wajib melakukan registrasi sesuai kategori usia yang ditentukan panitia.</p></td></tr>
+                            <tr><td style="font-size:12px;line-height:1.6;"><p><strong>4.</strong> Data pendaftaran harus benar dan dapat dipertanggungjawabkan.</p></td></tr>
+                            <tr><td style="font-size:12px;line-height:1.6;"><p><strong>5.</strong> Panitia berhak melakukan verifikasi data peserta apabila diperlukan.</p></td></tr>
+                            <tr><td style="font-size:12px;line-height:1.6;"><p><strong>6.</strong> Akses wahana mengikuti ketentuan operasional, batas usia, tinggi badan, dan standar keselamatan yang berlaku di Saloka Theme Park.</p></td></tr>
 
-                <!-- 4 -->
-                <tr>
-                  <td align="left"
-                      style="font-size:12px; line-height:1.5;">
-                    <p><strong>4.</strong> Konsep tarian tidak mengandung unsur SARA.</p>
-                  </td>
-                </tr>
+                            <!-- ================= B ================= -->
+                            <tr>
+                                <td align="left">
+                                    <p style="font-size:13px;line-height:1.6;margin-top:18px;">
+                                        <strong>B. KATEGORI PESERTA</strong>
+                                    </p>
+                                </td>
+                            </tr>
 
-                <!-- 5 -->
-                <tr>
-                  <td align="left"
-                      style="font-size:12px; line-height:1.5;">
-                    <p><strong>5.</strong> 1 (satu) grup terdiri atas maksimal 10 (sepuluh) orang yang terdiri atas 7–9
-                      orang penari (pria/wanita) dan 1 (satu) orang official.</p>
-                  </td>
-                </tr>
+                            <tr><td style="font-size:12px;line-height:1.6;"><p><strong>1.</strong> Kategori A: KB – TK.</p></td></tr>
+                            <tr><td style="font-size:12px;line-height:1.6;"><p><strong>2.</strong> Kategori B: SD Kelas 1 – 3.</p></td></tr>
+                            <tr><td style="font-size:12px;line-height:1.6;"><p><strong>3.</strong> Kategori C: SD Kelas 4 – 6.</p></td></tr>
+                            <tr><td style="font-size:12px;line-height:1.6;"><p><strong>4.</strong> Peserta wajib mengikuti kategori sesuai jenjang pendidikan yang sedang ditempuh.</p></td></tr>
 
-                <!-- 6 -->
-                <tr>
-                  <td align="left"
-                      style="font-size:12px; line-height:1.5;">
-                    <p><strong>6.</strong> Setiap kontingen boleh mengirimkan lebih dari 1 (satu) tim.</p>
-                  </td>
-                </tr>
+                            <!-- ================= C ================= -->
+                            <tr>
+                                <td align="left">
+                                    <p style="font-size:13px;line-height:1.6;margin-top:18px;">
+                                        <strong>C. PENDAFTARAN & PEMBAYARAN</strong>
+                                    </p>
+                                </td>
+                            </tr>
 
-                <!-- 7 -->
-                <tr>
-                  <td align="left"
-                      style="font-size:12px; line-height:1.5;">
-                    <p><strong>7.</strong> Biaya pendaftaran Presale Rp250.000/team dan tiket pendamping Rp80.000/orang.
-                      Jumlah pendamping tidak terbatas (sudah termasuk tiket wahana Saloka).</p>
-                  </td>
-                </tr>
+                            <tr><td style="font-size:12px;line-height:1.6;"><p><strong>1.</strong> Pendaftaran dilakukan melalui website resmi lombamewarnai.salokapark.com.</p></td></tr>
+                            <tr><td style="font-size:12px;line-height:1.6;"><p><strong>2.</strong> Pendaftaran dinyatakan sah setelah pembayaran berhasil diverifikasi oleh sistem.</p></td></tr>
+                            <tr><td style="font-size:12px;line-height:1.6;"><p><strong>3.</strong> Setiap peserta dan pendamping yang terdaftar akan mendapatkan tiket masuk dan akses bermain wahana sesuai ketentuan operasional Saloka Theme Park.</p></td></tr>
+                            <tr><td style="font-size:12px;line-height:1.6;"><p><strong>4.</strong> E-ticket dikirim secara digital melalui WhatsApp atau kanal resmi Saloka.</p></td></tr>
+                            <tr><td style="font-size:12px;line-height:1.6;"><p><strong>5.</strong> Voucher Riri Digital dikirim melalui WhatsApp resmi Saloka Theme Park setelah pembayaran berhasil diverifikasi.</p></td></tr>
+                            <tr><td style="font-size:12px;line-height:1.6;"><p><strong>6.</strong> E-Sertifikat peserta dikirim melalui WhatsApp resmi Saloka Theme Park setelah pembayaran berhasil diverifikasi.</p></td></tr>
+                            <tr><td style="font-size:12px;line-height:1.6;"><p><strong>7.</strong> Kuota peserta terbatas dan pendaftaran dapat ditutup sewaktu-waktu apabila kuota telah terpenuhi.</p></td></tr>
 
-                <!-- 8 -->
-                <tr>
-                  <td align="left"
-                      style="font-size:12px; line-height:1.5;">
-                    <p><strong>8.</strong> Biaya pendaftaran Regular Rp300.000/team dan tiket pendamping
-                      Rp100.000/orang. Jumlah pendamping tidak terbatas (sudah termasuk tiket wahana Saloka).</p>
-                  </td>
-                </tr>
+                            <!-- ================= D ================= -->
+                            <tr>
+                                <td align="left">
+                                    <p style="font-size:13px;line-height:1.6;margin-top:18px;">
+                                        <strong>D. PERUBAHAN DATA PESERTA</strong>
+                                    </p>
+                                </td>
+                            </tr>
 
-                <!-- 9 -->
-                <tr>
-                  <td align="left"
-                      style="font-size:12px; line-height:1.5;">
-                    <p><strong>9.</strong> Musik pengiring bebas (rekaman), dikirim dalam format MP3 melalui email atau
-                      Google Drive maksimal H-3 pelaksanaan serta melampirkan sumber musik.</p>
-                  </td>
-                </tr>
+                            <tr><td style="font-size:12px;line-height:1.6;"><p><strong>1.</strong> Pergantian nama peserta diperbolehkan maksimal H-1 pelaksanaan acara.</p></td></tr>
+                            <tr><td style="font-size:12px;line-height:1.6;"><p><strong>2.</strong> Pergantian peserta wajib berada pada kategori lomba yang sama.</p></td></tr>
+                            <tr><td style="font-size:12px;line-height:1.6;"><p><strong>3.</strong> Perubahan data peserta harus disampaikan melalui kontak resmi panitia.</p></td></tr>
 
-                <!-- 10 -->
-                <tr>
-                  <td align="left"
-                      style="font-size:12px; line-height:1.5;">
-                    <p><strong>10.</strong> Registrasi peserta dimulai pukul 07.00–10.00 WIB di Sales Counter untuk
-                      mendapatkan nomor urut peserta, sertifikat peserta/grup (online), dan ID Card Official.</p>
-                  </td>
-                </tr>
+                            <!-- ================= E ================= -->
+                            <tr>
+                                <td align="left">
+                                    <p style="font-size:13px;line-height:1.6;margin-top:18px;">
+                                        <strong>E. PEMBATALAN & REFUND</strong>
+                                    </p>
+                                </td>
+                            </tr>
 
-                <!-- 11 -->
-                <tr>
-                  <td align="left"
-                      style="font-size:12px; line-height:1.5;">
-                    <p><strong>11.</strong> Peserta harus standby 30 menit sebelum jadwal tampil di area lomba.</p>
-                  </td>
-                </tr>
+                            <tr><td style="font-size:12px;line-height:1.6;"><p><strong>1.</strong> Biaya pendaftaran yang telah dibayarkan tidak dapat dikembalikan (non-refundable).</p></td></tr>
+                            <tr><td style="font-size:12px;line-height:1.6;"><p><strong>2.</strong> Peserta yang berhalangan hadir dapat mengalihkan kepesertaannya kepada peserta lain sesuai kategori.</p></td></tr>
+                            <tr><td style="font-size:12px;line-height:1.6;"><p><strong>3.</strong> Pengalihan peserta hanya dapat dilakukan maksimal H-1 pelaksanaan acara.</p></td></tr>
+                            <tr><td style="font-size:12px;line-height:1.6;"><p><strong>4.</strong> Refund hanya berlaku apabila acara dibatalkan oleh penyelenggara.</p></td></tr>
 
-                <!-- 12 -->
-                <tr>
-                  <td align="left"
-                      style="font-size:12px; line-height:1.5;">
-                    <p><strong>12.</strong> Perwakilan tim wajib menghadiri Technical Meeting pada tanggal 19 Juli 2026
-                      melalui Google Meet.</p>
-                  </td>
-                </tr>
+                            <!-- ================= F ================= -->
+                            <tr>
+                                <td align="left">
+                                    <p style="font-size:13px;line-height:1.6;margin-top:18px;">
+                                        <strong>F. PELAKSANAAN LOMBA</strong>
+                                    </p>
+                                </td>
+                            </tr>
 
-                <!-- 13 -->
-                <tr>
-                  <td align="left"
-                      style="font-size:12px; line-height:1.5;">
-                    <p><strong>13.</strong> Penilaian berdasarkan aspek Wirogo, Wiromo, Wiroso, dan Visual.</p>
-                  </td>
-                </tr>
+                            <tr><td style="font-size:12px;line-height:1.6;"><p><strong>1.</strong> Registrasi ulang peserta dimulai pukul 07.00 WIB.</p></td></tr>
+                            <tr><td style="font-size:12px;line-height:1.6;"><p><strong>2.</strong> Peserta wajib hadir sesuai jadwal yang ditentukan panitia.</p></td></tr>
+                            <tr><td style="font-size:12px;line-height:1.6;"><p><strong>3.</strong> Peserta wajib hadir paling lambat 30 menit sebelum perlombaan dimulai.</p></td></tr>
+                            <tr><td style="font-size:12px;line-height:1.6;"><p><strong>4.</strong> Panitia tidak menyediakan alat mewarnai. Peserta wajib membawa perlengkapan sendiri.</p></td></tr>
+                            <tr><td style="font-size:12px;line-height:1.6;"><p><strong>5.</strong> Peserta tidak diperkenankan meminjam atau meminjamkan alat menggambar dan mewarnai.</p></td></tr>
+                            <tr><td style="font-size:12px;line-height:1.6;"><p><strong>6.</strong> Alat yang diperbolehkan: Crayon, Pensil Warna, dan Spidol.</p></td></tr>
+                            <tr><td style="font-size:12px;line-height:1.6;"><p><strong>7.</strong> Kertas lomba ukuran A3 disediakan oleh panitia.</p></td></tr>
+                            <tr><td style="font-size:12px;line-height:1.6;"><p><strong>8.</strong> Peserta diperbolehkan menambahkan objek gambar sesuai kreativitas.</p></td></tr>
+                            <tr><td style="font-size:12px;line-height:1.6;"><p><strong>9.</strong> Orang tua atau pendamping tidak diperkenankan memasuki area lomba selama perlombaan berlangsung.</p></td></tr>
+                            <tr><td style="font-size:12px;line-height:1.6;"><p><strong>10.</strong> Peserta dan pendamping tidak diperkenankan membawa makanan dan minuman dari luar Saloka Theme Park.</p></td></tr>
+                            <tr><td style="font-size:12px;line-height:1.6;"><p><strong>11.</strong> Peserta dan pendamping dihimbau membawa tumbler atau botol minum pribadi.</p></td></tr>
 
-                <!-- 14 -->
-                <tr>
-                  <td align="left"
-                      style="font-size:12px; line-height:1.5;">
-                    <p><strong>14.</strong> Pendaftaran ditutup pada 13 Juli 2026 pukul 23.59 WIB atau saat kuota
-                      peserta telah terpenuhi.</p>
-                  </td>
-                </tr>
+                            <!-- ================= G ================= -->
+                            <tr>
+                                <td align="left">
+                                    <p style="font-size:13px;line-height:1.6;margin-top:18px;">
+                                        <strong>G. PENJURIAN</strong>
+                                    </p>
+                                </td>
+                            </tr>
 
-                <!-- 15 -->
-                <tr>
-                  <td align="left"
-                      style="font-size:12px; line-height:1.5;">
-                    <p><strong>15.</strong> Panitia menyediakan tempat transit (touch up area) yang dapat digunakan
-                      bersama oleh seluruh peserta.</p>
-                  </td>
-                </tr>
+                            <tr><td style="font-size:12px;line-height:1.6;"><p><strong>Kriteria Penilaian:</strong></p></td></tr>
+                            <tr><td style="font-size:12px;line-height:1.6;"><p>• Harmoni & Komposisi Warna</p></td></tr>
+                            <tr><td style="font-size:12px;line-height:1.6;"><p>• Motorik, Kecermatan & Ketelitian</p></td></tr>
+                            <tr><td style="font-size:12px;line-height:1.6;"><p>• Kerapihan & Kebersihan</p></td></tr>
 
-                <!-- 16 -->
-                <tr>
-                  <td align="left"
-                      style="font-size:12px; line-height:1.5;">
-                    <p><strong>16.</strong> Peserta diperkenankan menggunakan properti tari yang mendukung penampilan.
-                    </p>
-                  </td>
-                </tr>
+                            <tr><td style="font-size:12px;line-height:1.6;"><p><strong>Ketentuan:</strong></p></td></tr>
+                            <tr><td style="font-size:12px;line-height:1.6;"><p><strong>1.</strong> Penilaian dilakukan oleh dewan juri yang ditunjuk panitia.</p></td></tr>
+                            <tr><td style="font-size:12px;line-height:1.6;"><p><strong>2.</strong> Keputusan dewan juri bersifat mutlak, final, dan tidak dapat diganggu gugat.</p></td></tr>
+                            <tr><td style="font-size:12px;line-height:1.6;"><p><strong>3.</strong> Panitia tidak melayani keberatan atau banding atas hasil penilaian.</p></td></tr>
 
-                <!-- 17 -->
-                <tr>
-                  <td align="left"
-                      style="font-size:12px; line-height:1.5;">
-                    <p><strong>17.</strong> Properti yang digunakan tidak diperkenankan mengotori panggung (misalnya
-                      flare, mercon, tepung, kelopak bunga, pasir, air, bubuk glitter, daun kering, confetti, balon
-                      helium, dan sejenisnya).</p>
-                  </td>
-                </tr>
+                            <!-- ================= H ================= -->
+                            <tr>
+                                <td align="left">
+                                    <p style="font-size:13px;line-height:1.6;margin-top:18px;">
+                                        <strong>H. MEET & GREET LOKA & RIRI</strong>
+                                    </p>
+                                </td>
+                            </tr>
 
-                <!-- 18 -->
-                <tr>
-                  <td align="left"
-                      style="font-size:12px; line-height:1.5;">
-                    <p><strong>18.</strong> Peserta dengan nomor undi 1–10 dihimbau sudah melakukan persiapan dari rumah
-                      (make up dan hairdo).</p>
-                  </td>
-                </tr>
+                            <tr><td style="font-size:12px;line-height:1.6;"><p><strong>1.</strong> Meet & Greet merupakan benefit tambahan bagi peserta yang terpilih melalui Lucky Draw.</p></td></tr>
+                            <tr><td style="font-size:12px;line-height:1.6;"><p><strong>2.</strong> Meet & Greet tidak dipungut biaya tambahan.</p></td></tr>
+                            <tr><td style="font-size:12px;line-height:1.6;"><p><strong>3.</strong> Total peserta Meet & Greet yang dipilih adalah 90 peserta (30 peserta setiap kategori).</p></td></tr>
+                            <tr><td style="font-size:12px;line-height:1.6;"><p><strong>4.</strong> Keputusan sistem Lucky Draw bersifat final dan tidak dapat diganggu gugat.</p></td></tr>
 
-                <!-- 19 -->
-                <tr>
-                  <td align="left"
-                      style="font-size:12px; line-height:1.5;">
-                    <p><strong>19.</strong> Peserta tidak diperkenankan membawa makanan dan minuman dari luar Saloka.
-                    </p>
-                  </td>
-                </tr>
+                            <!-- ================= I ================= -->
+                            <tr>
+                                <td align="left">
+                                    <p style="font-size:13px;line-height:1.6;margin-top:18px;">
+                                        <strong>I. DOKUMENTASI & PUBLIKASI</strong>
+                                    </p>
+                                </td>
+                            </tr>
 
-                <!-- 20 -->
-                <tr>
-                  <td align="left"
-                      style="font-size:12px; line-height:1.5;">
-                    <p><strong>20.</strong> Peserta dihimbau untuk membawa tumbler atau botol minum sendiri.</p>
-                  </td>
-                </tr>
+                            <tr><td style="font-size:12px;line-height:1.6;"><p><strong>1.</strong> Panitia berhak mengambil foto dan video selama acara berlangsung.</p></td></tr>
+                            <tr><td style="font-size:12px;line-height:1.6;"><p><strong>2.</strong> Dokumentasi dapat digunakan untuk kebutuhan promosi, publikasi, dan media sosial Saloka Theme Park maupun Educa Studio tanpa kompensasi tambahan.</p></td></tr>
+                            <tr><td style="font-size:12px;line-height:1.6;"><p><strong>3.</strong> Dengan mengikuti acara, peserta dan pendamping menyetujui penggunaan dokumentasi tersebut.</p></td></tr>
 
-                <!-- 21 -->
-                <tr>
-                  <td align="left"
-                      style="font-size:12px; line-height:1.5;">
-                    <p><strong>21.</strong> Peserta yang dipanggil sebanyak 3 (tiga) kali dan tidak hadir di tempat akan
-                      otomatis didiskualifikasi.</p>
-                  </td>
-                </tr>
+                            <!-- ================= J ================= -->
+                            <tr>
+                                <td align="left">
+                                    <p style="font-size:13px;line-height:1.6;margin-top:18px;">
+                                        <strong>J. KETENTUAN LAIN</strong>
+                                    </p>
+                                </td>
+                            </tr>
 
-                <!-- 22 -->
-                <tr>
-                  <td align="left"
-                      style="font-size:12px; line-height:1.5;">
-                    <p><strong>22.</strong> Pengumuman juara dilakukan setelah Baruklinting Show pukul 18.00 WIB.</p>
-                  </td>
-                </tr>
+                            <tr><td style="font-size:12px;line-height:1.6;"><p><strong>1.</strong> Panitia berhak mengubah jadwal, susunan acara, atau ketentuan teknis apabila diperlukan demi kelancaran acara.</p></td></tr>
+                            <tr><td style="font-size:12px;line-height:1.6;"><p><strong>2.</strong> Panitia berhak mendiskualifikasi peserta yang melanggar peraturan.</p></td></tr>
+                            <tr><td style="font-size:12px;line-height:1.6;"><p><strong>3.</strong> Keputusan panitia terkait pelaksanaan acara bersifat final.</p></td></tr>
 
-                <!-- 23 -->
-                <tr>
-                  <td align="left"
-                      style="font-size:12px; line-height:1.5;">
-                    <p><strong>23.</strong> Keputusan Dewan Juri bersifat mutlak dan tidak dapat diganggu gugat.</p>
-                  </td>
-                </tr>
-
-              </tbody>
-            </table>
-          </td>
-        </tr>
-      </tbody>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
     </table>
     <!--Detail Syarat & Ketentuan Section End -->
-
   </main>
   <!-- Syart & Ketentuan Section End -->
 </body>
