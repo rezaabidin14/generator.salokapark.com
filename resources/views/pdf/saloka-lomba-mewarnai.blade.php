@@ -976,7 +976,7 @@
           cellpadding="0"
           cellspacing="0"
           width="100%"
-          style="background-color:transparent;padding:0;border-bottom:2px dashed #ededed;">
+          style="background-color:transparent;padding:0;border-bottom:2px dashed #ededed; padding-top:140px;">
         <tbody>
             <tr>
                 <td align="left" valign="top">
@@ -1073,7 +1073,7 @@
                             <!-- ================= F ================= -->
                             <tr>
                                 <td align="left">
-                                    <p style="font-size:13px;line-height:1.6;margin-top:18px;">
+                                    <p style="font-size:13px;line-height:1.6;margin-top:18px;padding-top:200px;">
                                         <strong>F. PELAKSANAAN LOMBA</strong>
                                     </p>
                                 </td>
