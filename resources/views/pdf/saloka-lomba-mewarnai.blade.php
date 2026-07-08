@@ -107,19 +107,10 @@
           </td>
 
           <td align="center"
-              style="width: 35%;">
+              style="width: 50%;">
             <img src="{{ public_path('assets/images/logo_lomba_mewarnai_2026.png') }}"
                  alt="Logo Lomba Mewarnai"
                  width="140"
-                 style="display:block; margin:auto;"
-                 class="adapt-img">
-          </td>
-
-          <td align="center"
-              style="width: 25%;">
-            <img src="{{ public_path('assets/images/logosaloka.png') }}"
-                 alt="Logo Saloka"
-                 width="90"
                  style="display:block; margin:auto;"
                  class="adapt-img">
           </td>
