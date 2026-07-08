@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
+use Intervention\Image\Facades\Image;
 
 class LombaMewarnaiController extends Controller
 {
@@ -218,5 +219,35 @@ class LombaMewarnaiController extends Controller
                 'data'    => [],
             ], 500);
         }
+    }
+
+    public function generateVoucher(Request $request)
+    {
+        $request->validate([
+            'code' => 'required|string|max:30'
+        ]);
+
+        $template = public_path('images/voucher-template.jpg');
+
+        $image = Image::make($template);
+
+        $fontPath = public_path('fonts/Montserrat-Bold.ttf');
+        // atau Arial.ttf, Poppins-Bold.ttf, dll
+
+        $image->text(
+            strtoupper($request->code),
+            715, // X
+            500, // Y
+            function ($font) use ($fontPath) {
+                $font->file($fontPath);
+                $font->size(72);
+                $font->color('#000000');
+                $font->align('center');
+                $font->valign('middle');
+                $font->angle(0);
+            }
+        );
+
+        return $image->response('png');
     }
 }

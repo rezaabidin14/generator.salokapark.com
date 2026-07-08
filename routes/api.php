@@ -41,7 +41,7 @@ Route::post('/generate-lomba-tari-pdf', [LombaTariController::class, 'GeneratePd
 Route::post('/generate-lomba-tari-sertificate', [LombaTariController::class, 'GenerateSertificate']);
 Route::post('/generate-lomba-mewarnai-pdf', [LombaMewarnaiController::class, 'GeneratePdf']);
 Route::post('/generate-lomba-mewarnai-sertificate', [LombaMewarnaiController::class, 'GenerateSertificate']);
-
+Route::get('/generate-lomba-mewarnai-voucher', [LombaMewarnaiController::class, 'generateVoucher']);
 
 
 // Generete QR Code
@@ -68,3 +68,4 @@ Route::post('/generate-email-information', [GenerateEmailInformationPdfControlle
 
 // Generate Image From Sheet
 Route::get('/generate-image-from-sheet', [GenerateImageFromSheet::class, 'sheetToImage']);
+
