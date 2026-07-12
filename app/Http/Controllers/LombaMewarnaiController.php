@@ -236,7 +236,7 @@ class LombaMewarnaiController extends Controller
 
         $image->text(
             strtoupper($request->code),
-            715, // X
+            740, // X
             500, // Y
             function ($font) use ($fontPath) {
                 $font->file($fontPath);

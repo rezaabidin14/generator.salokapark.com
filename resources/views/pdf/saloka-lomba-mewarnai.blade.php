@@ -292,7 +292,7 @@
                                                       text-transform:uppercase;
                                                   "
                                               >
-                                                  Golden Ticket Winner
+                                                  Ticket Special
                                               </div>
 
                                               <div
@@ -307,10 +307,8 @@
                                                       line-height:1.55;
                                                   "
                                               >
-                                                  <strong>Selamat!</strong> Anda merupakan
-                                                  <strong>Pemenang Golden Ticket</strong>.
-
-                                                  Nikmati pengalaman eksklusif
+                                                  <strong>Selamat!</strong> Ananda terpilih
+                                                  <strong>untuk menikmati pengalaman eksklusif</strong>.
                                                   <strong>Meet &amp; Greet bersama Loka &amp; Riri</strong>,
                                                   lengkap dengan sesi foto untuk mengabadikan
                                                   momen spesial yang tak terlupakan.
