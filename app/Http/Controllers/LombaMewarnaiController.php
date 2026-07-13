@@ -224,7 +224,7 @@ class LombaMewarnaiController extends Controller
     public function generateVoucher(Request $request)
     {
         $request->validate([
-            'code' => 'required|string|max:30'
+            'code' => 'required|string|max:30',
         ]);
 
         $template = public_path('images/voucher-template.jpg');
@@ -232,22 +232,33 @@ class LombaMewarnaiController extends Controller
         $image = Image::make($template);
 
         $fontPath = public_path('fonts/Montserrat-Bold.ttf');
-        // atau Arial.ttf, Poppins-Bold.ttf, dll
 
         $image->text(
             strtoupper($request->code),
-            740, // X
-            500, // Y
+            740,
+            500,
             function ($font) use ($fontPath) {
                 $font->file($fontPath);
                 $font->size(72);
                 $font->color('#000000');
                 $font->align('center');
                 $font->valign('middle');
-                $font->angle(0);
             }
         );
 
-        return $image->response('png');
+        // Nama file menggunakan kode voucher
+        $filename = strtoupper($request->code) . '.png';
+
+        // Simpan ke storage/app/public/voucher
+        Storage::disk('public')->put(
+            'voucher/' . $filename,
+            (string) $image->encode('png')
+        );
+
+        return response()->json([
+            'success'   => true,
+            'file_name' => $filename,
+            'file_path' => asset('storage/voucher/' . $filename),
+        ]);
     }
 }
