@@ -91,7 +91,7 @@
       <tbody>
         <tr>
           <td align="left"
-              style="width: 40%;">
+              style="width: 65%;">
             <h4 style="line-height: 1.2; font-size: 18px">
               <strong>E-ticket</strong>
             </h4>
@@ -106,8 +106,8 @@
             </h6>
           </td>
 
-          <td align="center"
-              style="width: 50%;">
+          <td align="center"  
+              style="width: 35%;">
             <img src="{{ public_path('assets/images/logo_lomba_mewarnai_2026.png') }}"
                  alt="Logo Lomba Mewarnai"
                  width="140"
