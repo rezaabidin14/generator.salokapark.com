@@ -239,7 +239,7 @@ class LombaMewarnaiController extends Controller
             500,
             function ($font) use ($fontPath) {
                 $font->file($fontPath);
-                $font->size(72);
+                $font->size(65);
                 $font->color('#000000');
                 $font->align('center');
                 $font->valign('middle');
