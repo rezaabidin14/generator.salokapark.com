@@ -227,7 +227,7 @@ class LombaMewarnaiController extends Controller
             'code' => 'required|string|max:30',
         ]);
 
-        $template = public_path('images/voucher-template.jpg');
+        $template = public_path('images/voucher-template.png');
 
         $image = Image::make($template);
 
