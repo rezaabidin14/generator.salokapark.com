@@ -13,6 +13,7 @@ use App\Http\Controllers\SalokaPHRDController;
 use App\Http\Controllers\SalokafestController;
 use App\Http\Controllers\LombaTariController;
 use App\Http\Controllers\LombaMewarnaiController;
+use App\Http\Controllers\DanceCompetitionController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -42,6 +43,9 @@ Route::post('/generate-lomba-tari-sertificate', [LombaTariController::class, 'Ge
 Route::post('/generate-lomba-mewarnai-pdf', [LombaMewarnaiController::class, 'GeneratePdf']);
 Route::post('/generate-lomba-mewarnai-sertificate', [LombaMewarnaiController::class, 'GenerateSertificate']);
 Route::get('/generate-lomba-mewarnai-voucher', [LombaMewarnaiController::class, 'generateVoucher']);
+
+Route::post('/generate-dance-competition-pdf', [DanceCompetitionController::class, 'GeneratePdf']);
+Route::post('/generate-dance-competition-sertificate', [DanceCompetitionController::class, 'GenerateSertificate']);
 
 
 // Generete QR Code
