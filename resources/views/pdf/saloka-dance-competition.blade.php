@@ -90,8 +90,9 @@
            style="background-color: white; padding: 1rem 2rem;">
       <tbody>
         <tr>
+        <tr>
           <td align="left"
-              style="width: 65%;">
+              style="width: 50%;">
             <h4 style="line-height: 1.2; font-size: 18px">
               <strong>E-ticket</strong>
             </h4>
@@ -106,8 +107,19 @@
             </h6>
           </td>
 
+          <!-- Logo Tengah -->
           <td align="center"
-              style="width: 35%;">
+              style="width: 20%;">
+            <img src="{{ public_path('assets/images/logo_dance_competition.png') }}"
+                 alt="Logo Event"
+                 width="60"
+                 style="display:block; margin:auto;"
+                 class="adapt-img">
+          </td>
+
+          <!-- Logo Saloka -->
+          <td align="center"
+              style="width: 30%;">
             <img src="{{ public_path('assets/images/logosaloka.png') }}"
                  alt="Logo Saloka"
                  width="90"
