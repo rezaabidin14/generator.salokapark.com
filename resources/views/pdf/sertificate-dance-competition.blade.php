@@ -34,6 +34,8 @@
       left: 60px;
       right: 60px;
 
+      color: #fff;
+
       text-align: center;
       font-size: 48px;
       font-weight: bold;
@@ -47,6 +49,8 @@
       left: 60px;
       right: 60px;
 
+      color: #fff;
+
       text-align: center;
       font-size: 32px;
       font-weight: bold;
@@ -58,7 +62,7 @@
 <body>
 
   <img class="bg"
-       src="{{ public_path('images/SERTIFIKAT_TARI_KREASI.png') }}">
+       src="{{ public_path('images/SERTIFIKAT_DANCE_COMPETITION.png') }}">
 
   <div class="school-name">
     {{ $school_name }}

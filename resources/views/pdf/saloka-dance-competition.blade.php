@@ -109,7 +109,7 @@
 
           <!-- Logo Tengah -->
           <td align="center"
-              style="width: 20%;">
+              style="width: 25%;">
             <img src="{{ public_path('assets/images/logo_dance_competition.png') }}"
                  alt="Logo Event"
                  width="60"
@@ -119,7 +119,7 @@
 
           <!-- Logo Saloka -->
           <td align="center"
-              style="width: 30%;">
+              style="width: 25%;">
             <img src="{{ public_path('assets/images/logosaloka.png') }}"
                  alt="Logo Saloka"
                  width="90"
@@ -270,12 +270,15 @@
                               </p>
                             </td>
                             <td align="left"
-                                class=""
                                 width="15%"
-                                style="font-size: 12px; line-height: 1.2;">
-                              <p>
-                                <span>{{ $ticket_order['quantity'] }} Pax</span>
-                              </p>
+                                style="
+                                font-size:12px;
+                                line-height:1.3;
+                                padding:12px 8px;
+                                @if ($ticket_order['ticket_name'] ?? false) color:#8A6A00;
+                                    font-weight:bold; @endif
+                            ">
+                              {{ ($ticket_order['ticket_name'] ?? '') === 'Biaya Admin' ? '-' : $ticket_order['quantity'] . ' Pax' }}
                             </td>
                             <td align="left"
                                 class=""
@@ -1027,14 +1030,14 @@
 
                 <tr>
                   <td style="font-size:12px; line-height:1.5;">
-                    <p><strong>2.</strong> Pendaftaran melalui website.</p>
+                    <p><strong>2.</strong> Pendaftaran melalui website : dancecompetition.salokapark.com</p>
                   </td>
                 </tr>
 
                 <tr>
                   <td style="font-size:12px; line-height:1.5;">
-                    <p><strong>3.</strong> Membawakan 1 (satu) Tari Modern bertemakan Hip-hop, K-pop, atau Modern Dance
-                      dengan durasi maksimal 8 (delapan) menit (diberikan waktu maksimal 2 menit untuk persiapan).</p>
+                    <p><strong>3.</strong> Setiap tim membawakan 1 (satu) tarian Modern Dance dengan durasi maksimal 8
+                      (delapan) menit. Waktu persiapan sebelum tampil maksimal 2 (dua) menit.</p>
                   </td>
                 </tr>
 
