@@ -30,7 +30,7 @@
     .school-name {
       font-family: 'Montserrat';
       position: fixed;
-      top: 310px;
+      top: 290px;
       left: 60px;
       right: 60px;
 
@@ -45,7 +45,7 @@
     .group-name {
       font-family: 'Montserrat';
       position: fixed;
-      top: 375px;
+      top: 350px;
       left: 60px;
       right: 60px;
 
