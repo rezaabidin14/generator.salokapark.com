@@ -464,7 +464,7 @@
                               style="font-size: 12px; line-height: 1.2;">
                             <p>
                               <span>
-                                Sanggar/Sekolah
+                                Nama Sekolah / Studio
                               </span>
                             </p>
                           </td>
