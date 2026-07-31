@@ -1017,7 +1017,7 @@
                 <tr>
                   <td align="left">
                     <p style="line-height:1.5; font-size:14px">
-                      <strong>Syarat dan Ketentuan:</strong>
+                      <strong>Syarat &amp; Ketentuan:</strong>
                     </p>
                   </td>
                 </tr>
@@ -1049,8 +1049,8 @@
 
                 <tr>
                   <td style="font-size:12px; line-height:1.5;">
-                    <p><strong>5.</strong> 1 (satu) grup terdiri atas maksimal 10 (sepuluh) orang yang terdiri atas 7–9
-                      orang penari (pria/wanita) dan 1 (satu) orang official.</p>
+                    <p><strong>5.</strong> 1 (satu) grup terdiri atas maksimal 10 (Sepuluh) orang yang terdiri atas 7-9
+                      orang penari ( pria / wanita ) dan 1 orang official.</p>
                   </td>
                 </tr>
 
@@ -1062,22 +1062,22 @@
 
                 <tr>
                   <td style="font-size:12px; line-height:1.5;">
-                    <p><strong>7.</strong> Biaya pendaftaran Rp250.000 (Presale) atau Rp300.000 (Reguler) per tim (sudah
+                    <p><strong>7.</strong> Biaya pendaftaran Rp. 250.000 (Presale), 300.000 (Reguler) / tim (sudah
                       termasuk tiket wahana di Saloka).</p>
                   </td>
                 </tr>
 
                 <tr>
                   <td style="font-size:12px; line-height:1.5;">
-                    <p><strong>8.</strong> Musik pengiring bebas (rekaman), dikirim dalam format MP3 melalui email atau
-                      Google Drive maksimal H-3 pelaksanaan serta melampirkan sumber musik.</p>
+                    <p><strong>8.</strong> Musik pengiring bebas (rekaman), dikirim dalam format MP3 via email atau
+                      Google Drive maksimal H-3 serta melampirkan sumbernya</p>
                   </td>
                 </tr>
 
                 <tr>
                   <td style="font-size:12px; line-height:1.5;">
-                    <p><strong>9.</strong> Registrasi peserta dimulai pukul 07.00–11.00 WIB di Sales Counter untuk
-                      mendapatkan nomor urut peserta, sertifikat peserta/grup, dan ID Card Official.</p>
+                    <p><strong>9.</strong> Registrasi peserta dimulai pada pukul 07.00 - 11.00 WIB di Sales Counter
+                      (Mendapatkan nomor urut peserta, sertifikat peserta/grup,id card official).</p>
                   </td>
                 </tr>
 
@@ -1089,35 +1089,34 @@
 
                 <tr>
                   <td style="font-size:12px; line-height:1.5;">
-                    <p><strong>11.</strong> Perwakilan tim wajib menghadiri Technical Meeting pada tanggal 20 September.
-                    </p>
+                    <p><strong>11.</strong> Perwakilan Team wajib menghadiri Technical Meeting pada 20 September.</p>
                   </td>
                 </tr>
 
                 <tr>
                   <td style="font-size:12px; line-height:1.5;">
                     <p><strong>12.</strong> Penilaian berdasarkan: Koreografi, Teknik, Power, Kekompakan Tim, Ekspresi,
-                      dan Kostum.</p>
+                      Kostum.</p>
                   </td>
                 </tr>
 
                 <tr>
                   <td style="font-size:12px; line-height:1.5;">
-                    <p><strong>13.</strong> Pendamping mendapatkan tiket masuk khusus Rp80.000 (Presale) atau Rp100.000
-                      (Reguler) per orang (termasuk bermain wahana sepuasnya). Jumlah pendamping tidak terbatas.</p>
+                    <p><strong>13.</strong> Pendamping mendapatkan tiket masuk khusus Rp 80.000 (Presale), 100.000
+                      (Reguler) / Orang (termasuk bermain wahana sepuasnya) jumlah pendamping tidak terbatas.</p>
                   </td>
                 </tr>
 
                 <tr>
                   <td style="font-size:12px; line-height:1.5;">
-                    <p><strong>14.</strong> Pendaftaran ditutup pada tanggal 13 September pukul 23.59 WIB.</p>
+                    <p><strong>14.</strong> Pendaftaran ditutup 13 September Pukul 23.59</p>
                   </td>
                 </tr>
 
                 <tr>
                   <td style="font-size:12px; line-height:1.5;">
-                    <p><strong>15.</strong> Panitia menyediakan tempat transit (touch up area) yang dapat digunakan
-                      bersama oleh seluruh peserta.</p>
+                    <p><strong>15.</strong> Panitia menyediakan tempat transit (Tempat touch up) &amp; ( bergabung
+                      dengan seluruh peserta).</p>
                   </td>
                 </tr>
 
@@ -1131,21 +1130,21 @@
                 <tr>
                   <td style="font-size:12px; line-height:1.5;">
                     <p><strong>17.</strong> Properti yang digunakan tidak diperkenankan mengotori panggung (misalnya:
-                      flare, mercon, tepung, kelopak bunga, pasir, air, bubuk glitter, daun kering, confetti, balon
-                      helium, dan sejenisnya).</p>
+                      flare,mercon,tepung, kelopak bunga,pasir, air, bubuk glitter, daun kering, confetti, balon helium
+                      dan sejenisnya).</p>
                   </td>
                 </tr>
 
                 <tr>
                   <td style="font-size:12px; line-height:1.5;">
-                    <p><strong>18.</strong> Peserta dengan nomor undi 1–5 dihimbau sudah melakukan persiapan dari rumah
-                      (makeup dan hairdo).</p>
+                    <p><strong>18.</strong> Peserta dengan nomor undi 1-5 dihimbau sudah melakukan persiapan dari rumah
+                      (Makeup/ Hairdo).</p>
                   </td>
                 </tr>
 
                 <tr>
                   <td style="font-size:12px; line-height:1.5;">
-                    <p><strong>19.</strong> Peserta tidak diperkenankan membawa makanan dan minuman dari luar Saloka.
+                    <p><strong>19.</strong> Peserta tidak diperkenankan membawa makanan dan minuman dari luar saloka.
                     </p>
                   </td>
                 </tr>
@@ -1158,20 +1157,20 @@
 
                 <tr>
                   <td style="font-size:12px; line-height:1.5;">
-                    <p><strong>21.</strong> Peserta yang dipanggil 3 (tiga) kali dan tidak hadir di tempat akan otomatis
-                      didiskualifikasi.</p>
+                    <p><strong>21.</strong> Peserta yang dipanggil 3 kali tidak ada di tempat otomatis akan di
+                      diskualifikasi.</p>
                   </td>
                 </tr>
 
                 <tr>
                   <td style="font-size:12px; line-height:1.5;">
-                    <p><strong>22.</strong> Pengumuman juara dilakukan setelah Baruklinting Show pukul 18.00 WIB.</p>
+                    <p><strong>22.</strong> Pengumuman juara dilakukan setelah Baruklinting show pukul 18.00 WIB.</p>
                   </td>
                 </tr>
 
                 <tr>
                   <td style="font-size:12px; line-height:1.5;">
-                    <p><strong>23.</strong> Keputusan Dewan Juri bersifat mutlak dan tidak dapat diganggu gugat.</p>
+                    <p><strong>23.</strong> Keputusan Dewan Juri Tidak Dapat diganggu gugat.</p>
                   </td>
                 </tr>
 
