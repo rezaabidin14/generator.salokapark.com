@@ -1049,7 +1049,7 @@
 
                 <tr>
                   <td style="font-size:12px; line-height:1.5;">
-                    <p><strong>5.</strong> 1 (satu) grup terdiri atas maksimal 10 (Sepuluh) orang yang terdiri atas 7-9
+                    <p><strong>5.</strong> 1 (satu) grup terdiri atas maksimal 10 (Sepuluh) orang yang terdiri atas 5-9
                       orang penari ( pria / wanita ) dan 1 orang official.</p>
                   </td>
                 </tr>
