@@ -44,7 +44,7 @@ class CampignEmployeeController extends Controller
      * - customer_name
      * - customer_phone
      */
-    public function GenerateInvoice(Request $request)
+    public function GeneratePdf(Request $request)
     {
         $validator = Validator::make($request->all(), [
             'booking_code'   => 'required',
