@@ -44,183 +44,249 @@ class CampignEmployeeController extends Controller
      * - customer_name
      * - customer_phone
      */
-    public function GeneratePdf(Request $request)
-    {
-        $validator = Validator::make($request->all(), [
-            'booking_code'   => 'required',
-            'arrival_date'   => 'required|date',
-            'quantity'       => 'required|integer|min:1',
-            'unit_price'     => 'required|numeric|min:0',
-            'total_amount'   => 'required|numeric|min:0',
-            'customer_name'  => 'required',
-            'customer_phone' => 'required',
+public function GeneratePdf(Request $request)
+{
+    $validator = Validator::make($request->all(), [
+        'booking_code'   => 'required',
+        'arrival_date'   => 'required|date',
+        'quantity'       => 'required|integer|min:1',
+        'unit_price'     => 'required|numeric|min:0',
+        'total_amount'   => 'required|numeric|min:0',
+        'customer_name'  => 'required',
+        'customer_phone' => 'required',
+    ]);
+
+    if ($validator->fails()) {
+        return response()->json([
+            'status' => 'error',
+            'message' => $validator->errors()->first(),
+            'data' => [],
+        ], 422);
+    }
+
+    try {
+
+        /*
+        |--------------------------------------------------------------------------
+        | Format Tanggal
+        |--------------------------------------------------------------------------
+        */
+
+        $arrivalDate = Carbon::parse(
+            $request->arrival_date
+        )->format('d-m-Y');
+
+
+        /*
+        |--------------------------------------------------------------------------
+        | Data untuk Blade
+        |--------------------------------------------------------------------------
+        |
+        | Kita tetap menyediakan variable dari Blade lama,
+        | supaya tidak muncul Undefined variable.
+        |
+        */
+
+        $data = [
+
+            /*
+            |--------------------------------------------------------------------------
+            | Booking
+            |--------------------------------------------------------------------------
+            */
+
+            'order_id' => $request->booking_code,
+
+            'booking_code' => $request->booking_code,
+
+            'date_plan' => $arrivalDate,
+
+            'total_ticket' => (int) $request->quantity,
+
+            'unit_price' => (float) $request->unit_price,
+
+            'amount_total' => (float) $request->total_amount,
+
+
+            /*
+            |--------------------------------------------------------------------------
+            | Customer
+            |--------------------------------------------------------------------------
+            */
+
+            'customer_name' => $request->customer_name,
+
+            'customer_email' => $request->customer_email ?? '',
+
+            'customer_phone' => $request->customer_phone,
+
+            'customer_address' => $request->customer_address ?? '',
+
+            'customer_province' => $request->customer_province ?? '',
+
+            'customer_city' => $request->customer_city ?? '',
+
+
+            /*
+            |--------------------------------------------------------------------------
+            | Payment
+            |--------------------------------------------------------------------------
+            */
+
+            'payment_method' => 'Employee Campaign',
+
+            'payment_date' => Carbon::now()->format(
+                'd-m-Y H:i'
+            ),
+
+
+            /*
+            |--------------------------------------------------------------------------
+            | Ticket Orders
+            |--------------------------------------------------------------------------
+            */
+
+            'ticket_orders' => [
+                [
+                    'ticket_name' => 'Tiket Campaign Karyawan',
+
+                    'quantity' => (int) $request->quantity,
+
+                    'price' => (float) $request->unit_price,
+
+                    'subtotal' => (float) $request->total_amount,
+                ],
+            ],
+        ];
+
+
+        /*
+        |--------------------------------------------------------------------------
+        | Safe UTF-8
+        |--------------------------------------------------------------------------
+        */
+
+        $data = $this->safeUtf8($data);
+
+
+        /*
+        |--------------------------------------------------------------------------
+        | Generate PDF
+        |--------------------------------------------------------------------------
+        */
+
+        $pdfTicket = Pdf::loadView(
+            'pdf.invoice-campign-employee',
+            $data
+        )
+            ->setPaper('A4', 'portrait')
+            ->setOptions([
+                'defaultFont' => 'Open Sauce One',
+                'isHtml5ParserEnabled' => true,
+                'isRemoteEnabled' => true,
+            ])
+            ->setWarnings(false);
+
+
+        /*
+        |--------------------------------------------------------------------------
+        | DomPDF Chroot
+        |--------------------------------------------------------------------------
+        */
+
+        $pdfTicket
+            ->getDomPDF()
+            ->getOptions()
+            ->setChroot(public_path());
+
+
+        /*
+        |--------------------------------------------------------------------------
+        | Filename
+        |--------------------------------------------------------------------------
+        */
+
+        $fileName =
+            'Reservation-'
+            . $request->booking_code
+            . '.pdf';
+
+
+        /*
+        |--------------------------------------------------------------------------
+        | Save PDF
+        |--------------------------------------------------------------------------
+        */
+
+        $path =
+            'public/invoices/'
+            . $fileName;
+
+        Storage::put(
+            $path,
+            $pdfTicket->output()
+        );
+
+
+        /*
+        |--------------------------------------------------------------------------
+        | Absolute URL
+        |--------------------------------------------------------------------------
+        */
+
+        $pdfUrl = url(
+            Storage::url($path)
+        );
+
+
+        /*
+        |--------------------------------------------------------------------------
+        | Response
+        |--------------------------------------------------------------------------
+        */
+
+        return response()->json([
+            'status' => 'success',
+
+            'message' =>
+                'PDF Employee Campaign berhasil dibuat.',
+
+            'data' => [
+                'file_name' => $fileName,
+
+                'file_path' => $pdfUrl,
+
+                'booking_code' =>
+                    $request->booking_code,
+            ],
         ]);
 
-        if ($validator->fails()) {
-            return response()->json([
-                'status' => 'error',
-                'message' => $validator->errors()->first(),
-                'data' => [],
-            ], 422);
-        }
+    } catch (\Throwable $th) {
 
-        try {
+        Log::error(
+            'Generate Employee Campaign PDF Error',
+            [
+                'message' => $th->getMessage(),
 
-            /*
-            |--------------------------------------------------------------------------
-            | Format tanggal
-            |--------------------------------------------------------------------------
-            */
+                'trace' =>
+                    $th->getTraceAsString(),
 
-            $arrivalDate = Carbon::parse(
-                $request->arrival_date
-            )->format('d-m-Y');
+                'booking_code' =>
+                    $request->booking_code ?? null,
+            ]
+        );
 
+        return response()->json([
+            'status' => 'error',
 
-            /*
-            |--------------------------------------------------------------------------
-            | Data untuk Blade PDF
-            |--------------------------------------------------------------------------
-            |
-            | Field dibuat mengikuti kebutuhan Blade E-Ticket.
-            |
-            */
+            'message' =>
+                'Terjadi kesalahan generate pdf: '
+                . $th->getMessage(),
 
-            $data = [
-                'order_id' => $request->booking_code,
-
-                'booking_code' => $request->booking_code,
-
-                'date_plan' => $arrivalDate,
-
-                'total_ticket' => (int) $request->quantity,
-
-                'unit_price' => (float) $request->unit_price,
-
-                'amount_total' => (float) $request->total_amount,
-
-                'customer_name' => $request->customer_name,
-
-                'customer_phone' => $request->customer_phone,
-
-                'payment_method' => 'Employee Campaign',
-
-                'payment_date' => Carbon::now()->format(
-                    'd-m-Y H:i'
-                ),
-
-                /*
-                |--------------------------------------------------------------------------
-                | Dibuat untuk kompatibilitas jika masih ada
-                | bagian Blade lama yang menggunakan ticket_orders.
-                |--------------------------------------------------------------------------
-                */
-
-                'ticket_orders' => [
-                    [
-                        'ticket_name' => 'Tiket Campaign Karyawan',
-
-                        'quantity' => (int) $request->quantity,
-
-                        'price' => (float) $request->unit_price,
-
-                        'subtotal' => (float) $request->total_amount,
-                    ],
-                ],
-            ];
-
-
-            /*
-            |--------------------------------------------------------------------------
-            | Pastikan UTF-8
-            |--------------------------------------------------------------------------
-            */
-
-            $data = $this->safeUtf8($data);
-
-
-            /*
-            |--------------------------------------------------------------------------
-            | Generate PDF
-            |--------------------------------------------------------------------------
-            */
-
-            $pdfTicket = Pdf::loadView(
-                'pdf.invoice-website-saloka',
-                $data
-            )
-                ->setPaper('A4', 'portrait')
-                ->setOptions([
-                    'defaultFont' => 'Open Sauce One',
-                    'isHtml5ParserEnabled' => true,
-                    'isRemoteEnabled' => true,
-                ])
-                ->setWarnings(false);
-
-
-            /*
-            |--------------------------------------------------------------------------
-            | DomPDF Chroot
-            |--------------------------------------------------------------------------
-            */
-
-            $pdfTicket
-                ->getDomPDF()
-                ->getOptions()
-                ->setChroot(public_path());
-
-
-            /*
-            |--------------------------------------------------------------------------
-            | Nama File
-            |--------------------------------------------------------------------------
-            */
-
-            $fileName = 'Reservation-'
-                . $request->booking_code
-                . '.pdf';
-
-
-            /*
-            |--------------------------------------------------------------------------
-            | Storage
-            |--------------------------------------------------------------------------
-            */
-
-            $path = 'public/invoices/' . $fileName;
-
-            Storage::put(
-                $path,
-                $pdfTicket->output()
-            );
-
-
-            /*
-            |--------------------------------------------------------------------------
-            | Response
-            |--------------------------------------------------------------------------
-            */
-
-            return response()->json([
-                'status' => 'success',
-                'message' => 'E-ticket Employee Campaign berhasil dibuat.',
-                'data' => [
-                    'file_name' => $fileName,
-                    'file_path' => Storage::url($path),
-                    'booking_code' => $request->booking_code,
-                ],
-            ]);
-
-        } catch (\Throwable $th) {
-
-            return response()->json([
-                'status' => 'error',
-                'message' => 'Terjadi kesalahan generate pdf: '
-                    . $th->getMessage(),
-                'data' => [],
-            ], 500);
-        }
+            'data' => [],
+        ], 500);
     }
+}
 
 
     /**

@@ -1,117 +1,188 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>E-Ticket Employee Campaign - Saloka Theme Park</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <style>
-        @page {
-            margin: 0cm;
-        }
+    <meta
+        http-equiv="X-UA-Compatible"
+        content="ie=edge"
+    >
 
-        body {
-            font-family: "Poppins", sans-serif;
-            margin: 0cm;
-            padding: 0cm;
-            color: #333333;
-        }
+    <title>
+        Reservasi Tiket Saloka Theme Park
+    </title>
 
-        main {
-            margin: 0;
-            padding: 0;
-        }
-
-        p,
-        img,
-        span,
-        strong,
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            margin: 0;
-            padding: 0;
-            letter-spacing: 0;
-        }
-
-        .footer {
-            position: fixed;
-            bottom: 0px;
-            left: 0px;
-            right: 0px;
-            text-align: center;
-        }
-
-        .footer img {
-            width: 100%;
-        }
-
-        .page-break {
-            page-break-after: always;
-        }
-
-        .header {
-            position: fixed;
-            top: 0px;
-            left: 0px;
-            right: 0px;
-            text-align: center;
-        }
-    </style>
 </head>
 
+
+<style>
+
+    @page {
+        margin: 0cm;
+    }
+
+
+    body {
+        font-family: "Poppins", sans-serif;
+        margin: 0cm;
+        padding: 0cm;
+    }
+
+
+    main {
+        margin: 0;
+        padding: 0;
+    }
+
+
+    p,
+    img,
+    span,
+    strong,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 0;
+        padding: 0;
+        letter-spacing: 0;
+    }
+
+
+    .footer {
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        text-align: center;
+    }
+
+
+    .footer img {
+        width: 100%;
+    }
+
+
+    .page-break {
+        page-break-after: always;
+    }
+
+
+    .header {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        text-align: center;
+    }
+
+</style>
+
+
 <body style="margin: 0; padding: 0;">
+
 
     <!-- =========================================================
          FOOTER
     ========================================================== -->
+
     <div class="footer">
-        <img src="{{ public_path('assets/images/footer_pdf.png') }}" alt="Footer Image">
+
+        <img
+            src="{{ public_path('assets/images/footer_pdf.png') }}"
+            alt="Footer Image"
+        >
+
     </div>
 
 
     <!-- =========================================================
          HEADER
     ========================================================== -->
+
     <div class="header">
 
-        <table align="center"
-               cellpadding="0"
-               cellspacing="0"
-               width="100%"
-               style="background-color: #FFFFFFFF; padding: 1rem 2rem;">
+        <table
+            align="center"
+            cellpadding="0"
+            cellspacing="0"
+            width="100%"
+            style="
+                background-color: #FFFFFFFF;
+                padding: 1rem 2rem;
+            "
+        >
 
-            <tbody style="background-color: #FFFFFFFF;">
+            <tbody
+                style="
+                    background-color: #FFFFFFFF;
+                    padding-inline: 0rem;
+                    padding-block: 0rem;
+                "
+            >
 
                 <tr>
 
                     <td align="left">
 
-                        <h4 style="line-height: 1.2; font-size: 20px;">
-                            <strong>E-ticket</strong>
+                        <h4
+                            style="
+                                line-height: 1.2;
+                                font-size: 20px;
+                            "
+                        >
+
+                            <strong>
+                                E-ticket
+                            </strong>
+
                         </h4>
 
-                        <h6 style="line-height: 1.2; font-size: 16px;">
-                            <strong>Reservasi Campaign Karyawan</strong>
+
+                        <h6
+                            style="
+                                line-height: 1.2;
+                                font-size: 16px;
+                            "
+                        >
+
+                            <strong>
+                                Reservasi Saloka Theme Park
+                            </strong>
+
                         </h6>
 
-                        <h6 style="
-                            line-height: 1.2;
-                            font-size: 14px;
-                            color: #169870;
-                            font-weight: 400;
-                        ">
-                            <span>Kode Booking:</span>
-                            <strong>{{ $booking_code }}</strong>
+
+                        <h6
+                            style="
+                                line-height: 1.2;
+                                font-size: 14px;
+                                color: #169870;
+                                font-weight: 400;
+                            "
+                        >
+
+                            <span>
+                                Kode Booking:
+                            </span>
+
+                            <strong>
+                                {{ $booking_code }}
+                            </strong>
+
                         </h6>
 
                     </td>
+
 
                     <td align="right">
 
@@ -119,6 +190,7 @@
                             src="{{ public_path('assets/images/logosaloka.png') }}"
                             alt="Saloka"
                             width="100"
+                            class="adapt-img"
                         >
 
                     </td>
@@ -135,101 +207,130 @@
     <!-- =========================================================
          DETAIL TIKET
     ========================================================== -->
-    <main style="
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        margin-top: 8rem;
-        background-color: #FFFFFFFF;
-    ">
+
+    <main
+        style="
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            padding-inline: 0;
+            padding-block: 0;
+            margin-top: 8rem;
+            background-color: #FFFFFFFF;
+        "
+    >
 
 
         <!-- =====================================================
-             INFORMASI TIKET + QR CODE
+             QR CODE + INFORMASI TIKET
         ====================================================== -->
-        <table align="center"
-               cellpadding="0"
-               cellspacing="0"
-               width="100%"
-               style="
-                   background-color: #FFFFFFFF;
-                   padding: 0.5rem 2rem;
-               ">
+
+        <table
+            align="center"
+            cellpadding="0"
+            cellspacing="0"
+            width="100%"
+            style="
+                background-color: #FFFFFFFF;
+                padding: 0.5rem 2rem;
+            "
+        >
 
             <tbody>
 
                 <tr>
 
-                    <!-- INFORMASI SALOKA -->
-                    <td align="left"
+
+                    <!-- =================================================
+                         INFORMASI SALOKA
+                    ================================================== -->
+
+                    <td
+                        align="left"
                         valign="top"
                         style="
                             border-right: 1px solid #ededed;
                             padding-right: .5rem;
                             padding-left: 0rem;
-                        ">
+                        "
+                    >
 
-                        <p style="
-                            font-size: 14px;
-                            line-height: 1.2;
-                        ">
-                            <strong>Saloka Theme Park</strong>
+                        <p
+                            style="
+                                font-size: 14px;
+                                line-height: 1.2;
+                            "
+                        >
+
+                            <strong>
+                                Saloka Theme Park
+                            </strong>
+
                         </p>
 
-                        <p style="
-                            font-size: 12px;
-                            line-height: 1.2;
-                            color: #999999;
-                            margin-top: 5px;
-                        ">
+
+                        <p
+                            style="
+                                font-size: 12px;
+                                line-height: 1.2;
+                                color: #999999;
+                            "
+                        >
+
                             <strong>
                                 Jl. Fatmawati No.154,
                                 Tuntang,
                                 Semarang,
                                 Jawa Tengah 50773
                             </strong>
-                        </p>
 
-                        <p style="
-                            font-size: 12px;
-                            line-height: 1.5;
-                            color: #169870;
-                            margin-top: 15px;
-                        ">
-                            <strong>
-                                Employee Campaign
-                            </strong>
                         </p>
 
                     </td>
 
 
-                    <!-- INFORMASI KEDATANGAN -->
-                    <td align="left"
+                    <!-- =================================================
+                         INFORMASI KEDATANGAN
+                    ================================================== -->
+
+                    <td
+                        align="left"
                         valign="top"
                         style="
                             border-right: 1px solid #ededed;
                             padding-right: 1rem;
                             padding-left: 1rem;
-                        ">
+                        "
+                    >
 
-                        <table align="center"
-                               cellpadding="0"
-                               cellspacing="0"
-                               width="100%"
-                               style="background-color: #ffffff;">
+                        <table
+                            align="center"
+                            cellpadding="0"
+                            cellspacing="0"
+                            width="100%"
+                            style="
+                                background-color: #ffffff;
+                            "
+                        >
 
                             <tbody>
 
+
                                 <!-- TANGGAL KEDATANGAN -->
+
                                 <tr>
 
                                     <td align="left">
 
-                                        <div style="
-                                            font-size: 12px;
-                                            line-height: 1.2;
-                                        ">
+                                        <div
+                                            style="
+                                                display: flex;
+                                                align-items: center;
+                                                font-size: 12px;
+                                                line-height: 1.2;
+                                                white-space: nowrap;
+                                            "
+                                        >
 
                                             <img
                                                 src="{{ public_path('assets/images/calender_png.png') }}"
@@ -242,13 +343,19 @@
                                                 "
                                             >
 
-                                            <span style="
-                                                vertical-align: middle;
-                                            ">
+                                            <span
+                                                style="
+                                                    vertical-align: middle;
+                                                    white-space: nowrap;
+                                                "
+                                            >
+
                                                 Tgl Kedatangan:
+
                                                 <strong>
                                                     {{ $date_plan }}
                                                 </strong>
+
                                             </span>
 
                                         </div>
@@ -259,15 +366,25 @@
 
 
                                 <!-- JUMLAH TIKET -->
+
                                 <tr>
 
-                                    <td align="left"
-                                        style="padding-top: .8rem;">
+                                    <td
+                                        align="left"
+                                        style="
+                                            padding-top: .5rem;
+                                        "
+                                    >
 
-                                        <div style="
-                                            font-size: 12px;
-                                            line-height: 1.2;
-                                        ">
+                                        <div
+                                            style="
+                                                display: flex;
+                                                align-items: center;
+                                                font-size: 12px;
+                                                line-height: 1.2;
+                                                white-space: nowrap;
+                                            "
+                                        >
 
                                             <img
                                                 src="{{ public_path('assets/images/ticket_png.jpg') }}"
@@ -280,14 +397,20 @@
                                                 "
                                             >
 
-                                            <span style="
-                                                vertical-align: middle;
-                                            ">
+                                            <span
+                                                style="
+                                                    vertical-align: middle;
+                                                "
+                                            >
+
                                                 Qty Ticket:
+
                                                 <strong>
                                                     {{ $total_ticket }}
                                                 </strong>
+
                                                 Pax
+
                                             </span>
 
                                         </div>
@@ -296,30 +419,6 @@
 
                                 </tr>
 
-
-                                <!-- JENIS CAMPAIGN -->
-                                <tr>
-
-                                    <td align="left"
-                                        style="padding-top: .8rem;">
-
-                                        <div style="
-                                            font-size: 12px;
-                                            line-height: 1.2;
-                                        ">
-
-                                            <span>
-                                                Jenis:
-                                                <strong>
-                                                    Campaign Karyawan
-                                                </strong>
-                                            </span>
-
-                                        </div>
-
-                                    </td>
-
-                                </tr>
 
                             </tbody>
 
@@ -328,30 +427,54 @@
                     </td>
 
 
-                    <!-- QR CODE -->
-                    <td align="center"
+                    <!-- =================================================
+                         QR CODE
+                    ================================================== -->
+
+                    <td
+                        align="center"
                         style="
                             padding-right: 1rem;
                             padding-left: 1rem;
-                        ">
+                        "
+                    >
 
-                        <p style="
-                            color: #169870;
-                            font-size: 14px;
-                            margin-bottom: 8px;
-                        ">
+
+                        <!-- TOTAL -->
+
+                        <p
+                            style="
+                                color: #169870;
+                                font-size: 14px;
+                            "
+                        >
+
                             <strong>
-                                {{ 'Rp ' . number_format($amount_total, 0, ',', '.') }}
+
+                                Rp
+                                {{ number_format(
+                                    $amount_total,
+                                    0,
+                                    ',',
+                                    '.'
+                                ) }}
+
                             </strong>
+
                         </p>
 
+
+                        <!-- QR -->
 
                         <img
                             src="data:image/png;base64,{!! base64_encode(
                                 QrCode::format('png')
                                     ->size(132)
+                                    ->format('png')
                                     ->merge(
-                                        public_path('storage/avatar_loka_3d.png'),
+                                        public_path(
+                                            'storage/avatar_loka_3d.png'
+                                        ),
                                         0.25,
                                         true
                                     )
@@ -360,6 +483,34 @@
                                     ->style('square')
                                     ->eye('circle')
                                     ->margin(3)
+                                    ->color(0, 0, 0)
+                                    ->eyeColor(
+                                        0,
+                                        22,
+                                        152,
+                                        112,
+                                        22,
+                                        152,
+                                        112
+                                    )
+                                    ->eyeColor(
+                                        1,
+                                        22,
+                                        152,
+                                        112,
+                                        22,
+                                        152,
+                                        112
+                                    )
+                                    ->eyeColor(
+                                        2,
+                                        22,
+                                        152,
+                                        112,
+                                        22,
+                                        152,
+                                        112
+                                    )
                                     ->generate($booking_code)
                             ) !!}"
                             width="132"
@@ -369,23 +520,33 @@
                             "
                         >
 
-                        <p style="
-                            margin-top: 5px;
-                        ">
-                            <strong style="font-size: 12px;">
+
+                        <p>
+
+                            <strong
+                                style="
+                                    font-size: 12px;
+                                "
+                            >
                                 Kode Booking:
                             </strong>
+
                         </p>
 
-                        <h4 style="
-                            color: #169870;
-                            font-size: 20px;
-                            margin-top: 3px;
-                        ">
+
+                        <h4
+                            style="
+                                color: #169870;
+                                font-size: 20px;
+                            "
+                        >
+
                             <strong>
                                 {{ $booking_code }}
                             </strong>
+
                         </h4>
+
 
                     </td>
 
@@ -397,49 +558,63 @@
 
 
         <!-- =====================================================
-             RINGKASAN RESERVASI
+             RINGKASAN PEMBAYARAN
         ====================================================== -->
-        <table align="center"
-               cellpadding="0"
-               cellspacing="0"
-               width="100%"
-               style="
-                   background-color: #FFFFFFFF;
-                   padding: 0rem 0rem;
-                   padding-top: 1rem;
-                   border-bottom: 2px dashed #ededed;
-                   border-top: 2px dashed #ededed;
-               ">
+
+        <table
+            align="center"
+            cellpadding="0"
+            cellspacing="0"
+            width="100%"
+            style="
+                background-color: #FFFFFFFF;
+                padding: 0rem 0rem;
+                padding-top: 1rem;
+                border-bottom: 2px dashed #ededed;
+                border-top: 2px dashed #ededed;
+            "
+        >
 
             <tbody>
 
                 <tr>
 
-                    <td align="left"
-                        valign="top">
+                    <td
+                        align="left"
+                        valign="top"
+                    >
 
-                        <table align="center"
-                               cellpadding="0"
-                               cellspacing="0"
-                               width="100%"
-                               style="
-                                   background-color: #FFFFFFFF;
-                                   padding: 1rem 2rem;
-                               ">
+                        <table
+                            align="center"
+                            cellpadding="0"
+                            cellspacing="0"
+                            width="100%"
+                            style="
+                                background-color: #FFFFFFFF;
+                                padding: 1rem 2rem;
+                            "
+                        >
 
                             <tbody>
+
+
+                                <!-- JUDUL -->
 
                                 <tr>
 
                                     <td align="left">
 
-                                        <p style="
-                                            line-height: 1.5;
-                                            font-size: 14px;
-                                        ">
+                                        <p
+                                            style="
+                                                line-height: 1.5;
+                                                font-size: 14px;
+                                            "
+                                        >
+
                                             <strong>
                                                 Ringkasan Reservasi
                                             </strong>
+
                                         </p>
 
                                     </td>
@@ -447,89 +622,215 @@
                                 </tr>
 
 
-                                <!-- ITEM TIKET -->
+                                <!-- =================================================
+                                     ITEM TIKET
+                                ================================================== -->
+
+                                @foreach ($ticket_orders as $ticket_order)
+
+                                    <tr>
+
+                                        <td align="left">
+
+                                            <table
+                                                align="center"
+                                                cellpadding="0"
+                                                cellspacing="0"
+                                                width="100%"
+                                                style="
+                                                    margin-top: .5rem;
+                                                "
+                                            >
+
+                                                <tbody>
+
+                                                    <tr>
+
+
+                                                        <!-- NAMA TIKET -->
+
+                                                        <td
+                                                            align="left"
+                                                            width="45%"
+                                                            style="
+                                                                font-size: 12px;
+                                                                line-height: 1.2;
+                                                            "
+                                                        >
+
+                                                            <p>
+
+                                                                <span>
+                                                                    {{ $ticket_order['ticket_name'] }}
+                                                                </span>
+
+                                                            </p>
+
+                                                        </td>
+
+
+                                                        <!-- QUANTITY -->
+
+                                                        <td
+                                                            align="left"
+                                                            width="15%"
+                                                            style="
+                                                                font-size: 12px;
+                                                                line-height: 1.2;
+                                                            "
+                                                        >
+
+                                                            <p>
+
+                                                                <span>
+                                                                    {{ $ticket_order['quantity'] }}
+                                                                    Pax
+                                                                </span>
+
+                                                            </p>
+
+                                                        </td>
+
+
+                                                        <!-- HARGA -->
+
+                                                        <td
+                                                            align="left"
+                                                            width="15%"
+                                                            style="
+                                                                font-size: 12px;
+                                                                line-height: 1.2;
+                                                            "
+                                                        >
+
+                                                            <p>
+
+                                                                <span>
+
+                                                                    Rp
+                                                                    {{ number_format(
+                                                                        $ticket_order['price'],
+                                                                        0,
+                                                                        ',',
+                                                                        '.'
+                                                                    ) }}
+
+                                                                </span>
+
+                                                            </p>
+
+                                                        </td>
+
+
+                                                        <!-- SUBTOTAL -->
+
+                                                        <td
+                                                            align="right"
+                                                            width="25%"
+                                                            style="
+                                                                font-size: 12px;
+                                                                line-height: 1.2;
+                                                            "
+                                                        >
+
+                                                            <p>
+
+                                                                <span>
+
+                                                                    Rp
+                                                                    {{ number_format(
+                                                                        $ticket_order['subtotal'],
+                                                                        0,
+                                                                        ',',
+                                                                        '.'
+                                                                    ) }}
+
+                                                                </span>
+
+                                                            </p>
+
+                                                        </td>
+
+
+                                                    </tr>
+
+                                                </tbody>
+
+                                            </table>
+
+                                        </td>
+
+                                    </tr>
+
+                                @endforeach
+
+
+                                <!-- =================================================
+                                     TOTAL PEMBAYARAN
+                                ================================================== -->
+
                                 <tr>
 
                                     <td align="left">
 
-                                        <table align="center"
-                                               cellpadding="0"
-                                               cellspacing="0"
-                                               width="100%"
-                                               style="
-                                                   margin-top: .5rem;
-                                               ">
+                                        <table
+                                            align="center"
+                                            cellpadding="0"
+                                            cellspacing="0"
+                                            width="100%"
+                                            style="
+                                                margin-top: .3rem;
+                                            "
+                                        >
 
                                             <tbody>
 
                                                 <tr>
 
-                                                    <td align="left"
+
+                                                    <td
+                                                        align="left"
                                                         width="45%"
                                                         style="
                                                             font-size: 12px;
                                                             line-height: 1.2;
-                                                        ">
+                                                        "
+                                                    >
 
                                                         <p>
-                                                            <span>
-                                                                Tiket Campaign Karyawan
-                                                            </span>
+
+                                                            <strong>
+                                                                Total Pembayaran
+                                                            </strong>
+
                                                         </p>
 
                                                     </td>
 
 
-                                                    <td align="left"
+                                                    <td
                                                         width="15%"
-                                                        style="
-                                                            font-size: 12px;
-                                                            line-height: 1.2;
-                                                        ">
-
-                                                        <p>
-                                                            <span>
-                                                                {{ $total_ticket }} Pax
-                                                            </span>
-                                                        </p>
-
-                                                    </td>
+                                                    ></td>
 
 
-                                                    <td align="left"
+                                                    <td
                                                         width="15%"
-                                                        style="
-                                                            font-size: 12px;
-                                                            line-height: 1.2;
-                                                        ">
-
-                                                        <p>
-
-                                                            <span>
-                                                                Rp
-                                                                {{ number_format(
-                                                                    $unit_price ?? ($amount_total / max($total_ticket, 1)),
-                                                                    0,
-                                                                    ',',
-                                                                    '.'
-                                                                ) }}
-                                                            </span>
-
-                                                        </p>
-
-                                                    </td>
+                                                    ></td>
 
 
-                                                    <td align="right"
+                                                    <td
+                                                        align="right"
                                                         width="25%"
                                                         style="
                                                             font-size: 12px;
                                                             line-height: 1.2;
-                                                        ">
+                                                        "
+                                                    >
 
                                                         <p>
 
-                                                            <span>
+                                                            <strong>
+
                                                                 Rp
                                                                 {{ number_format(
                                                                     $amount_total,
@@ -537,7 +838,8 @@
                                                                     ',',
                                                                     '.'
                                                                 ) }}
-                                                            </span>
+
+                                                            </strong>
 
                                                         </p>
 
@@ -553,77 +855,6 @@
 
                                 </tr>
 
-
-                                <!-- TOTAL -->
-                                <tr>
-
-                                    <td align="left">
-
-                                        <table align="center"
-                                               cellpadding="0"
-                                               cellspacing="0"
-                                               width="100%"
-                                               style="
-                                                   margin-top: .3rem;
-                                               ">
-
-                                            <tbody>
-
-                                                <tr>
-
-                                                    <td align="left"
-                                                        width="45%"
-                                                        style="
-                                                            font-size: 12px;
-                                                            line-height: 1.2;
-                                                        ">
-
-                                                        <p>
-                                                            <strong>
-                                                                Total Reservasi
-                                                            </strong>
-                                                        </p>
-
-                                                    </td>
-
-
-                                                    <td width="15%"></td>
-
-                                                    <td width="15%"></td>
-
-
-                                                    <td align="right"
-                                                        width="25%"
-                                                        style="
-                                                            font-size: 12px;
-                                                            line-height: 1.2;
-                                                        ">
-
-                                                        <p>
-
-                                                            <strong>
-                                                                Rp
-                                                                {{ number_format(
-                                                                    $amount_total,
-                                                                    0,
-                                                                    ',',
-                                                                    '.'
-                                                                ) }}
-                                                            </strong>
-
-                                                        </p>
-
-                                                    </td>
-
-                                                </tr>
-
-                                            </tbody>
-
-                                        </table>
-
-                                    </td>
-
-                                </tr>
 
                             </tbody>
 
@@ -637,332 +868,6 @@
 
         </table>
 
-
-        <!-- =====================================================
-             DETAIL RESERVASI
-        ====================================================== -->
-        <table align="center"
-               cellpadding="0"
-               cellspacing="0"
-               width="100%"
-               style="
-                   background-color: #FFFFFFFF;
-                   padding: 0rem 0rem;
-                   border-bottom: 2px dashed #ededed;
-               ">
-
-            <tbody>
-
-                <tr>
-
-                    <td align="left"
-                        valign="top">
-
-                        <table align="center"
-                               cellpadding="0"
-                               cellspacing="0"
-                               width="100%"
-                               style="
-                                   background-color: #FFFFFFFF;
-                                   padding: 1rem 2rem;
-                               ">
-
-                            <tbody>
-
-                                <tr>
-
-                                    <td align="left">
-
-                                        <p style="
-                                            line-height: 1.5;
-                                            font-size: 14px;
-                                        ">
-                                            <strong>
-                                                Detail Reservasi
-                                            </strong>
-                                        </p>
-
-                                    </td>
-
-                                </tr>
-
-
-                                <!-- KODE BOOKING -->
-                                <tr>
-
-                                    <td align="left">
-
-                                        <table width="100%"
-                                               style="
-                                                   margin-top: .5rem;
-                                               ">
-
-                                            <tbody>
-
-                                                <tr>
-
-                                                    <td width="30%"
-                                                        style="
-                                                            font-size: 12px;
-                                                        ">
-                                                        Kode Booking
-                                                    </td>
-
-                                                    <td width="70%"
-                                                        style="
-                                                            font-size: 12px;
-                                                        ">
-
-                                                        <strong>
-                                                            {{ $booking_code }}
-                                                        </strong>
-
-                                                    </td>
-
-                                                </tr>
-
-                                            </tbody>
-
-                                        </table>
-
-                                    </td>
-
-                                </tr>
-
-
-                                <!-- TANGGAL KEDATANGAN -->
-                                <tr>
-
-                                    <td align="left">
-
-                                        <table width="100%"
-                                               style="
-                                                   margin-top: .2rem;
-                                               ">
-
-                                            <tbody>
-
-                                                <tr>
-
-                                                    <td width="30%"
-                                                        style="
-                                                            font-size: 12px;
-                                                        ">
-                                                        Tanggal Kedatangan
-                                                    </td>
-
-                                                    <td width="70%"
-                                                        style="
-                                                            font-size: 12px;
-                                                        ">
-
-                                                        {{ $date_plan }}
-
-                                                    </td>
-
-                                                </tr>
-
-                                            </tbody>
-
-                                        </table>
-
-                                    </td>
-
-                                </tr>
-
-
-                                <!-- JUMLAH TIKET -->
-                                <tr>
-
-                                    <td align="left">
-
-                                        <table width="100%"
-                                               style="
-                                                   margin-top: .2rem;
-                                               ">
-
-                                            <tbody>
-
-                                                <tr>
-
-                                                    <td width="30%"
-                                                        style="
-                                                            font-size: 12px;
-                                                        ">
-                                                        Jumlah Tiket
-                                                    </td>
-
-                                                    <td width="70%"
-                                                        style="
-                                                            font-size: 12px;
-                                                        ">
-
-                                                        {{ $total_ticket }} Pax
-
-                                                    </td>
-
-                                                </tr>
-
-                                            </tbody>
-
-                                        </table>
-
-                                    </td>
-
-                                </tr>
-
-
-                                <!-- HARGA PER TIKET -->
-                                <tr>
-
-                                    <td align="left">
-
-                                        <table width="100%"
-                                               style="
-                                                   margin-top: .2rem;
-                                               ">
-
-                                            <tbody>
-
-                                                <tr>
-
-                                                    <td width="30%"
-                                                        style="
-                                                            font-size: 12px;
-                                                        ">
-                                                        Harga per Tiket
-                                                    </td>
-
-                                                    <td width="70%"
-                                                        style="
-                                                            font-size: 12px;
-                                                        ">
-
-                                                        Rp
-                                                        {{ number_format(
-                                                            $unit_price ?? ($amount_total / max($total_ticket, 1)),
-                                                            0,
-                                                            ',',
-                                                            '.'
-                                                        ) }}
-
-                                                    </td>
-
-                                                </tr>
-
-                                            </tbody>
-
-                                        </table>
-
-                                    </td>
-
-                                </tr>
-
-
-                                <!-- TOTAL -->
-                                <tr>
-
-                                    <td align="left">
-
-                                        <table width="100%"
-                                               style="
-                                                   margin-top: .2rem;
-                                               ">
-
-                                            <tbody>
-
-                                                <tr>
-
-                                                    <td width="30%"
-                                                        style="
-                                                            font-size: 12px;
-                                                        ">
-
-                                                        <strong>
-                                                            Total
-                                                        </strong>
-
-                                                    </td>
-
-                                                    <td width="70%"
-                                                        style="
-                                                            font-size: 12px;
-                                                        ">
-
-                                                        <strong>
-                                                            Rp
-                                                            {{ number_format(
-                                                                $amount_total,
-                                                                0,
-                                                                ',',
-                                                                '.'
-                                                            ) }}
-                                                        </strong>
-
-                                                    </td>
-
-                                                </tr>
-
-                                            </tbody>
-
-                                        </table>
-
-                                    </td>
-
-                                </tr>
-
-
-                                <!-- METODE -->
-                                <tr>
-
-                                    <td align="left">
-
-                                        <table width="100%"
-                                               style="
-                                                   margin-top: .2rem;
-                                               ">
-
-                                            <tbody>
-
-                                                <tr>
-
-                                                    <td width="30%"
-                                                        style="
-                                                            font-size: 12px;
-                                                        ">
-                                                        Jenis Reservasi
-                                                    </td>
-
-                                                    <td width="70%"
-                                                        style="
-                                                            font-size: 12px;
-                                                        ">
-
-                                                        Employee Campaign
-
-                                                    </td>
-
-                                                </tr>
-
-                                            </tbody>
-
-                                        </table>
-
-                                    </td>
-
-                                </tr>
-
-                            </tbody>
-
-                        </table>
-
-                    </td>
-
-                </tr>
-
-            </tbody>
-
-        </table>
 
     </main>
 
@@ -970,6 +875,7 @@
     <!-- =========================================================
          PAGE BREAK
     ========================================================== -->
+
     <div class="page-break"></div>
 
 
@@ -977,56 +883,77 @@
          HALAMAN 2
          PETUNJUK PENGGUNAAN KODE BOOKING
     ========================================================== -->
-    <main style="
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        margin-top: 8rem;
-    ">
 
-        <table align="center"
-               cellpadding="0"
-               cellspacing="0"
-               width="100%"
-               style="
-                   background-color: #FFFFFFFF;
-                   padding: 0rem 0rem;
-                   border-top: 2px dashed #ededed;
-                   border-bottom: 2px dashed #ededed;
-               ">
+    <main
+        style="
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            padding-inline: 0;
+            padding-block: 0;
+            margin-top: 8rem;
+        "
+    >
+
+
+        <!-- =====================================================
+             PETUNJUK PENGGUNAAN
+        ====================================================== -->
+
+        <table
+            align="center"
+            cellpadding="0"
+            cellspacing="0"
+            width="100%"
+            style="
+                background-color: #FFFFFFFF;
+                padding: 0rem 0rem;
+                border-top: 2px dashed #ededed;
+                border-bottom: 2px dashed #ededed;
+            "
+        >
 
             <tbody>
 
                 <tr>
 
-                    <td align="left"
-                        valign="top">
+                    <td
+                        align="left"
+                        valign="top"
+                    >
 
-                        <table align="center"
-                               cellpadding="0"
-                               cellspacing="0"
-                               width="100%"
-                               style="
-                                   background-color: #FFFFFFFF;
-                                   padding: 1rem 2rem;
-                               ">
+                        <table
+                            align="center"
+                            cellpadding="0"
+                            cellspacing="0"
+                            width="100%"
+                            style="
+                                background-color: #FFFFFFFF;
+                                padding: 1rem 2rem;
+                            "
+                        >
 
                             <tbody>
 
 
                                 <!-- JUDUL -->
+
                                 <tr>
 
                                     <td align="left">
 
-                                        <p style="
-                                            line-height: 1.5;
-                                            font-size: 14px;
-                                        ">
+                                        <p
+                                            style="
+                                                line-height: 1.5;
+                                                font-size: 14px;
+                                            "
+                                        >
+
                                             <strong>
                                                 Penting! Begini Cara Gunakan
                                                 Kode Booking Saloka Kamu
                                             </strong>
+
                                         </p>
 
                                     </td>
@@ -1035,37 +962,104 @@
 
 
                                 <!-- INFO -->
+
                                 <tr>
 
                                     <td align="left">
 
-                                        <p style="
-                                            font-size: 12px;
-                                            line-height: 1.5;
-                                            margin-top: .5rem;
-                                        ">
-                                            Kamu tidak perlu mencetak
-                                            e-ticket ini.
-                                        </p>
+                                        <table
+                                            align="center"
+                                            cellpadding="0"
+                                            cellspacing="0"
+                                            width="100%"
+                                            style="
+                                                margin-top: .5rem;
+                                            "
+                                        >
+
+                                            <tbody>
+
+                                                <tr>
+
+                                                    <td
+                                                        align="left"
+                                                        width="100%"
+                                                        style="
+                                                            font-size: 12px;
+                                                            line-height: 1.2;
+                                                        "
+                                                    >
+
+                                                        <p>
+
+                                                            <span>
+                                                                Kamu tidak perlu
+                                                                mencetak
+                                                                e-ticketnya
+                                                            </span>
+
+                                                        </p>
+
+                                                    </td>
+
+                                                </tr>
+
+                                            </tbody>
+
+                                        </table>
 
                                     </td>
 
                                 </tr>
 
 
+                                <!-- INFO 2 -->
+
                                 <tr>
 
                                     <td align="left">
 
-                                        <p style="
-                                            font-size: 12px;
-                                            line-height: 1.5;
-                                            margin-top: .2rem;
-                                        ">
-                                            Cukup tunjukkan Kode Booking
-                                            kamu saat sampai di
-                                            Saloka Theme Park.
-                                        </p>
+                                        <table
+                                            align="center"
+                                            cellpadding="0"
+                                            cellspacing="0"
+                                            width="100%"
+                                            style="
+                                                margin-top: .2rem;
+                                            "
+                                        >
+
+                                            <tbody>
+
+                                                <tr>
+
+                                                    <td
+                                                        align="left"
+                                                        width="100%"
+                                                        style="
+                                                            font-size: 12px;
+                                                            line-height: 1.2;
+                                                        "
+                                                    >
+
+                                                        <p>
+
+                                                            <span>
+                                                                Cukup tunjukkan
+                                                                Kode Booking
+                                                                kamu saat sampai
+                                                                di Saloka Theme Park
+                                                            </span>
+
+                                                        </p>
+
+                                                    </td>
+
+                                                </tr>
+
+                                            </tbody>
+
+                                        </table>
 
                                     </td>
 
@@ -1073,19 +1067,50 @@
 
 
                                 <!-- SUB JUDUL -->
+
                                 <tr>
 
                                     <td align="left">
 
-                                        <p style="
-                                            font-size: 14px;
-                                            line-height: 1.5;
-                                            margin-top: .8rem;
-                                        ">
-                                            <strong>
-                                                Berikut langkah mudahnya:
-                                            </strong>
-                                        </p>
+                                        <table
+                                            align="center"
+                                            cellpadding="0"
+                                            cellspacing="0"
+                                            width="100%"
+                                            style="
+                                                margin-top: .5rem;
+                                            "
+                                        >
+
+                                            <tbody>
+
+                                                <tr>
+
+                                                    <td
+                                                        align="left"
+                                                        width="100%"
+                                                        style="
+                                                            font-size: 14px;
+                                                            line-height: 1.2;
+                                                        "
+                                                    >
+
+                                                        <p>
+
+                                                            <strong>
+                                                                Berikut langkah
+                                                                mudahnya:
+                                                            </strong>
+
+                                                        </p>
+
+                                                    </td>
+
+                                                </tr>
+
+                                            </tbody>
+
+                                        </table>
 
                                     </td>
 
@@ -1093,38 +1118,68 @@
 
 
                                 <!-- LANGKAH 1 -->
+
                                 <tr>
 
                                     <td align="left">
 
-                                        <table width="100%"
-                                               style="
-                                                   margin-top: .5rem;
-                                               ">
+                                        <table
+                                            align="center"
+                                            cellpadding="0"
+                                            cellspacing="0"
+                                            width="100%"
+                                            style="
+                                                margin-top: .5rem;
+                                            "
+                                        >
 
-                                            <tr>
+                                            <tbody>
 
-                                                <td width="3%"
-                                                    valign="top"
-                                                    style="
-                                                        font-size: 12px;
-                                                    ">
-                                                    1.
-                                                </td>
+                                                <tr>
 
-                                                <td width="97%"
-                                                    style="
-                                                        font-size: 12px;
-                                                        line-height: 1.5;
-                                                    ">
+                                                    <td
+                                                        align="left"
+                                                        width="3%"
+                                                        style="
+                                                            font-size: 12px;
+                                                            line-height: 1.2;
+                                                        "
+                                                    >
 
-                                                    Cek Kode Booking kamu
-                                                    yang dikirim melalui
-                                                    WhatsApp.
+                                                        <p>
+                                                            <span>
+                                                                1.
+                                                            </span>
+                                                        </p>
 
-                                                </td>
+                                                    </td>
 
-                                            </tr>
+
+                                                    <td
+                                                        align="left"
+                                                        width="97%"
+                                                        style="
+                                                            font-size: 12px;
+                                                            line-height: 1.2;
+                                                        "
+                                                    >
+
+                                                        <p>
+
+                                                            <span>
+                                                                Cek kode booking
+                                                                kamu yang dikirim
+                                                                lewat email atau
+                                                                Whatsapp.
+                                                            </span>
+
+                                                        </p>
+
+                                                    </td>
+
+                                                </tr>
+
+                                            </tbody>
 
                                         </table>
 
@@ -1134,41 +1189,74 @@
 
 
                                 <!-- LANGKAH 2 -->
+
                                 <tr>
 
                                     <td align="left">
 
-                                        <table width="100%"
-                                               style="
-                                                   margin-top: .2rem;
-                                               ">
+                                        <table
+                                            align="center"
+                                            cellpadding="0"
+                                            cellspacing="0"
+                                            width="100%"
+                                            style="
+                                                margin-top: .2rem;
+                                            "
+                                        >
 
-                                            <tr>
+                                            <tbody>
 
-                                                <td width="3%"
-                                                    valign="top"
-                                                    style="
-                                                        font-size: 12px;
-                                                    ">
-                                                    2.
-                                                </td>
+                                                <tr>
 
-                                                <td width="97%"
-                                                    style="
-                                                        font-size: 12px;
-                                                        line-height: 1.5;
-                                                    ">
+                                                    <td
+                                                        align="left"
+                                                        width="3%"
+                                                        style="
+                                                            font-size: 12px;
+                                                            line-height: 1.2;
+                                                        "
+                                                    >
 
-                                                    Tunjukkan
-                                                    <strong>
-                                                        Kode Booking
-                                                    </strong>
-                                                    saat di loket
-                                                    penukaran tiket.
+                                                        <p>
+                                                            <span>
+                                                                2.
+                                                            </span>
+                                                        </p>
 
-                                                </td>
+                                                    </td>
 
-                                            </tr>
+
+                                                    <td
+                                                        align="left"
+                                                        width="97%"
+                                                        style="
+                                                            font-size: 12px;
+                                                            line-height: 1.2;
+                                                        "
+                                                    >
+
+                                                        <p>
+
+                                                            <span>
+
+                                                                Tunjukkan
+
+                                                                <strong>
+                                                                    Kode Booking
+                                                                </strong>
+
+                                                                saat di loket
+                                                                penukaran tiket.
+
+                                                            </span>
+
+                                                        </p>
+
+                                                    </td>
+
+                                                </tr>
+
+                                            </tbody>
 
                                         </table>
 
@@ -1178,38 +1266,67 @@
 
 
                                 <!-- LANGKAH 3 -->
+
                                 <tr>
 
                                     <td align="left">
 
-                                        <table width="100%"
-                                               style="
-                                                   margin-top: .2rem;
-                                               ">
+                                        <table
+                                            align="center"
+                                            cellpadding="0"
+                                            cellspacing="0"
+                                            width="100%"
+                                            style="
+                                                margin-top: .2rem;
+                                            "
+                                        >
 
-                                            <tr>
+                                            <tbody>
 
-                                                <td width="3%"
-                                                    valign="top"
-                                                    style="
-                                                        font-size: 12px;
-                                                    ">
-                                                    3.
-                                                </td>
+                                                <tr>
 
-                                                <td width="97%"
-                                                    style="
-                                                        font-size: 12px;
-                                                        line-height: 1.5;
-                                                    ">
+                                                    <td
+                                                        align="left"
+                                                        width="3%"
+                                                        style="
+                                                            font-size: 12px;
+                                                            line-height: 1.2;
+                                                        "
+                                                    >
 
-                                                    Tim kami akan melakukan
-                                                    scan dan verifikasi
-                                                    Kode Booking.
+                                                        <p>
+                                                            <span>
+                                                                3.
+                                                            </span>
+                                                        </p>
 
-                                                </td>
+                                                    </td>
 
-                                            </tr>
+
+                                                    <td
+                                                        align="left"
+                                                        width="97%"
+                                                        style="
+                                                            font-size: 12px;
+                                                            line-height: 1.2;
+                                                        "
+                                                    >
+
+                                                        <p>
+
+                                                            <span>
+                                                                Tim kami akan
+                                                                scan &
+                                                                verifikasi.
+                                                            </span>
+
+                                                        </p>
+
+                                                    </td>
+
+                                                </tr>
+
+                                            </tbody>
 
                                         </table>
 
@@ -1219,40 +1336,75 @@
 
 
                                 <!-- LANGKAH 4 -->
+
                                 <tr>
 
                                     <td align="left">
 
-                                        <table width="100%"
-                                               style="
-                                                   margin-top: .2rem;
-                                               ">
+                                        <table
+                                            align="center"
+                                            cellpadding="0"
+                                            cellspacing="0"
+                                            width="100%"
+                                            style="
+                                                margin-top: .2rem;
+                                            "
+                                        >
 
-                                            <tr>
+                                            <tbody>
 
-                                                <td width="3%"
-                                                    valign="top"
-                                                    style="
-                                                        font-size: 12px;
-                                                    ">
-                                                    4.
-                                                </td>
+                                                <tr>
 
-                                                <td width="97%"
-                                                    style="
-                                                        font-size: 12px;
-                                                        line-height: 1.5;
-                                                    ">
+                                                    <td
+                                                        align="left"
+                                                        width="3%"
+                                                        style="
+                                                            font-size: 12px;
+                                                            line-height: 1.2;
+                                                        "
+                                                    >
 
-                                                    Setelah valid,
-                                                    kamu akan mendapatkan
-                                                    tiket fisik dan dapat
-                                                    langsung menikmati
-                                                    wahana Saloka.
+                                                        <p>
+                                                            <span>
+                                                                4.
+                                                            </span>
+                                                        </p>
 
-                                                </td>
+                                                    </td>
 
-                                            </tr>
+
+                                                    <td
+                                                        align="left"
+                                                        width="97%"
+                                                        style="
+                                                            font-size: 12px;
+                                                            line-height: 1.2;
+                                                        "
+                                                    >
+
+                                                        <p>
+
+                                                            <span>
+
+                                                                Setelah valid,
+                                                                kamu akan
+                                                                mendapatkan
+                                                                tiket fisik dan
+                                                                langsung bisa
+                                                                masuk untuk
+                                                                nikmati semua
+                                                                wahana
+                                                                sepuasnya!
+
+                                                            </span>
+
+                                                        </p>
+
+                                                    </td>
+
+                                                </tr>
+
+                                            </tbody>
 
                                         </table>
 
@@ -1262,44 +1414,109 @@
 
 
                                 <!-- INFO TAMBAHAN -->
+
                                 <tr>
 
                                     <td align="left">
 
-                                        <p style="
-                                            font-size: 12px;
-                                            line-height: 1.5;
-                                            margin-top: .7rem;
-                                        ">
+                                        <table
+                                            align="center"
+                                            cellpadding="0"
+                                            cellspacing="0"
+                                            width="100%"
+                                            style="
+                                                margin-top: .5rem;
+                                            "
+                                        >
 
-                                            Kalau masih bingung,
-                                            kamu bisa menunjukkan
-                                            E-ticket ini kepada
-                                            petugas kami di lokasi.
+                                            <tbody>
 
-                                        </p>
+                                                <tr>
+
+                                                    <td
+                                                        align="left"
+                                                        width="100%"
+                                                        style="
+                                                            font-size: 12px;
+                                                            line-height: 1.2;
+                                                        "
+                                                    >
+
+                                                        <p>
+
+                                                            <span>
+
+                                                                Kalau masih
+                                                                bingung, kamu
+                                                                bisa tunjukkan
+                                                                E-tiket ini ke
+                                                                petugas kami di
+                                                                lokasi.
+
+                                                            </span>
+
+                                                        </p>
+
+                                                    </td>
+
+                                                </tr>
+
+                                            </tbody>
+
+                                        </table>
 
                                     </td>
 
                                 </tr>
 
 
+                                <!-- PENUTUP -->
+
                                 <tr>
 
                                     <td align="left">
 
-                                        <p style="
-                                            font-size: 12px;
-                                            line-height: 1.5;
-                                            margin-top: .5rem;
-                                        ">
+                                        <table
+                                            align="center"
+                                            cellpadding="0"
+                                            cellspacing="0"
+                                            width="100%"
+                                            style="
+                                                margin-top: .1rem;
+                                            "
+                                        >
 
-                                            <strong>
-                                                Rasakan keceriaan
-                                                tiada habisnya di Saloka.
-                                            </strong>
+                                            <tbody>
 
-                                        </p>
+                                                <tr>
+
+                                                    <td
+                                                        align="left"
+                                                        width="100%"
+                                                        style="
+                                                            font-size: 12px;
+                                                            line-height: 1.2;
+                                                        "
+                                                    >
+
+                                                        <p>
+
+                                                            <strong>
+                                                                Rasakan
+                                                                keceriaan tiada
+                                                                habisnya di
+                                                                Saloka.
+                                                            </strong>
+
+                                                        </p>
+
+                                                    </td>
+
+                                                </tr>
+
+                                            </tbody>
+
+                                        </table>
 
                                     </td>
 
@@ -1322,45 +1539,59 @@
         <!-- =====================================================
              SYARAT & KETENTUAN
         ====================================================== -->
-        <table align="center"
-               cellpadding="0"
-               cellspacing="0"
-               width="100%"
-               style="
-                   background-color: #FFFFFFFF;
-                   padding: 0rem 0rem;
-                   border-bottom: 2px dashed #ededed;
-               ">
+
+        <table
+            align="center"
+            cellpadding="0"
+            cellspacing="0"
+            width="100%"
+            style="
+                background-color: #FFFFFFFF;
+                padding: 0rem 0rem;
+                border-bottom: 2px dashed #ededed;
+            "
+        >
 
             <tbody>
 
                 <tr>
 
-                    <td align="left"
-                        valign="top">
+                    <td
+                        align="left"
+                        valign="top"
+                    >
 
-                        <table align="center"
-                               cellpadding="0"
-                               cellspacing="0"
-                               width="100%"
-                               style="
-                                   background-color: #FFFFFFFF;
-                                   padding: 1rem 2rem;
-                               ">
+                        <table
+                            align="center"
+                            cellpadding="0"
+                            cellspacing="0"
+                            width="100%"
+                            style="
+                                background-color: #FFFFFFFF;
+                                padding: 1rem 2rem;
+                            "
+                        >
 
                             <tbody>
+
+
+                                <!-- JUDUL -->
 
                                 <tr>
 
                                     <td align="left">
 
-                                        <p style="
-                                            line-height: 1.5;
-                                            font-size: 14px;
-                                        ">
+                                        <p
+                                            style="
+                                                line-height: 1.5;
+                                                font-size: 14px;
+                                            "
+                                        >
+
                                             <strong>
                                                 Syarat & Ketentuan Kunjungan:
                                             </strong>
+
                                         </p>
 
                                     </td>
@@ -1369,41 +1600,76 @@
 
 
                                 <!-- SYARAT 1 -->
+
                                 <tr>
 
                                     <td align="left">
 
-                                        <table width="100%"
-                                               style="
-                                                   margin-top: .5rem;
-                                               ">
+                                        <table
+                                            align="center"
+                                            cellpadding="0"
+                                            cellspacing="0"
+                                            width="100%"
+                                            style="
+                                                margin-top: .5rem;
+                                            "
+                                        >
 
-                                            <tr>
+                                            <tbody>
 
-                                                <td width="3%"
-                                                    valign="top"
-                                                    style="
-                                                        font-size: 12px;
-                                                    ">
-                                                    1.
-                                                </td>
+                                                <tr>
 
-                                                <td width="97%"
-                                                    style="
-                                                        font-size: 12px;
-                                                        line-height: 1.5;
-                                                    ">
+                                                    <td
+                                                        align="left"
+                                                        width="3%"
+                                                        style="
+                                                            font-size: 12px;
+                                                            line-height: 1.2;
+                                                        "
+                                                    >
 
-                                                    <strong>
-                                                        Tiket hanya berlaku
-                                                        di tanggal kunjungan
-                                                    </strong>
-                                                    yang telah dipilih
-                                                    saat reservasi.
+                                                        <p>
+                                                            <span>
+                                                                1.
+                                                            </span>
+                                                        </p>
 
-                                                </td>
+                                                    </td>
 
-                                            </tr>
+
+                                                    <td
+                                                        align="left"
+                                                        width="97%"
+                                                        style="
+                                                            font-size: 12px;
+                                                            line-height: 1.2;
+                                                        "
+                                                    >
+
+                                                        <p>
+
+                                                            <span>
+
+                                                                <strong>
+                                                                    Tiket hanya
+                                                                    berlaku di
+                                                                    tanggal
+                                                                    kunjungan
+                                                                </strong>
+
+                                                                yang telah
+                                                                dipilih saat
+                                                                reservasi.
+
+                                                            </span>
+
+                                                        </p>
+
+                                                    </td>
+
+                                                </tr>
+
+                                            </tbody>
 
                                         </table>
 
@@ -1413,42 +1679,77 @@
 
 
                                 <!-- SYARAT 2 -->
+
                                 <tr>
 
                                     <td align="left">
 
-                                        <table width="100%"
-                                               style="
-                                                   margin-top: .2rem;
-                                               ">
+                                        <table
+                                            align="center"
+                                            cellpadding="0"
+                                            cellspacing="0"
+                                            width="100%"
+                                            style="
+                                                margin-top: .2rem;
+                                            "
+                                        >
 
-                                            <tr>
+                                            <tbody>
 
-                                                <td width="3%"
-                                                    valign="top"
-                                                    style="
-                                                        font-size: 12px;
-                                                    ">
-                                                    2.
-                                                </td>
+                                                <tr>
 
-                                                <td width="97%"
-                                                    style="
-                                                        font-size: 12px;
-                                                        line-height: 1.5;
-                                                    ">
+                                                    <td
+                                                        align="left"
+                                                        width="3%"
+                                                        style="
+                                                            font-size: 12px;
+                                                            line-height: 1.2;
+                                                        "
+                                                    >
 
-                                                    <strong>
-                                                        Tiket tidak dapat
-                                                        digunakan lebih
-                                                        dari 1 kali
-                                                    </strong>
-                                                    atau di luar tanggal
-                                                    kunjungan.
+                                                        <p>
+                                                            <span>
+                                                                2.
+                                                            </span>
+                                                        </p>
 
-                                                </td>
+                                                    </td>
 
-                                            </tr>
+
+                                                    <td
+                                                        align="left"
+                                                        width="97%"
+                                                        style="
+                                                            font-size: 12px;
+                                                            line-height: 1.2;
+                                                        "
+                                                    >
+
+                                                        <p>
+
+                                                            <span>
+
+                                                                <strong>
+                                                                    Tiket tidak
+                                                                    dapat
+                                                                    digunakan
+                                                                    lebih dari
+                                                                    1 kali
+                                                                </strong>
+
+                                                                atau di luar
+                                                                tanggal
+                                                                kunjungan.
+
+                                                            </span>
+
+                                                        </p>
+
+                                                    </td>
+
+                                                </tr>
+
+                                            </tbody>
 
                                         </table>
 
@@ -1458,39 +1759,72 @@
 
 
                                 <!-- SYARAT 3 -->
+
                                 <tr>
 
                                     <td align="left">
 
-                                        <table width="100%"
-                                               style="
-                                                   margin-top: .2rem;
-                                               ">
+                                        <table
+                                            align="center"
+                                            cellpadding="0"
+                                            cellspacing="0"
+                                            width="100%"
+                                            style="
+                                                margin-top: .2rem;
+                                            "
+                                        >
 
-                                            <tr>
+                                            <tbody>
 
-                                                <td width="3%"
-                                                    valign="top"
-                                                    style="
-                                                        font-size: 12px;
-                                                    ">
-                                                    3.
-                                                </td>
+                                                <tr>
 
-                                                <td width="97%"
-                                                    style="
-                                                        font-size: 12px;
-                                                        line-height: 1.5;
-                                                    ">
+                                                    <td
+                                                        align="left"
+                                                        width="3%"
+                                                        style="
+                                                            font-size: 12px;
+                                                            line-height: 1.2;
+                                                        "
+                                                    >
 
-                                                    Pengunjung wajib menjaga
-                                                    ketertiban dan kebersihan
-                                                    selama berada di area
-                                                    taman.
+                                                        <p>
+                                                            <span>
+                                                                3.
+                                                            </span>
+                                                        </p>
 
-                                                </td>
+                                                    </td>
 
-                                            </tr>
+
+                                                    <td
+                                                        align="left"
+                                                        width="97%"
+                                                        style="
+                                                            font-size: 12px;
+                                                            line-height: 1.2;
+                                                        "
+                                                    >
+
+                                                        <p>
+
+                                                            <span>
+
+                                                                Pengunjung
+                                                                wajib menjaga
+                                                                ketertiban dan
+                                                                kebersihan
+                                                                selama berada
+                                                                di area taman.
+
+                                                            </span>
+
+                                                        </p>
+
+                                                    </td>
+
+                                                </tr>
+
+                                            </tbody>
 
                                         </table>
 
@@ -1500,39 +1834,73 @@
 
 
                                 <!-- SYARAT 4 -->
+
                                 <tr>
 
                                     <td align="left">
 
-                                        <table width="100%"
-                                               style="
-                                                   margin-top: .2rem;
-                                               ">
+                                        <table
+                                            align="center"
+                                            cellpadding="0"
+                                            cellspacing="0"
+                                            width="100%"
+                                            style="
+                                                margin-top: .2rem;
+                                            "
+                                        >
 
-                                            <tr>
+                                            <tbody>
 
-                                                <td width="3%"
-                                                    valign="top"
-                                                    style="
-                                                        font-size: 12px;
-                                                    ">
-                                                    4.
-                                                </td>
+                                                <tr>
 
-                                                <td width="97%"
-                                                    style="
-                                                        font-size: 12px;
-                                                        line-height: 1.5;
-                                                    ">
+                                                    <td
+                                                        align="left"
+                                                        width="3%"
+                                                        style="
+                                                            font-size: 12px;
+                                                            line-height: 1.2;
+                                                        "
+                                                    >
 
-                                                    Dilarang membawa makanan
-                                                    dan minuman dari luar
-                                                    ke dalam area Saloka
-                                                    Theme Park.
+                                                        <p>
+                                                            <span>
+                                                                4.
+                                                            </span>
+                                                        </p>
 
-                                                </td>
+                                                    </td>
 
-                                            </tr>
+
+                                                    <td
+                                                        align="left"
+                                                        width="97%"
+                                                        style="
+                                                            font-size: 12px;
+                                                            line-height: 1.2;
+                                                        "
+                                                    >
+
+                                                        <p>
+
+                                                            <span>
+
+                                                                Dilarang
+                                                                membawa
+                                                                makanan dan
+                                                                minuman dari
+                                                                luar ke dalam
+                                                                area Saloka
+                                                                Theme Park.
+
+                                                            </span>
+
+                                                        </p>
+
+                                                    </td>
+
+                                                </tr>
+
+                                            </tbody>
 
                                         </table>
 
@@ -1542,40 +1910,74 @@
 
 
                                 <!-- SYARAT 5 -->
+
                                 <tr>
 
                                     <td align="left">
 
-                                        <table width="100%"
-                                               style="
-                                                   margin-top: .2rem;
-                                               ">
+                                        <table
+                                            align="center"
+                                            cellpadding="0"
+                                            cellspacing="0"
+                                            width="100%"
+                                            style="
+                                                margin-top: .2rem;
+                                            "
+                                        >
 
-                                            <tr>
+                                            <tbody>
 
-                                                <td width="3%"
-                                                    valign="top"
-                                                    style="
-                                                        font-size: 12px;
-                                                    ">
-                                                    5.
-                                                </td>
+                                                <tr>
 
-                                                <td width="97%"
-                                                    style="
-                                                        font-size: 12px;
-                                                        line-height: 1.5;
-                                                    ">
+                                                    <td
+                                                        align="left"
+                                                        width="3%"
+                                                        style="
+                                                            font-size: 12px;
+                                                            line-height: 1.2;
+                                                        "
+                                                    >
 
-                                                    Tiket yang sudah dibeli
-                                                    <strong>
-                                                        tidak dapat
-                                                        diuangkan kembali.
-                                                    </strong>
+                                                        <p>
+                                                            <span>
+                                                                5.
+                                                            </span>
+                                                        </p>
 
-                                                </td>
+                                                    </td>
 
-                                            </tr>
+
+                                                    <td
+                                                        align="left"
+                                                        width="97%"
+                                                        style="
+                                                            font-size: 12px;
+                                                            line-height: 1.2;
+                                                        "
+                                                    >
+
+                                                        <p>
+
+                                                            <span>
+
+                                                                Tiket yang
+                                                                sudah dibeli
+
+                                                                <strong>
+                                                                    tidak dapat
+                                                                    diuangkan
+                                                                    kembali
+                                                                </strong>.
+
+                                                            </span>
+
+                                                        </p>
+
+                                                    </td>
+
+                                                </tr>
+
+                                            </tbody>
 
                                         </table>
 
@@ -1585,39 +1987,72 @@
 
 
                                 <!-- SYARAT 6 -->
+
                                 <tr>
 
                                     <td align="left">
 
-                                        <table width="100%"
-                                               style="
-                                                   margin-top: .2rem;
-                                               ">
+                                        <table
+                                            align="center"
+                                            cellpadding="0"
+                                            cellspacing="0"
+                                            width="100%"
+                                            style="
+                                                margin-top: .2rem;
+                                            "
+                                        >
 
-                                            <tr>
+                                            <tbody>
 
-                                                <td width="3%"
-                                                    valign="top"
-                                                    style="
-                                                        font-size: 12px;
-                                                    ">
-                                                    6.
-                                                </td>
+                                                <tr>
 
-                                                <td width="97%"
-                                                    style="
-                                                        font-size: 12px;
-                                                        line-height: 1.5;
-                                                    ">
+                                                    <td
+                                                        align="left"
+                                                        width="3%"
+                                                        style="
+                                                            font-size: 12px;
+                                                            line-height: 1.2;
+                                                        "
+                                                    >
 
-                                                    Batas penukaran tiket
-                                                    dilayani hingga
-                                                    1 jam sebelum jam
-                                                    operasional berakhir.
+                                                        <p>
+                                                            <span>
+                                                                6.
+                                                            </span>
+                                                        </p>
 
-                                                </td>
+                                                    </td>
 
-                                            </tr>
+
+                                                    <td
+                                                        align="left"
+                                                        width="97%"
+                                                        style="
+                                                            font-size: 12px;
+                                                            line-height: 1.2;
+                                                        "
+                                                    >
+
+                                                        <p>
+
+                                                            <span>
+
+                                                                Batas penukaran
+                                                                tiket dilayani
+                                                                hingga 1 Jam
+                                                                sebelum jam
+                                                                Operasional
+                                                                berakhir.
+
+                                                            </span>
+
+                                                        </p>
+
+                                                    </td>
+
+                                                </tr>
+
+                                            </tbody>
 
                                         </table>
 
@@ -1627,38 +2062,68 @@
 
 
                                 <!-- SYARAT 7 -->
+
                                 <tr>
 
                                     <td align="left">
 
-                                        <table width="100%"
-                                               style="
-                                                   margin-top: .2rem;
-                                               ">
+                                        <table
+                                            align="center"
+                                            cellpadding="0"
+                                            cellspacing="0"
+                                            width="100%"
+                                            style="
+                                                margin-top: .2rem;
+                                            "
+                                        >
 
-                                            <tr>
+                                            <tbody>
 
-                                                <td width="3%"
-                                                    valign="top"
-                                                    style="
-                                                        font-size: 12px;
-                                                    ">
-                                                    7.
-                                                </td>
+                                                <tr>
 
-                                                <td width="97%"
-                                                    style="
-                                                        font-size: 12px;
-                                                        line-height: 1.5;
-                                                    ">
+                                                    <td
+                                                        align="left"
+                                                        width="3%"
+                                                        style="
+                                                            font-size: 12px;
+                                                            line-height: 1.2;
+                                                        "
+                                                    >
 
-                                                    <strong>
-                                                        Jam Operasional Saloka:
-                                                    </strong>
+                                                        <p>
+                                                            <span>
+                                                                7.
+                                                            </span>
+                                                        </p>
 
-                                                </td>
+                                                    </td>
 
-                                            </tr>
+
+                                                    <td
+                                                        align="left"
+                                                        width="97%"
+                                                        style="
+                                                            font-size: 12px;
+                                                            line-height: 1.2;
+                                                        "
+                                                    >
+
+                                                        <p>
+
+                                                            <span>
+
+                                                                Jam Operasional
+                                                                Saloka :
+
+                                                            </span>
+
+                                                        </p>
+
+                                                    </td>
+
+                                                </tr>
+
+                                            </tbody>
 
                                         </table>
 
@@ -1667,38 +2132,68 @@
                                 </tr>
 
 
-                                <!-- JAM SENIN-KAMIS -->
+                                <!-- JAM SENIN - KAMIS -->
+
                                 <tr>
 
                                     <td align="left">
 
-                                        <table width="100%"
-                                               style="
-                                                   margin-top: .1rem;
-                                                   padding-left: 2rem;
-                                               ">
+                                        <table
+                                            align="center"
+                                            cellpadding="0"
+                                            cellspacing="0"
+                                            width="100%"
+                                            style="
+                                                margin-top: .1rem;
+                                                padding-left: 2rem;
+                                            "
+                                        >
 
-                                            <tr>
+                                            <tbody>
 
-                                                <td width="3%"
-                                                    style="
-                                                        font-size: 12px;
-                                                    ">
-                                                    •
-                                                </td>
+                                                <tr>
 
-                                                <td width="97%"
-                                                    style="
-                                                        font-size: 12px;
-                                                        line-height: 1.5;
-                                                    ">
+                                                    <td
+                                                        align="left"
+                                                        width="2%"
+                                                        style="
+                                                            font-size: 12px;
+                                                            line-height: 1.2;
+                                                        "
+                                                    >
 
-                                                    Senin - Kamis
-                                                    10.00 - 18.00 WIB
+                                                        <p>
+                                                            <span>
+                                                                •
+                                                            </span>
+                                                        </p>
 
-                                                </td>
+                                                    </td>
 
-                                            </tr>
+
+                                                    <td
+                                                        align="left"
+                                                        width="98%"
+                                                        style="
+                                                            font-size: 12px;
+                                                            line-height: 1.2;
+                                                        "
+                                                    >
+
+                                                        <p>
+
+                                                            <span>
+                                                                Senin - Kamis
+                                                                10.00 - 18.00 WIB
+                                                            </span>
+
+                                                        </p>
+
+                                                    </td>
+
+                                                </tr>
+
+                                            </tbody>
 
                                         </table>
 
@@ -1708,37 +2203,67 @@
 
 
                                 <!-- JAM JUMAT -->
+
                                 <tr>
 
                                     <td align="left">
 
-                                        <table width="100%"
-                                               style="
-                                                   margin-top: .1rem;
-                                                   padding-left: 2rem;
-                                               ">
+                                        <table
+                                            align="center"
+                                            cellpadding="0"
+                                            cellspacing="0"
+                                            width="100%"
+                                            style="
+                                                margin-top: .1rem;
+                                                padding-left: 2rem;
+                                            "
+                                        >
 
-                                            <tr>
+                                            <tbody>
 
-                                                <td width="3%"
-                                                    style="
-                                                        font-size: 12px;
-                                                    ">
-                                                    •
-                                                </td>
+                                                <tr>
 
-                                                <td width="97%"
-                                                    style="
-                                                        font-size: 12px;
-                                                        line-height: 1.5;
-                                                    ">
+                                                    <td
+                                                        align="left"
+                                                        width="2%"
+                                                        style="
+                                                            font-size: 12px;
+                                                            line-height: 1.2;
+                                                        "
+                                                    >
 
-                                                    Jum'at
-                                                    12.00 - 19.00 WIB
+                                                        <p>
+                                                            <span>
+                                                                •
+                                                            </span>
+                                                        </p>
 
-                                                </td>
+                                                    </td>
 
-                                            </tr>
+
+                                                    <td
+                                                        align="left"
+                                                        width="98%"
+                                                        style="
+                                                            font-size: 12px;
+                                                            line-height: 1.2;
+                                                        "
+                                                    >
+
+                                                        <p>
+
+                                                            <span>
+                                                                Jum'at
+                                                                12.00 - 19.00 WIB
+                                                            </span>
+
+                                                        </p>
+
+                                                    </td>
+
+                                                </tr>
+
+                                            </tbody>
 
                                         </table>
 
@@ -1747,38 +2272,68 @@
                                 </tr>
 
 
-                                <!-- JAM SABTU-MINGGU -->
+                                <!-- JAM SABTU - MINGGU -->
+
                                 <tr>
 
                                     <td align="left">
 
-                                        <table width="100%"
-                                               style="
-                                                   margin-top: .1rem;
-                                                   padding-left: 2rem;
-                                               ">
+                                        <table
+                                            align="center"
+                                            cellpadding="0"
+                                            cellspacing="0"
+                                            width="100%"
+                                            style="
+                                                margin-top: .1rem;
+                                                padding-left: 2rem;
+                                            "
+                                        >
 
-                                            <tr>
+                                            <tbody>
 
-                                                <td width="3%"
-                                                    style="
-                                                        font-size: 12px;
-                                                    ">
-                                                    •
-                                                </td>
+                                                <tr>
 
-                                                <td width="97%"
-                                                    style="
-                                                        font-size: 12px;
-                                                        line-height: 1.5;
-                                                    ">
+                                                    <td
+                                                        align="left"
+                                                        width="2%"
+                                                        style="
+                                                            font-size: 12px;
+                                                            line-height: 1.2;
+                                                        "
+                                                    >
 
-                                                    Sabtu - Minggu
-                                                    10.00 - 19.00 WIB
+                                                        <p>
+                                                            <span>
+                                                                •
+                                                            </span>
+                                                        </p>
 
-                                                </td>
+                                                    </td>
 
-                                            </tr>
+
+                                                    <td
+                                                        align="left"
+                                                        width="98%"
+                                                        style="
+                                                            font-size: 12px;
+                                                            line-height: 1.2;
+                                                        "
+                                                    >
+
+                                                        <p>
+
+                                                            <span>
+                                                                Sabtu - Minggu
+                                                                10.00 - 19.00 WIB
+                                                            </span>
+
+                                                        </p>
+
+                                                    </td>
+
+                                                </tr>
+
+                                            </tbody>
 
                                         </table>
 
@@ -1799,7 +2354,9 @@
 
         </table>
 
+
     </main>
+
 
 </body>
 
