@@ -14,6 +14,7 @@ use App\Http\Controllers\SalokafestController;
 use App\Http\Controllers\LombaTariController;
 use App\Http\Controllers\LombaMewarnaiController;
 use App\Http\Controllers\DanceCompetitionController;
+use App\Http\Controllers\CampignEmployeeController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -72,4 +73,7 @@ Route::post('/generate-email-information', [GenerateEmailInformationPdfControlle
 
 // Generate Image From Sheet
 Route::get('/generate-image-from-sheet', [GenerateImageFromSheet::class, 'sheetToImage']);
+
+// Generate CampignEmployee
+Route::post('/generate-campign-employee-pdf', [CampignEmployeeController::class, 'GeneratePdf']);
 
