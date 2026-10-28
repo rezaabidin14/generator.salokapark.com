@@ -148,7 +148,7 @@ public function GeneratePdf(Request $request)
 
             'ticket_orders' => [
                 [
-                    'ticket_name' => 'Tiket Campaign Karyawan',
+                    'ticket_name' => (string) $request->ticket_name,
 
                     'quantity' => (int) $request->quantity,
 
