@@ -12,6 +12,9 @@ use App\Http\Controllers\SalokaEduPrideController;
 use App\Http\Controllers\SalokaPHRDController;
 use App\Http\Controllers\SalokafestController;
 use App\Http\Controllers\LombaTariController;
+use App\Http\Controllers\LombaMewarnaiController;
+use App\Http\Controllers\DanceCompetitionController;
+use App\Http\Controllers\CampignEmployeeController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -38,7 +41,12 @@ Route::post('/generate-saloka-phrd-sertificate', [SalokaPHRDController::class, '
 Route::post('/generate-salokafest-pdf', [SalokafestController::class, 'GeneratePdf']);
 Route::post('/generate-lomba-tari-pdf', [LombaTariController::class, 'GeneratePdf']);
 Route::post('/generate-lomba-tari-sertificate', [LombaTariController::class, 'GenerateSertificate']);
+Route::post('/generate-lomba-mewarnai-pdf', [LombaMewarnaiController::class, 'GeneratePdf']);
+Route::post('/generate-lomba-mewarnai-sertificate', [LombaMewarnaiController::class, 'GenerateSertificate']);
+Route::get('/generate-lomba-mewarnai-voucher', [LombaMewarnaiController::class, 'generateVoucher']);
 
+Route::post('/generate-dance-competition-pdf', [DanceCompetitionController::class, 'GeneratePdf']);
+Route::post('/generate-dance-competition-sertificate', [DanceCompetitionController::class, 'GenerateSertificate']);
 
 
 // Generete QR Code
@@ -65,3 +73,7 @@ Route::post('/generate-email-information', [GenerateEmailInformationPdfControlle
 
 // Generate Image From Sheet
 Route::get('/generate-image-from-sheet', [GenerateImageFromSheet::class, 'sheetToImage']);
+
+// Generate CampignEmployee
+Route::post('/generate-campign-employee-pdf', [CampignEmployeeController::class, 'GeneratePdf']);
+
