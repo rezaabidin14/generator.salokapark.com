@@ -575,8 +575,7 @@
                                                         style="font-size: 12px; line-height: 1.2;">
                                                         <p>
                                                             <span>
-                                                                Tunjukkan <strong>Kode Booking (12 digit angka
-                                                                    hijau)</strong> saat di
+                                                                Tunjukkan <strong>Kode Booking</strong> saat di
                                                                 loket penukaran tiket.
                                                             </span>
                                                         </p>
